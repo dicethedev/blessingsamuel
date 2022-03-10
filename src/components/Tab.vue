@@ -37,7 +37,48 @@
     </template>
   </div>
 </template>
-
+//For Tab setting
+// tabData: [
+        {
+          id: 1,
+          title: "PrintriteNG",
+          title2: "--- Intern Software Engineer @",
+          linkname: "PrintriteNg",
+          link1: "https://www.printrite.ng",
+          datetitle: "May 2021 - Present",
+          list1: "Did my internship program at Printrite Ng.",
+          list2:
+            "Work with languagues , platforms , frameworks, and content management systems such as PHP, VueJs, Github, Bitbucket, JavaScript, SQL and Figma.",
+          list3:
+            "Communicate with integrative teams of developers, engineers, designers and clients.",
+        },
+        {
+          id: 2,
+          title: "Dicemedia",
+          title2: "--- Designer @",
+          linkname: "Dicemediastudio",
+          link: "https://www.printrite.ng",
+          datetitle: "August 2019 - Present",
+          list1: "I'm the Co-founder of Dicemedia Studio. ",
+          list2:
+            "I started my Graphic Designing journey back in 2019 down till date.",
+          list3:
+            "I'm well experienced with over 2 years experience and i can handle any graphic design jobs i have opportunity to get on to work with. I'm a team builder, working with teams has been my priority.",
+        },
+        {
+          id: 3,
+          title: "Lettads",
+          title2: "--- Graphic Designer @",
+          linkname: "Lettads",
+          link3: "https://www.lettads.com.ng",
+          datetitle: "Feb 2020 - Feb 2021",
+          list1:
+            "Designing layouts, producing images, and developing styles for websites, social media profiles.",
+          list2:
+            "Prioritizing workloads and coordinating multiple ongoing projects.",
+          list3: "Implementing SEO and SEM tactics to get measurable results.",
+        },
+      ],
 <script>
 export default {
   props: {
