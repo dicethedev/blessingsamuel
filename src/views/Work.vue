@@ -8,7 +8,9 @@
     </div>
 
     <!-- Card here -->
-    <div class="work-details"></div>
+    <div class="work-details">
+      <div class="card_1"></div>
+    </div>
     <router-view />
   </section>
 </template>
