@@ -42,7 +42,7 @@ export default {};
     color: var(--color-focus);
     background-color: transparent;
     border: 1px dashed var(--color-focus);
-    border-radius: 10px 30px;
+    border-radius: 0px 30px;
     padding: 1.25rem 1.88rem;
     word-spacing: 5px;
     width: 230px;

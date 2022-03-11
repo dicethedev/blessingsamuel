@@ -81,6 +81,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "/src/scss/_mixins.scss";
 :root {
   --color-focus: #00cffd;
   --fz-sm: 12px;
@@ -107,15 +108,24 @@ export default {
     color: var(--color-focus);
     background-color: transparent;
     border: 1px dashed var(--color-focus);
-    border-radius: 10px 30px;
+    border-radius: 0px 30px;
     padding: 1.25rem 1.88rem;
     word-spacing: 5px;
     width: 260px;
+    //115px
+    margin-top: 7.1875rem;
     height: 30px;
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
     transition: var(--transition);
+
+    //Mobile Responsiveness
+    @include breakpoint-down(medium) {
+      margin-left: -280px;
+      width: 180px;
+      height: 20px;
+    }
 
     .head-numbering > h2 {
       display: flex;
@@ -134,11 +144,20 @@ export default {
       font-size: 25px;
       font-weight: 700;
       color: #ccd6f6;
+      //Mobile Responsiveness
+      @include breakpoint-down(medium) {
+        font-size: 17px;
+      }
       span {
         color: #00cffd;
         font-size: 20px;
         font-weight: 200;
         margin-right: 2px;
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          font-size: 16px;
+        }
       }
       .button-style2 {
         color: var(--color-focus);
@@ -150,6 +169,14 @@ export default {
         cursor: pointer;
         margin-top: -49px;
         margin-left: 190px;
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          width: 34px;
+          height: 25px;
+          margin-top: -40px;
+          margin-left: 136px;
+        }
       }
     }
   }

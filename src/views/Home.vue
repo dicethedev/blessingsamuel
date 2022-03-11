@@ -17,10 +17,11 @@
         </div>
         <div class="small-heading-detail">
           <p>
-            I’m a Software Engineer from Nigeria and I am so efficacious about
-            learning new skills, technologies and applying them to solve
-            problems. Also, specializing in building (and occasionally
-            designing) notable digital experiences.
+            I love to build and style things that live on web pages with great
+            user interface & experience. I am very good with HTML5, CSS3 (SCSS
+            included). I am also very good with JavaScript and its frameworks
+            such as Vuejs & Angular. I have over 2 years professional experience
+            in front end development.
             <!-- <a href="https://myshelta.com/" target="_blank" rel="norefer">
               Shelta.
             </a> -->
@@ -28,8 +29,8 @@
         </div>
 
         <!-- Get in touch is here -->
-        <div class="action-button-email">
-          <a v-bind:href="`mailto:${email}`">Get in Touch</a>
+        <div class="action-button">
+          <a v-bind:href="`mailto:${email}`">See Projects</a>
         </div>
       </div>
     </section>
@@ -234,7 +235,7 @@ h6 {
       }
     }
 
-    .action-button-email {
+    .action-button {
       //70px = 4.375rem
       margin-top: 4.375rem;
 
@@ -242,7 +243,7 @@ h6 {
         color: var(--color-focus);
         background-color: transparent;
         border: 1px solid var(--color-focus);
-        border-radius: 30px 10px 30px 10px;
+        border-radius: 30px 0px 30px 0px;
         padding: 1.25rem 3rem;
         word-spacing: 5px;
         font-size: 1rem;
