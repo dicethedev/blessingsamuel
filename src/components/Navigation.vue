@@ -119,14 +119,14 @@ export default {
       // margin-bottom: 1rem;
 
       @media (max-width: 640px) {
-        margin-left: -5px !important;
+        margin-left: 5px !important;
       }
 
       img {
         // margin-left: 305px;
         width: 60px;
         height: 60px;
-        transition: var(--transition);
+        transition: 200ms ease-in-out;
 
         &:hover {
           border: 1px dashed #00cffd;
@@ -139,19 +139,20 @@ export default {
       display: inline-block;
       justify-content: flex-end;
       cursor: pointer;
-      font-size: 16px;
-      font-weight: 300;
+      font-size: 14px;
+      font-weight: 400;
       //60px = 3.75rem
       color: #00cffd;
       background-color: transparent;
       border: 1px solid;
       border-color: #00cffd #00e9df;
+      border-radius: 20px 0px 20px 0px;
+      text-decoration: none;
       //10px = 0.625rem;
       line-height: 1;
       //18px  1.125rem 40px = 2.5rem
-      padding: 1rem 2.5rem;
-      text-decoration: none;
-      transition: 200ms ease-in-out;
+      padding: 1rem 2rem;
+      margin: 1rem 2rem 1rem;
       overflow: hidden;
 
       &::before {
@@ -163,11 +164,11 @@ export default {
         right: 0;
         background-color: rgba(13, 186, 255, 0.185);
         opacity: 0;
-        transition: opacity 150ms ease-in-out;
+        transition: opacity 200ms ease-in-out;
       }
 
       &:hover::before {
-        opacity: 1;
+        opacity: 2;
       }
     }
   }
