@@ -91,7 +91,7 @@
     </section>
 
     <section class="flex">
-      <Work />
+      <Experience />
     </section>
 
     <section class="flex">
@@ -108,7 +108,7 @@
 // @ is an alias to /src
 import Skills from "@/views/Skills.vue";
 import Project from "@/views/Project.vue";
-import Work from "@/views/Work.vue";
+import Experience from "@/views/Experience.vue";
 import About from "@/views/About.vue";
 export default {
   name: "Home",
@@ -120,7 +120,7 @@ export default {
   },
   components: {
     About,
-    Work,
+    Experience,
     Project,
     Skills,
   },

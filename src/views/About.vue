@@ -23,13 +23,13 @@
             work with zeal and real wizardy.
           </p>
           <p>
-            Blessing has a Diploma in Software Engineering.
-            Blessing does not love talking about himself in the 3rd person. He
-            want to learn New things, because that's what brings joy to his life
-            Up. He believe in team success & growth, however he always put his
-            best & maintain a strong team bonding for every project he get to
-            work on. Here are a few technologies l’ve been working with
-            recently: JavaScipt, Vue, Nodejs, GraphQl, TypeScript, MySQl & PHP.
+            Blessing has a Diploma in Software Engineering. Blessing does not
+            love talking about himself in the 3rd person. He want to learn New
+            things, because that's what brings joy to his life Up. He believe in
+            team success & growth, however he always put his best & maintain a
+            strong team bonding for every project he get to work on. Here are a
+            few technologies l’ve been working with recently: JavaScipt, Vue,
+            Nodejs, GraphQl, TypeScript, MySQl & PHP.
           </p>
           <!-- <p>Here are a few technologies l’ve been working with recently:</p> -->
         </div>
