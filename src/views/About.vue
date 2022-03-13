@@ -68,10 +68,10 @@ export default {};
   margin-top: 90px;
   margin-left: 380px;
 
-  //Mobile Responsiveness
-  @include breakpoint-down(medium) {
-    margin-left: 2.5rem;
-  }
+  // //Mobile Responsiveness
+  // @include breakpoint-down(medium) {
+  //   margin-left: 150px;
+  // }
 
   .button-style {
     color: var(--color-focus);
@@ -84,16 +84,26 @@ export default {};
     height: 30px;
     line-height: 1;
     text-decoration: none;
-    cursor: pointer;
-    transition: var(--transition);
+    transition: 300ms ease-in-out;
 
     //Mobile Responsiveness
+    @include breakpoint-down(small) {
+      margin-left: 2.5rem;
+      width: 140px;
+      height: 20px;
+    }
+
+    //Tablet Responsiveness
     @include breakpoint-down(medium) {
       margin-left: 2.5rem;
       width: 140px;
       height: 20px;
     }
 
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-down(large) {
+      margin-left: -180px;
+    }
     .head-numbering > h2 {
       display: flex;
       -webkit-box-align: center;
@@ -161,9 +171,21 @@ export default {};
     border-color: #00cffd #00e9df #00cffd #00e9df;
     overflow: hidden;
 
-    //Mobile Responsiveness
+    //Desktop Responsiveness
     @include breakpoint-down(medium) {
-      max-width: 400px;
+      margin-left: -400px;
+      max-width: 500px;
+    }
+
+    //Tablet Responsiveness
+    @include breakpoint-down(large) {
+      margin-left: -100px;
+    }
+
+    //Mobile Responsiveness
+    @include breakpoint-down(small) {
+      margin-left: 1rem;
+      max-width: 350px;
     }
 
     .container-details {
@@ -181,8 +203,14 @@ export default {};
           margin-bottom: 30px;
 
           //Mobile Responsiveness
+          @include breakpoint-down(small) {
+            margin-left: 4rem;
+            margin-right: 2rem;
+          }
+
+          //Tablet Responsiveness
           @include breakpoint-down(medium) {
-            margin-left: 8rem;
+            margin-left: 12rem;
           }
         }
       }
@@ -200,11 +228,10 @@ export default {};
           max-width: 500px;
           line-height: 25px;
 
-          // //Mobile Responsiveness
-          // @include breakpoint-down(medium) {
-          //   font-size: 0.9375rem;
-          //   line-height: 23px;
-          // }
+          //Mobile Responsiveness
+          @include breakpoint-down(small) {
+            max-width: 500px;
+          }
         }
       }
     }

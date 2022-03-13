@@ -16,6 +16,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "/src/scss/_mixins.scss";
 :root {
   --color-focus: #00cffd;
   --fz-sm: 12px;
@@ -35,7 +36,7 @@ export default {};
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-  margin-top: 10px;
+  margin-top: 90px;
   margin-left: 380px;
 
   .button-style {
@@ -51,6 +52,27 @@ export default {};
     text-decoration: none;
     cursor: pointer;
     transition: var(--transition);
+
+    //Mobile Responsiveness
+    @include breakpoint-down(small) {
+      margin-left: 200px;
+      margin-top: 500px;
+      width: 170px;
+      height: 20px;
+    }
+
+    //Mobile Responsiveness
+    @include breakpoint-down(medium) {
+      margin-left: -310px;
+      margin-top: 500px;
+      width: 170px;
+      height: 20px;
+    }
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-down(large) {
+      margin-left: -255px;
+    }
 
     .head-numbering > h2 {
       display: flex;
@@ -72,11 +94,19 @@ export default {};
       font-size: 25px;
       font-weight: 700;
       color: #ccd6f6;
+      //Mobile Responsiveness
+      @include breakpoint-down(medium) {
+        font-size: 17px;
+      }
       span {
         color: #00cffd;
         font-size: 20px;
         font-weight: 200;
         margin-right: 2px;
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          font-size: 16px;
+        }
       }
       .button-style2 {
         color: var(--color-focus);
@@ -88,6 +118,14 @@ export default {};
         cursor: pointer;
         margin-top: -49px;
         margin-left: 160px;
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          width: 34px;
+          height: 25px;
+          margin-top: -41px;
+          margin-left: 115px;
+        }
       }
     }
   }

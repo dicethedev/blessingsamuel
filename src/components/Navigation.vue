@@ -87,6 +87,7 @@ export default {
   position: fixed;
   transition: var(--transition);
   color: #fff;
+  overflow: hidden;
 
   .overlay {
     opacity: 0;
@@ -122,6 +123,11 @@ export default {
         margin-left: 5px !important;
       }
 
+      //Responsiveness for Desktop or Laptop
+      @include breakpoint-down(large) {
+        margin-left: -15px;
+      }
+
       img {
         // margin-left: 305px;
         width: 60px;
@@ -144,15 +150,17 @@ export default {
       //60px = 3.75rem
       color: #00cffd;
       background-color: transparent;
-      border: 1px solid;
+      border: 2px solid;
       border-color: #00cffd #00e9df;
-      border-radius: 20px 0px 20px 0px;
+      border-radius: 15px 0px 15px 0px;
       text-decoration: none;
       //10px = 0.625rem;
       line-height: 1;
       //18px  1.125rem 40px = 2.5rem
-      padding: 1rem 2rem;
-      margin: 1rem 2rem 1rem;
+      padding: 0.5rem 2rem;
+      // margin: 1rem 2rem 1rem;
+      margin-top: 2rem;
+      margin-right: 20px !important;
       overflow: hidden;
 
       &::before {
@@ -179,6 +187,7 @@ export default {
   background-color: #112240;
   box-shadow: 0px 5px 10px #12284e;
   -webkit-box-align: center;
+  height: 100px;
 
   nav {
     padding: 8px 0;
@@ -188,6 +197,9 @@ export default {
         width: 65px;
         height: 65px;
       }
+    }
+    .resume-button {
+      margin-top: 1.4rem;
     }
   }
 }

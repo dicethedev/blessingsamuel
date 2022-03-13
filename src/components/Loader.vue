@@ -1,0 +1,154 @@
+<template>
+  <transition name="fade">
+    <!-- //changing to v-if directive (v-if="show")  -->
+    <!-- <div class="preloader"> -->
+    <div v-if="show" class="preloader">
+      <div class="container">
+        <div class="logo">
+          <img src="@/assets/Logo.svg" alt="" />
+        </div>
+        <!-- <p>Blessing Samuel Project!</p> -->
+        <div class="circles">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</template>
+
+<script>
+//changing the if directive
+export default {
+  name: "loader",
+  data() {
+    return {
+      show: true,
+    };
+  },
+
+  mounted() {
+    this.showToggle();
+  },
+
+  methods: {
+    //setting the animation to delay to let application load
+    showToggle() {
+      setTimeout(() => {
+        this.show = false;
+      }, 2000);
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+//Preloader must fill full window and hide background till the load ends
+.preloader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  transition: opacity 200ms linear;
+  background-color: #16294b;
+  // #ebebeb
+  z-index: 9999;
+  height: 100vh;
+  overflow: hidden;
+
+  .container {
+    width: 100px;
+    height: 90px;
+    background: #ebebeb;
+    //10px
+    border-radius: 40px;
+    padding: 30px 25px;
+    margin-bottom: 40px;
+
+    .logo img {
+      width: 7rem;
+      height: 7rem;
+      background-repeat: no-repeat;
+      margin-left: -6px;
+      margin-top: -18px;
+    }
+
+    .circles {
+      display: flex;
+      margin-top: -15px;
+      margin-left: 6px;
+
+      .circle {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        background: linear-gradient(180deg, #00cffd 0%, #00e9df 100%);
+        border-radius: 50%;
+        animation-name: scaleIn;
+        animation-duration: 1s;
+        transform: scale(0);
+
+        &:nth-child(1) {
+          animation-delay: 0s;
+        }
+        &:nth-child(2) {
+          animation-delay: 0.1s;
+        }
+        &:nth-child(3) {
+          animation-delay: 0.2s;
+        }
+        //    &:nth-child(4) {
+        //      animation-delay: 0.3s;
+        //    }
+        //    &:nth-child(5) {
+        //      animation-delay: 0.4s;
+        //    }
+      }
+    }
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 1s;
+
+    .logo {
+      animation-name: scaleOut;
+      animation-duration: 1s;
+      p {
+        animation-name: scaleOut;
+        animation-duration: 1s;
+      }
+    }
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+  @keyframes scaleOut {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+// Scrollbar customize style is here
+::-webkit-scrollbar {
+  display: none;
+}
+</style>

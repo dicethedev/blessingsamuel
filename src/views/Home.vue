@@ -28,9 +28,10 @@
           </p>
         </div>
 
-        <!-- Get in touch is here -->
+        <!-- See projects is here -->
+        <!--  <a v-bind:href="`mailto:${email}`">See Projects</a> -->
         <div class="action-button">
-          <a v-bind:href="`mailto:${email}`">See Projects</a>
+          <a href="#" target="_blank" rel="noreferrer">See Projects</a>
         </div>
       </div>
     </section>
@@ -92,11 +93,11 @@
     </section>
 
     <section class="flex">
-      <Experience />
+      <Project />
     </section>
 
     <section class="flex">
-      <Project />
+      <Experience />
     </section>
 
     <section class="flex">
@@ -182,6 +183,11 @@ h6 {
       font-weight: 400;
       transition: var(--transition);
       transition-delay: 100ms;
+
+      //Responsiveness for Desktop or Laptop
+      @include breakpoint-down(large) {
+        margin-left: 20px;
+      }
     }
 
     .big-heading {
@@ -196,6 +202,11 @@ h6 {
         @include breakpoint-down(medium) {
           //20px = 1.25rem
           font-size: 2rem;
+        }
+
+        //Responsiveness for Desktop or Laptop
+        @include breakpoint-down(large) {
+          margin-left: 15px;
         }
       }
     }
@@ -214,6 +225,11 @@ h6 {
           font-size: 2.1875rem;
           word-break: break-word;
         }
+
+        //Responsiveness for Desktop or Laptop
+        @include breakpoint-down(large) {
+          margin-left: 15px;
+        }
       }
     }
 
@@ -221,6 +237,11 @@ h6 {
       margin: 15px 0px 0px;
       max-width: 520px;
       color: #8892b0;
+
+      //Responsiveness for Desktop or Laptop
+      @include breakpoint-down(large) {
+        margin-left: 20px;
+      }
 
       p {
         margin: 0px 0px 15px;
@@ -251,6 +272,11 @@ h6 {
         text-decoration: none;
         cursor: pointer;
         overflow: hidden;
+
+        //Responsiveness for Desktop or Laptop
+        @include breakpoint-down(large) {
+          margin-left: 30px;
+        }
 
         &::before {
           content: "";
@@ -336,8 +362,17 @@ h6 {
     }
   }
   //Mobile Responsiveness
+  @include breakpoint-down(small) {
+    display: none;
+  }
+  //Responsiveness for Desktop or Laptop
   @include breakpoint-down(medium) {
     display: none;
+  }
+
+  //Responsiveness for Desktop or Laptop
+  @include breakpoint-down(large) {
+    margin-left: -25px;
   }
 }
 
@@ -395,9 +430,17 @@ h6 {
     right: auto;
     z-index: 10;
   }
-
   //Mobile Responsiveness
+  @include breakpoint-down(small) {
+    display: none;
+  }
+  //Responsiveness for Desktop or Laptop
   @include breakpoint-down(medium) {
+    display: none;
+  }
+
+  //Responsiveness for Desktop or Laptop
+  @include breakpoint-down(large) {
     display: none;
   }
 }

@@ -14,6 +14,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "/src/scss/_mixins.scss";
 :root {
   --color-focus: #00cffd;
   --fz-sm: 12px;
@@ -50,6 +51,19 @@ export default {};
     cursor: pointer;
     transition: var(--transition);
 
+    //Mobile Responsiveness
+    @include breakpoint-down(medium) {
+      margin-left: -310px;
+      margin-top: 600px;
+      width: 180px;
+      height: 20px;
+    }
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-down(large) {
+      margin-left: -255px;
+    }
+
     .head-numbering > h2 {
       display: flex;
       -webkit-box-align: center;
@@ -70,11 +84,19 @@ export default {};
       font-size: 25px;
       font-weight: 700;
       color: #ccd6f6;
+      //Mobile Responsiveness
+      @include breakpoint-down(medium) {
+        font-size: 17px;
+      }
       span {
         color: #00cffd;
         font-size: 20px;
         font-weight: 200;
         margin-right: 2px;
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          font-size: 16px;
+        }
       }
       .button-style2 {
         color: var(--color-focus);
@@ -86,6 +108,14 @@ export default {};
         cursor: pointer;
         margin-top: -49px;
         margin-left: 160px;
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          width: 45px;
+          height: 25px;
+          margin-top: -40px;
+          margin-left: 110px;
+        }
       }
     }
   }

@@ -1,4 +1,6 @@
 <template>
+  <!-- Preloader for the page is here -->
+  <Loader />
   <div class="app flex flex-column">
     <Navigation />
     <div></div>
@@ -7,13 +9,14 @@
 </template>
 
 <script>
-// import AnimationScreen from "@/components/AnimationScreen.vue";
+import Loader from "@/components/Loader.vue";
 import Navigation from "@/components/Navigation.vue";
 export default {
   name: "App",
 
   components: {
     Navigation,
+    Loader,
     // AnimationScreen,
   },
 };
@@ -37,17 +40,18 @@ export default {
 .app {
   background-color: #112240;
   position: relative;
-  min-height: 500vh;
+  min-height: 900vh;
+  // overflow-x: hidden;
   // flex-direction: column;
   @media (min-width: 900px) {
     flex-direction: column !important;
   }
 
-  .app-content {
-    padding: 0 20px;
-    flex: 1;
-    position: relative;
-  }
+  // .app-content {
+  //   padding: 0 20px;
+  //   flex: 1;
+  //   position: relative;
+  // }
 }
 // Scrollbar customize style is here
 ::-webkit-scrollbar {

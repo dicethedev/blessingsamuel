@@ -35,8 +35,8 @@
         </div>
         <!-- 2 -->
         <div class="experience-card">
-          <h2>Software Engineer Intern</h2>
-          <h4>Printrite.ng</h4>
+          <h2>Wordpress Web Developer</h2>
+          <h4>Lettads.com.ng</h4>
           <ul>
             <li>
               <p>Did my internship program at Printrite Ng.</p>
@@ -101,7 +101,7 @@ export default {
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-  margin-top: 70px;
+  margin-top: 90px;
   margin-left: 380px;
 
   .button-style {
@@ -120,11 +120,23 @@ export default {
     cursor: pointer;
     transition: var(--transition);
 
-    //Mobile Responsiveness
+    //Tablet Responsiveness
     @include breakpoint-down(medium) {
-      margin-left: -280px;
+      margin-left: -350px;
       width: 180px;
       height: 20px;
+    }
+
+    //Mobile Responsiveness
+    @include breakpoint-down(small) {
+      margin-left: 800px;
+      width: 180px;
+      height: 20px;
+    }
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-down(large) {
+      margin-left: -180px;
     }
 
     .head-numbering > h2 {
@@ -188,24 +200,47 @@ export default {
     // padding: 100px 6.944vw;
 
     .experience-list {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
       width: 100%;
       padding-bottom: 30px;
       margin-right: 3.125rem;
 
-      // @media (max-width: 1199.98px) {
-      //   justify-content: space-around;
-      //   margin-right: -20px;
-      // }
+      @include breakpoint-up(medium) {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: -300px;
+      }
+      //Responsiveness for Desktop or Laptop
+      @include breakpoint-up(large) {
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: -2px;
+      }
+
+      //Tablet Responsiveness
+      @include breakpoint-down(medium) {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: -280px;
+      }
+
+      //Mobile Responsiveness
+      @include breakpoint-down(small) {
+        margin-left: -380px;
+      }
+
+      //Responsiveness for Desktop or Laptop
+      @include breakpoint-down(large) {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: -100px;
+        gap: 1px;
+      }
     }
 
     .experience-card {
-      width: 350px;
-      max-width: 30%;
+      width: 300px;
+      max-width: 20%;
       min-width: 300px;
-      min-height: 245px;
+      min-height: 200px;
       background: #e6f1ff;
       //10px
       border-radius: 0.625rem;
@@ -213,6 +248,23 @@ export default {
       margin-right: 15px;
       margin-bottom: 40px;
       color: #16294b;
+
+      //Mobile Responsiveness
+      @include breakpoint-down(small) {
+        width: 350px;
+        max-width: 50%;
+        min-width: 350px;
+        min-height: 200px;
+        margin-left: -30px;
+      }
+      //Tablet Responsiveness
+      @include breakpoint-down(medium) {
+        width: 350px;
+        max-width: 50%;
+        min-width: 350px;
+        min-height: 200px;
+        margin-left: 60px;
+      }
 
       h2,
       h4 {
@@ -241,9 +293,21 @@ export default {
       }
     }
 
+    .experience-card:nth-child(2) {
+      //Responsiveness for Desktop or Laptop
+      @include breakpoint-down(large) {
+        margin-left: -150px;
+      }
+    }
+
     .experience-card:last-of-type {
       background: var(--color-focus);
       margin-right: 0;
+
+      //Responsiveness for Desktop or Laptop
+      @include breakpoint-down(large) {
+        margin-left: 200px;
+      }
     }
     .experience-card:last-of-type h4,
     .experience-card:last-of-type p {
