@@ -136,6 +136,7 @@ export default {
 
         &:hover {
           border: 1px dashed #00cffd;
+          border-radius: 50px;
         }
       }
     }

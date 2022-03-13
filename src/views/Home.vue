@@ -78,15 +78,15 @@
         <img class="line-focus" src="@/assets/line-focus.svg" alt="" />
       </ul>
     </div>
-
+    <!-- 
     <div class="link-to-right">
-      <a v-bind:href="`mailto:${email}`">dicethedev@gmail.com</a>
+      <a v-bind:href="`mailto:${email}`">dicethedev@gmail.com</a> -->
 
-      <ul class="style-right">
-        <!-- Line-focus bottom is here -->
-        <img class="focus-line" src="@/assets/focus-line.svg" alt="" />
-      </ul>
-    </div>
+    <!-- <ul class="style-right"> -->
+    <!-- Line-focus bottom is here -->
+    <!-- <img class="focus-line" src="@/assets/focus-line.svg" alt="" /> -->
+    <!-- </ul>
+    </div> -->
 
     <section class="flex">
       <About />
@@ -306,7 +306,7 @@ h6 {
   right: auto;
   z-index: 10;
   transition: var(--transition);
-  margin-left: 3rem;
+  margin-left: 5rem;
 
   ul,
   .style-left {
@@ -317,7 +317,7 @@ h6 {
     margin: 0px;
     padding: 0px;
     list-style: none;
-    margin-top: -300px;
+    margin-top: -350px;
     margin-right: -20px;
   }
 
@@ -339,14 +339,15 @@ h6 {
   }
 
   li a img {
-    width: 21.3px;
-    height: 21.3px;
+    width: 25.5px;
+    height: 25.5px;
     transition: var(--transition);
     // transition: var(--easing);
 
     &:hover {
       border: 1px dashed #00cffd;
-      padding: 5px;
+      padding: 10px;
+      border-radius: 20px;
     }
   }
   // Line-focus styling area is here
@@ -377,71 +378,71 @@ h6 {
 }
 
 //link-to-right styling area
-.link-to-right {
-  display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-  position: fixed;
-  margin-left: 2rem;
+// .link-to-right {
+//   display: flex;
+//   flex-direction: column;
+//   -webkit-box-align: center;
+//   align-items: center;
+//   position: fixed;
+//   margin-left: 2rem;
 
-  a {
-    display: inline-block;
-    margin: 20px auto;
-    padding: 10px;
-    margin-left: 120px;
-    margin-top: -205px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.1em;
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    color: #8892b0;
-    transition: var(--transition);
+//   a {
+//     display: inline-block;
+//     margin: 20px auto;
+//     padding: 10px;
+//     margin-left: 120px;
+//     margin-top: -205px;
+//     font-size: 12px;
+//     font-weight: 400;
+//     line-height: 18px;
+//     letter-spacing: 0.1em;
+//     -webkit-writing-mode: vertical-rl;
+//     writing-mode: vertical-rl;
+//     text-decoration: none;
+//     text-decoration-skip-ink: auto;
+//     color: #8892b0;
+//     transition: var(--transition);
 
-    &:hover {
-      border: 1px dashed #00cffd;
-      color: #00cffd;
-    }
-  }
+//     &:hover {
+//       border: 1px dashed #00cffd;
+//       color: #00cffd;
+//     }
+//   }
 
-  ul,
-  .style-right {
-    // display: flex;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    margin-top: 200px;
-    // Margining it to right is right here
-    margin-left: 120px;
-  }
+//   ul,
+//   .style-right {
+//     // display: flex;
+//     flex-direction: column;
+//     -webkit-box-align: center;
+//     align-items: center;
+//     margin: 0px;
+//     padding: 0px;
+//     list-style: none;
+//     margin-top: 200px;
+//     // Margining it to right is right here
+//     margin-left: 120px;
+//   }
 
-  // focus-line styling area is here
-  .focus-line {
-    width: 1.8px;
-    position: fixed;
-    bottom: 0px;
-    right: auto;
-    z-index: 10;
-  }
-  //Mobile Responsiveness
-  @include breakpoint-down(small) {
-    display: none;
-  }
-  //Responsiveness for Desktop or Laptop
-  @include breakpoint-down(medium) {
-    display: none;
-  }
+//   // focus-line styling area is here
+//   .focus-line {
+//     width: 1.8px;
+//     position: fixed;
+//     bottom: 0px;
+//     right: auto;
+//     z-index: 10;
+//   }
+//   //Mobile Responsiveness
+//   @include breakpoint-down(small) {
+//     display: none;
+//   }
+//   //Responsiveness for Desktop or Laptop
+//   @include breakpoint-down(medium) {
+//     display: none;
+//   }
 
-  //Responsiveness for Desktop or Laptop
-  @include breakpoint-down(large) {
-    display: none;
-  }
-}
+//   //Responsiveness for Desktop or Laptop
+//   @include breakpoint-down(large) {
+//     display: none;
+//   }
+// }
 </style>
