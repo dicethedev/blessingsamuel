@@ -2,12 +2,54 @@
   <section class="project-me">
     <div class="button-style">
       <h2 class="head-numbering">
-        <span>03.</span> I’ve Built this
+        <span>02.</span> I’ve Built this
         <div class="button-style2"></div>
       </h2>
     </div>
 
-    <div class="wrapper-grid"></div>
+    <div class="project-content">
+      <div class="image-container">
+        <a href=""
+          ><img src="../assets/project-image-1.jpg" alt="project-image-1"
+        /></a>
+      </div>
+      <div class="project-details">
+        <h1>Featured Project</h1>
+        <h3>Weather App</h3>
+        <div class="container">
+          <p>
+            Weather app develop with Vue. An API is pass from openweather.org,
+            You can search any country of your choice from the web app and it
+            will tell you the country tempeature, date, time, atmosphere
+            changes. Having struggled understanding how to pass an API through
+            this I learn a lot from my struggle.
+          </p>
+        </div>
+        <div class="stacks">
+          <div class="stack">HTMl</div>
+          <div class="stack">CSS</div>
+          <div class="stack">VUE</div>
+          <div class="stack">API</div>
+        </div>
+
+        <div class="link-direction">
+          <a
+            href="https://toye-quiz.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="../assets/github-link-direct.svg" alt="" />
+          </a>
+          <a
+            href="https://toye-quiz.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img class="lmg-2" src="../assets/arrow-link-direct.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -43,15 +85,15 @@ export default {};
     color: var(--color-focus);
     background-color: transparent;
     border: 1px dashed var(--color-focus);
-    border-radius: 0px 30px;
+    border-radius: 0px 20px;
     padding: 1.25rem 1.88rem;
     word-spacing: 5px;
-    width: 230px;
-    height: 30px;
+    width: 290px;
+    height: 60px;
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
-    transition: var(--transition);
+    margin-top: 120px;
 
     //Mobile Responsiveness
     @include breakpoint-down(small) {
@@ -84,10 +126,6 @@ export default {};
       width: 100%;
       font-size: clamp(26px, 5vw, var(--fz-heading));
       white-space: nowrap;
-      transition: var(--transition);
-      visibility: visible;
-      //  opacity: 1;
-      //  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     }
 
     h2 {
@@ -100,7 +138,7 @@ export default {};
       }
       span {
         color: #00cffd;
-        font-size: 20px;
+        font-size: 19px;
         font-weight: 200;
         margin-right: 2px;
         //Mobile Responsiveness
@@ -111,13 +149,13 @@ export default {};
       .button-style2 {
         color: var(--color-focus);
         background-color: #00cffd;
-        border-radius: 0px 30px;
+        border-radius: 0px 20px;
         padding: 1.25rem 1.88rem;
-        width: 42px;
-        height: 35px;
+        width: 101px;
+        height: 60px;
         cursor: pointer;
         margin-top: -49px;
-        margin-left: 160px;
+        margin-left: 157px;
 
         //Mobile Responsiveness
         @include breakpoint-down(medium) {
@@ -130,115 +168,109 @@ export default {};
     }
   }
 
-  .wrapper-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 20px;
-    margin-left: -70px;
-    //     justify-content: center;
+  .project-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 200px;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: -50px;
+    position: relative;
+    z-index: 1;
+    margin-top: 90px;
 
-    .project-container {
-      overflow: hidden;
-      box-shadow: 0px 2px 8px 0px var(--color-focus);
-      background-color: #16294b;
-      text-align: center;
-      border-radius: 1rem;
-      position: relative;
-      //  margin: 0.1rem;
-      width: 280px;
-      height: 500px;
-      margin-top: 60px;
+    .image-container {
+      //Mobile responsiveness
+      // padding: 40px;
+      // width: 34.24vw;
+      // height: 34.24vw;
+      background: #d9e4f3;
+      padding: 20px;
+      border-radius: 3px;
+      width: 30.24vw;
+      height: 30.24vw;
+
+      img {
+        object-fit: cover;
+        object-position: left center;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+      }
+    }
+    .project-details {
+      width: 36vw;
+      margin-left: 100px;
+
+      h1 {
+        color: #0db9ff;
+        font-size: var(--fz-md);
+        font-weight: 200;
+        font-style: italic;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        margin-left: 300px;
+      }
+      h3 {
+        color: #e6f1ff;
+        font-size: 30px;
+        font-weight: 400px;
+        margin-left: 255px;
+        margin-bottom: 20px;
+      }
     }
 
-    .project-img {
-      position: absolute;
-      //  The weather screen shot image is in the background-image
-      background-image: url("../assets/screen.jpg");
-      height: 6rem;
-      width: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    //The Imge-cliping is here below
-    .banner-img {
-      width: 8rem;
-      clip-path: circle(0px at center);
-      margin-top: 70px;
-    }
-
-    h1 {
-      color: #8993b1;
-      font-size: 1.2rem;
-      top: 50px;
-    }
-    //h1
-    .project-overline {
-      font-style: italic;
-      font-weight: 100;
-      font-size: 14px;
-      // line-height: 10px;
-      color: #00cffd;
-    }
-    .description-container {
-      display: flex;
-      position: relative;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #16294b;
+    .container {
+      width: 650px;
+      height: 150px;
+      background: #16294b;
       box-shadow: 4px 7px 57px 2px rgba(0, 0, 0, 0.25);
-      border-radius: 20px;
-      padding: 1.5rem;
-      width: 220px;
-      height: 140px;
-      transform: translate(23%-20%);
-      //p
-      .description {
-        //  position: absolute;
-        margin: 1rem 0.5rem;
-        font-size: 13.5px;
-        color: #8993b1;
+      border-radius: 5px;
+      margin-left: -200px;
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        color: #8892b0;
+        font-weight: 400;
+        max-width: 600px;
+        margin-top: -45px;
+        margin-left: 10px;
       }
     }
-    //ul
-    .project-tech-list {
-      display: flex;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
-      margin: 10px 0px 10px 90px;
-      padding: 0px;
-      list-style: none;
-      color: #8993b1;
 
-      li {
-        margin-top: 10px;
+    .stacks {
+      display: flex;
+      margin-top: 30px;
+      margin-bottom: 16px;
+
+      .stack {
+        display: flex;
+        width: 98px;
+        height: 36px;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-focus);
+        color: #112240;
+        border-radius: 5px;
         margin-right: 10px;
+        letter-spacing: 0.2em;
+        font-size: 12px;
       }
     }
-
-    .project-links {
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      position: relative;
-      margin-top: 10px;
-      margin-left: 10px;
-      margin-bottom: 10px;
+    .link-direction {
+      margin-top: 32px;
+      margin-left: 360px;
 
       a {
-        margin-left: 20px;
         img {
-          width: 21.3px;
-          height: 21.3px;
-          transition: var(--transition);
-          transition: var(--easing);
-
+          width: 25px;
+          margin-right: 10px;
           &:hover {
             border: 1px dashed #00cffd;
-            padding: 5px;
+            padding: 10px;
+            border-radius: 20px;
           }
         }
       }

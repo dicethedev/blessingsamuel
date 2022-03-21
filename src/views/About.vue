@@ -17,7 +17,7 @@
           <p>
             I am a frontend software engineer currently based in Nigeria. I am
             very proficient using javascript and its frameworks like Vue and
-            Angular. I am also very good with mock up languages such as html and
+            React. I am also very good with mock up languages such as html and
             css. I find joy when I use logic to provide solution to challenges
             thereby solving user potential problems. With two years of
             experience in frontend developement, I do not love talking about
@@ -66,36 +66,23 @@ export default {};
   transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
   margin-top: 90px;
-  margin-left: 380px;
-
-  // //Mobile Responsiveness
-  // @include breakpoint-down(medium) {
-  //   margin-left: 150px;
-  // }
+  margin-left: 420px;
 
   .button-style {
     color: var(--color-focus);
     background-color: transparent;
     border: 1px dashed #00e9df;
-    border-radius: 0px 30px;
+    border-radius: 0px 20px;
     padding: 1.25rem 1.88rem;
     word-spacing: 5px;
-    width: 160px;
-    height: 30px;
+    width: 220px;
+    height: 60px;
     line-height: 1;
     text-decoration: none;
     transition: 300ms ease-in-out;
 
-    //Mobile Responsiveness
-    @include breakpoint-down(small) {
-      margin-left: 2.5rem;
-      width: 140px;
-      height: 20px;
-    }
-
     //Tablet Responsiveness
     @include breakpoint-down(medium) {
-      margin-left: 2.5rem;
       width: 140px;
       height: 20px;
     }
@@ -111,10 +98,10 @@ export default {};
       align-items: center;
       position: relative;
       margin: 10px 0px 40px;
+      margin-top: 40px;
       width: 100%;
       font-size: clamp(26px, 5vw, var(--fz-heading));
       white-space: nowrap;
-      transition: var(--transition);
     }
 
     h2 {
@@ -127,7 +114,7 @@ export default {};
       }
       span {
         color: #00cffd;
-        font-size: 20px;
+        font-size: 19px;
         font-weight: 200;
         margin-right: 10px;
         //Mobile Responsiveness
@@ -138,12 +125,12 @@ export default {};
       .button-style2 {
         color: var(--color-focus);
         background-color: #00cffd;
-        border-radius: 0px 30px;
+        border-radius: 0px 20px;
         padding: 1.25rem 1.88rem;
-        width: 16px;
-        height: 35px;
+        width: 75px;
+        height: 60px;
         cursor: pointer;
-        margin-top: -49px;
+        margin-top: -48px;
         margin-left: 115px;
 
         //Mobile Responsiveness
@@ -158,9 +145,9 @@ export default {};
   }
 
   .container {
-    display: grid;
+    display: flex;
     width: 95vw;
-    max-width: 450px;
+    max-width: 500px;
     padding: 2rem;
     background-color: rgba(17, 34, 64, 1);
     padding: 1.5rem;
@@ -171,21 +158,27 @@ export default {};
     border-color: #00cffd #00e9df #00cffd #00e9df;
     overflow: hidden;
 
-    //Desktop Responsiveness
+    //Tablet Responsiveness
+    @include breakpoint-down(large) {
+      margin-left: -20px;
+    }
+
+    //Mobile - Tablet Responsiveness
     @include breakpoint-down(medium) {
-      margin-left: -400px;
-      max-width: 500px;
+      margin-left: -200px;
+      max-width: 380px;
     }
 
     //Tablet Responsiveness
-    @include breakpoint-down(large) {
-      margin-left: -100px;
+    @include breakpoint-down(small) {
+      margin-left: -320px;
+      max-width: 370px;
+      overflow-x: hidden;
     }
 
-    //Mobile Responsiveness
-    @include breakpoint-down(small) {
-      margin-left: 1rem;
-      max-width: 350px;
+    //Desktop Responsiveness
+    @include breakpoint-up(xlarge) {
+      margin-left: 200px;
     }
 
     .container-details {
@@ -202,15 +195,20 @@ export default {};
           clip-path: circle(60px at center);
           margin-bottom: 30px;
 
-          //Mobile Responsiveness
-          @include breakpoint-down(small) {
-            margin-left: 4rem;
-            margin-right: 2rem;
+          // //Mobile Responsiveness
+          // @include breakpoint-down(small) {
+          //   margin-left: 4rem;
+          //   margin-right: 2rem;
+          // }
+
+          //Mobile - Tablet Responsiveness
+          @include breakpoint-down(medium) {
+            margin-left: 8rem;
           }
 
-          //Tablet Responsiveness
-          @include breakpoint-down(medium) {
-            margin-left: 12rem;
+          //Desktop Responsiveness
+          @include breakpoint-up(large) {
+            margin-left: 165px;
           }
         }
       }

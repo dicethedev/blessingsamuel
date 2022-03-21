@@ -58,7 +58,7 @@ export default {
   // #ebebeb
   z-index: 9999;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
 
   .container {
     width: 100px;

@@ -6,10 +6,12 @@
         <a href="/#Home"><img src="@/assets/Logo.svg" alt="" /></a>
       </div>
 
+      <!-- Resume Button area is here -->
       <div>
-        <!-- Resume Button area is here -->
         <!-- href="/resume.pdf" -->
-        <a class="resume-button" href="#" target="_blank">Resume</a>
+        <a class="resume-button" href="#" @click="readPdf" target="_blank"
+          >Resume</a
+        >
       </div>
     </nav>
   </header>
@@ -36,6 +38,15 @@ export default {
   },
 
   methods: {
+    //PDF file
+    // ReadPdf() {
+    //   window.open("./Profile.pdf", "_blank");
+    // },
+    readPdf: function () {
+      const pdf = "./profile.pdf";
+      window.open(pdf, "_blank").focus();
+    },
+
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
     },

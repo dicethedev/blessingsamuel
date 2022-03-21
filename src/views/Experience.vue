@@ -2,7 +2,7 @@
   <section class="work-me">
     <div class="button-style">
       <h2 class="head-numbering">
-        <span>02.</span> I’ve Worked here
+        <span>03.</span> I’ve Worked here
         <div class="button-style2"></div>
       </h2>
     </div>
@@ -108,28 +108,19 @@ export default {
     color: var(--color-focus);
     background-color: transparent;
     border: 1px dashed var(--color-focus);
-    border-radius: 0px 30px;
+    border-radius: 0px 20px;
     padding: 1.25rem 1.88rem;
     word-spacing: 5px;
-    width: 260px;
+    width: 315px;
+    height: 60px;
     //115px
     margin-top: 7.1875rem;
-    height: 30px;
     line-height: 1;
     text-decoration: none;
-    cursor: pointer;
-    transition: var(--transition);
 
-    //Tablet Responsiveness
+    //Mobile - Tablet Responsiveness
     @include breakpoint-down(medium) {
-      margin-left: -350px;
-      width: 180px;
-      height: 20px;
-    }
-
-    //Mobile Responsiveness
-    @include breakpoint-down(small) {
-      margin-left: 800px;
+      margin-left: 200px;
       width: 180px;
       height: 20px;
     }
@@ -153,7 +144,7 @@ export default {
     }
 
     h2 {
-      font-size: 25px;
+      font-size: 23px;
       font-weight: 700;
       color: #ccd6f6;
       //Mobile Responsiveness
@@ -162,7 +153,7 @@ export default {
       }
       span {
         color: #00cffd;
-        font-size: 20px;
+        font-size: 19px;
         font-weight: 200;
         margin-right: 2px;
 
@@ -174,12 +165,12 @@ export default {
       .button-style2 {
         color: var(--color-focus);
         background-color: #00cffd;
-        border-radius: 0px 30px;
+        border-radius: 0px 20px;
         padding: 1.25rem 1.88rem;
-        width: 42px;
-        height: 35px;
+        width: 100px;
+        height: 60px;
         cursor: pointer;
-        margin-top: -49px;
+        margin-top: -47px;
         margin-left: 190px;
 
         //Mobile Responsiveness
@@ -197,53 +188,55 @@ export default {
     align-items: center;
     //115px
     margin-top: 7.1875rem;
-    // padding: 100px 6.944vw;
+
+    //Tablet Responsiveness
+    @include breakpoint-down(large) {
+      margin-left: -200px;
+    }
+
+    //Mobile - Tablet Responsiveness
+    @include breakpoint-down(medium) {
+      margin-left: -200px;
+    }
+
+    //Mobile - Tablet Responsiveness
+    @include breakpoint-up(medium) {
+      margin-left: -200px;
+    }
+
+    @include breakpoint-up(xlarge) {
+      margin-left: -10px;
+    }
+
+    //Mobile Responsiveness
+    @include breakpoint-down(small) {
+      margin-left: -280px;
+    }
 
     .experience-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      // gap: 0.5rem;
+      flex-wrap: wrap;
       width: 100%;
-      padding-bottom: 30px;
-      margin-right: 3.125rem;
-
-      @include breakpoint-up(medium) {
-        grid-template-columns: repeat(2, 1fr);
-        margin-left: -300px;
-      }
-      //Responsiveness for Desktop or Laptop
-      @include breakpoint-up(large) {
-        grid-template-columns: repeat(3, 1fr);
-        margin-left: -2px;
-      }
+      padding-bottom: 20px;
+      margin-right: 50px;
 
       //Tablet Responsiveness
-      @include breakpoint-down(medium) {
-        grid-template-columns: repeat(1, 1fr);
-        margin-left: -280px;
-      }
-
-      //Mobile Responsiveness
-      @include breakpoint-down(small) {
-        margin-left: -380px;
-      }
-
-      //Responsiveness for Desktop or Laptop
       @include breakpoint-down(large) {
-        grid-template-columns: repeat(2, 1fr);
-        margin-left: -100px;
-        gap: 1px;
+        justify-content: space-around;
+        margin-right: 60px;
       }
     }
 
     .experience-card {
-      width: 300px;
-      max-width: 20%;
+      width: 320px;
+      max-width: 30%;
       min-width: 300px;
-      min-height: 200px;
+      min-height: 245px;
       background: #e6f1ff;
       //10px
-      border-radius: 0.625rem;
+      border-radius: 5px;
       padding: 30px 25px;
       margin-right: 15px;
       margin-bottom: 40px;
@@ -252,18 +245,10 @@ export default {
       //Mobile Responsiveness
       @include breakpoint-down(small) {
         width: 350px;
-        max-width: 50%;
-        min-width: 350px;
+        max-width: 30%;
+        min-width: 300px;
         min-height: 200px;
         margin-left: -30px;
-      }
-      //Tablet Responsiveness
-      @include breakpoint-down(medium) {
-        width: 350px;
-        max-width: 50%;
-        min-width: 350px;
-        min-height: 200px;
-        margin-left: 60px;
       }
 
       h2,
@@ -293,20 +278,18 @@ export default {
       }
     }
 
-    .experience-card:nth-child(2) {
-      //Responsiveness for Desktop or Laptop
-      @include breakpoint-down(large) {
-        margin-left: -150px;
-      }
-    }
-
     .experience-card:last-of-type {
       background: var(--color-focus);
       margin-right: 0;
 
-      //Responsiveness for Desktop or Laptop
-      @include breakpoint-down(large) {
-        margin-left: 200px;
+      //Mobile Responsiveness
+      @include breakpoint-down(small) {
+        margin-right: 15px;
+      }
+
+      //Tablet - Mobile Responsiveness
+      @include breakpoint-down(medium) {
+        margin-right: 15px;
       }
     }
     .experience-card:last-of-type h4,

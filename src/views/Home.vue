@@ -20,8 +20,8 @@
             I love to build and style things that live on web pages with great
             user interface & experience. I am very good with HTML5, CSS3 (SCSS
             included). I am also very good with JavaScript and its frameworks
-            such as Vuejs & Angular. I have over 2 years professional experience
-            in front end development.
+            such as Vue & React. I have over 2 years professional experience in
+            front end development.
             <!-- <a href="https://myshelta.com/" target="_blank" rel="norefer">
               Shelta.
             </a> -->
@@ -31,11 +31,10 @@
         <!-- See projects is here -->
         <!--  <a v-bind:href="`mailto:${email}`">See Projects</a> -->
         <div class="action-button">
-          <a href="#" target="_blank" rel="noreferrer">See Projects</a>
+          <router-link to="/">See Projects</router-link>
         </div>
       </div>
     </section>
-
     <div class="link-to-left">
       <ul class="style-left">
         <!-- Github link -->
@@ -103,6 +102,7 @@
     <section class="flex">
       <Skills />
     </section>
+    <router-view />
   </div>
 </template>
 
@@ -140,7 +140,6 @@ export default {
   --fz-heading: 32px;
   --lightest-slate: #ccd6f6;
   --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
-  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 h1,
@@ -225,6 +224,10 @@ h6 {
           font-size: 2.1875rem;
           word-break: break-word;
         }
+        // //Mobile - Tablet Responsiveness
+        // @include breakpoint-up(large) {
+        //   margin-left: 300px;
+        // }
 
         //Responsiveness for Desktop or Laptop
         @include breakpoint-down(large) {
@@ -339,15 +342,15 @@ h6 {
   }
 
   li a img {
-    width: 25.5px;
-    height: 25.5px;
+    width: 23px;
+    height: 23px;
     transition: var(--transition);
     // transition: var(--easing);
 
     &:hover {
       border: 1px dashed #00cffd;
-      padding: 10px;
-      border-radius: 20px;
+      padding: 5px;
+      border-radius: 10px;
     }
   }
   // Line-focus styling area is here
@@ -368,7 +371,7 @@ h6 {
   }
   //Responsiveness for Desktop or Laptop
   @include breakpoint-down(medium) {
-    display: none;
+    margin-left: 200px;
   }
 
   //Responsiveness for Desktop or Laptop
