@@ -95,15 +95,19 @@
     </section>
 
     <section class="flex">
-      <Project />
-    </section>
-
-    <section class="flex">
       <Experience />
     </section>
 
     <section class="flex">
+      <Project />
+    </section>
+
+    <section class="flex">
       <SkillSet />
+    </section>
+
+    <section class="flex">
+      <Contact />
     </section>
     <router-view />
   </div>
@@ -111,6 +115,7 @@
 
 <script>
 // @ is an alias to /src
+import Contact from "@/views/Contact.vue";
 import SkillSet from "@/views/SkillSet.vue";
 import Project from "@/views/Project.vue";
 import Experience from "@/views/Experience.vue";
@@ -128,6 +133,7 @@ export default {
     Experience,
     Project,
     SkillSet,
+    Contact,
   },
 
   methods: {},

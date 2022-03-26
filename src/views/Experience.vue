@@ -1,8 +1,10 @@
 <template>
   <section class="work-me">
-    <div class="button-style">
+    <div
+      class="button-style animate__animated animate__bounce animate__infinite"
+    >
       <h2 class="head-numbering">
-        <span>03.</span> I’ve Worked here
+        <span>02.</span> I’ve Worked here
         <div class="button-style2"></div>
       </h2>
     </div>
@@ -101,7 +103,7 @@ export default {
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-  margin-top: 1200px;
+  margin-top: 100px;
   margin-left: 380px;
 
   .button-style {
@@ -117,6 +119,7 @@ export default {
     margin-top: 7.1875rem;
     line-height: 1;
     text-decoration: none;
+    margin-left: 240px;
 
     //Mobile - Tablet Responsiveness
     @include breakpoint-down(medium) {
@@ -146,7 +149,7 @@ export default {
     h2 {
       font-size: 23px;
       font-weight: 700;
-      color: #ccd6f6;
+      color: #e6f1ff;
       //Mobile Responsiveness
       @include breakpoint-down(medium) {
         font-size: 17px;

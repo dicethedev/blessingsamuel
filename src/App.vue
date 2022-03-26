@@ -40,7 +40,7 @@ export default {
 .app {
   background-color: #112240;
   position: relative;
-  min-height: 900vh;
+  min-height: 735vh;
   // overflow-x: hidden;
   // flex-direction: column;
   @media (min-width: 900px) {

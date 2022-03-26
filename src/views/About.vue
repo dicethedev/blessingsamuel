@@ -1,6 +1,8 @@
 <template>
   <section class="about-me">
-    <div class="button-style">
+    <div
+      class="button-style animate__animated animate__bounce animate__infinite"
+    >
       <h2 class="head-numbering">
         <span>01.</span>About Me
         <div class="button-style2"></div>
@@ -79,7 +81,7 @@ export default {};
     height: 60px;
     line-height: 1;
     text-decoration: none;
-    transition: 300ms ease-in-out;
+    margin-left: 240px;
 
     //Tablet Responsiveness
     @include breakpoint-down(medium) {
@@ -107,7 +109,7 @@ export default {};
     h2 {
       font-size: 25px;
       font-weight: 700;
-      color: #ccd6f6;
+      color: #e6f1ff;
       //Mobile Responsiveness
       @include breakpoint-down(medium) {
         font-size: 17px;

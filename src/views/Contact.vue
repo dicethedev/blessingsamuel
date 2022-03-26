@@ -1,30 +1,35 @@
 <template>
-  <section class="skillset-me">
+  <section class="contact-me">
     <div
       class="button-style animate__animated animate__bounce animate__infinite"
     >
       <h2 class="head-numbering">
-        <span>04.</span> I’ve this Skillset
+        <span>05.</span> What’s Next?
         <div class="button-style2"></div>
       </h2>
     </div>
 
-    <div class="skillset">
-      <div class="skills">
-        <div class="skill-container">
-          <div class="skill-list">
-            <img src="../assets/logos_html-5.svg" alt="" />
-            <img src="../assets/logos_css-3.svg" alt="" />
-            <img src="../assets/logos_sass.svg" alt="" />
-            <img src="../assets/logos_javascript.svg" alt="" />
-            <img src="../assets/logos_vue.svg" alt="" />
-            <img src="../assets/logos_react.svg" alt="" />
-            <img src="../assets/logos_mysql.svg" alt="" />
-            <img src="../assets/logos_nodejs.svg" alt="" />
-          </div>
-        </div>
+    <div class="contact-details">
+      <h1>Get me Hired!</h1>
+      <p>
+        I'm looking for any new opportunities, my inbox is always open. If
+        you’re currently have a role for Blessing, please don’t hestiate to get
+        in touch with me. I’ll try all my best to reply you on time. Thank you!
+      </p>
+      <div class="contact-link">
+        <a href="#" target="_blank" rel="noopener">Say Hello</a>
       </div>
     </div>
+
+    <footer>
+      <h3>Designed & Built by Blessing Samuel</h3>
+      <div class="project-destination">
+        <a href="https://github.com/dicethedev" target="_blank" rel="noreferrer"
+          ><img src="../assets/fa-brands_figma.svg" alt=""
+        /></a>
+        <a href=""><img src="../assets/akar-icons_link-out.svg" alt="" /></a>
+      </div>
+    </footer>
   </section>
 </template>
 
@@ -45,16 +50,10 @@ export default {};
   --dice-color-shadow: rgba(2, 12, 27, 0.7);
 }
 
-.skillset-me {
-  position: relative;
-  height: 100vh;
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-  margin-top: 1100px;
-  margin-left: 380px;
-
+.contact-me {
+  //   position: relative;
+  //   height: 100vh;
+  //   margin-top: 30px;
   .button-style {
     color: var(--color-focus);
     background-color: transparent;
@@ -62,12 +61,12 @@ export default {};
     border-radius: 0px 20px;
     padding: 1.25rem 1.88rem;
     word-spacing: 5px;
-    width: 305px;
+    width: 275px;
     height: 60px;
     line-height: 1;
     text-decoration: none;
-    cursor: pointer;
-    margin-left: 240px;
+    margin-top: -100px;
+    margin-left: 700px;
 
     //Mobile Responsiveness
     @include breakpoint-down(small) {
@@ -125,11 +124,11 @@ export default {};
         background-color: #00cffd;
         border-radius: 0px 20px;
         padding: 1.25rem 1.88rem;
-        width: 126px;
+        width: 120px;
         height: 60px;
         cursor: pointer;
         margin-top: -49px;
-        margin-left: 147px;
+        margin-left: 123px;
 
         //Mobile Responsiveness
         @include breakpoint-down(medium) {
@@ -142,53 +141,71 @@ export default {};
     }
   }
 
-  .skillset {
-    // background: #fff;
-    border: 1px solid var(--color-focus);
-    padding: 100px 6.944vw;
-    position: relative;
-    margin-top: 90px;
-    width: 1000px;
+  .contact-details {
+    margin-top: 70px;
+    margin-left: 640px;
 
-    .skills {
+    h1 {
+      font-size: clamp(40px, 5vw, 60px);
+      font-style: italic;
+    }
+    p {
+      color: #8892b0;
+      font-size: var(--fz-md);
+      max-width: 500px;
+      text-align: center;
+      line-height: 26.44px;
+      margin-left: -50px;
+      margin-top: 20px;
+    }
+    .contact-link {
       display: flex;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 400;
+      word-spacing: 5px;
+      border: 2px solid var(--color-focus);
+      border-radius: 10px;
+      padding: 0 20px;
+      width: fit-content;
+      height: 80px;
+      margin-top: 30px;
+      margin-left: 120px;
+      overflow: hidden;
+
+      a {
+        text-decoration: none;
+        color: var(--color-focus);
+        cursor: pointer;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    margin-top: 230px;
+    text-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 560px;
+
+    h3 {
+      color: #8892b0;
+      font-size: 15px;
+      font-weight: 300;
     }
 
-    .skill-container {
-      width: 100%;
-      overflow: hidden;
-      margin-right: -90px;
-      margin-top: 15px;
-
-      .skill-list {
-        display: flex;
-        align-items: center;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
-        -webkit-animation: scrollFromLefttoRight 4s ease-in-out 1s infinite;
-        animation: scrollFromLefttoRight 4s ease-in-out 1s infinite;
-
+    .project-destination {
+      margin-top: 10px;
+      a {
+        text-decoration: none;
         img {
-          margin-right: 20px;
-          width: 120px;
-          height: 120px;
-        }
-
-        @keyframes scrollFromLefttoRight {
-          0% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-          }
-          50% {
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-          }
-          100% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-          }
+          margin-right: 5px;
         }
       }
     }

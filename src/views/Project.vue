@@ -1,8 +1,10 @@
 <template>
   <section class="project-me">
-    <div class="button-style">
+    <div
+      class="button-style animate__animated animate__bounce animate__infinite"
+    >
       <h2 class="head-numbering">
-        <span>02.</span> I’ve Built this
+        <span>03.</span> I’ve Built this
         <div class="button-style2"></div>
       </h2>
     </div>
@@ -168,7 +170,7 @@ export default {};
   opacity: 1;
   transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-  margin-top: 90px;
+  margin-top: 100px;
   margin-left: 380px;
 
   .button-style {
@@ -183,7 +185,7 @@ export default {};
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
-    margin-top: 120px;
+    margin-left: 240px;
 
     //Mobile Responsiveness
     @include breakpoint-down(small) {
@@ -221,7 +223,7 @@ export default {};
     h2 {
       font-size: 25px;
       font-weight: 700;
-      color: #ccd6f6;
+      color: #e6f1ff;
       //Mobile Responsiveness
       @include breakpoint-down(medium) {
         font-size: 17px;
@@ -266,7 +268,7 @@ export default {};
     justify-content: space-between;
     // margin-right: 300px;
     position: relative;
-    margin-top: 90px;
+    margin-top: 100px;
     margin-bottom: 60px;
 
     .image-container {
