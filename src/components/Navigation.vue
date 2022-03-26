@@ -42,9 +42,10 @@ export default {
     // ReadPdf() {
     //   window.open("./Profile.pdf", "_blank");
     // },
-    readPdf: function () {
+    readPdf() {
       const pdf = "./profile.pdf";
       window.open(pdf, "_blank").focus();
+      return;
     },
 
     toggleMobileNav() {
@@ -162,12 +163,11 @@ export default {
       //60px = 3.75rem
       color: #00cffd;
       background-color: transparent;
-      border: 2px solid;
+      border: 1px solid;
       border-color: #00cffd #00e9df;
       border-radius: 15px 0px 15px 0px;
       text-decoration: none;
       //10px = 0.625rem;
-      line-height: 1;
       //18px  1.125rem 40px = 2.5rem
       padding: 0.5rem 2rem;
       // margin: 1rem 2rem 1rem;

@@ -12,7 +12,10 @@
         <div class="big-heading-2">
           <!-- <h3>The full stop to your search.</h3> -->
           <!-- <h3>I design things for the web.</h3> -->
-          <h3>The Tech guy with the Web.</h3>
+          <h3 class="animate__animated animate__pulse animate__infinite">
+            The Tech guy with the Web.
+          </h3>
+
           <!-- <hr /> -->
         </div>
         <div class="small-heading-detail">
@@ -100,7 +103,7 @@
     </section>
 
     <section class="flex">
-      <Skills />
+      <SkillSet />
     </section>
     <router-view />
   </div>
@@ -108,7 +111,7 @@
 
 <script>
 // @ is an alias to /src
-import Skills from "@/views/Skills.vue";
+import SkillSet from "@/views/SkillSet.vue";
 import Project from "@/views/Project.vue";
 import Experience from "@/views/Experience.vue";
 import About from "@/views/About.vue";
@@ -124,8 +127,10 @@ export default {
     About,
     Experience,
     Project,
-    Skills,
+    SkillSet,
   },
+
+  methods: {},
 };
 </script>
 
@@ -140,6 +145,8 @@ export default {
   --fz-heading: 32px;
   --lightest-slate: #ccd6f6;
   --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --animate-duration: 0.1ms;
+  --animate-delay: 400ms;
 }
 
 h1,

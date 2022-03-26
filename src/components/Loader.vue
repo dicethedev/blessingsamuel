@@ -37,7 +37,7 @@ export default {
     showToggle() {
       setTimeout(() => {
         this.show = false;
-      }, 2000);
+      }, 1000);
     },
   },
 };
@@ -61,20 +61,20 @@ export default {
   overflow: auto;
 
   .container {
-    width: 100px;
-    height: 90px;
+    width: 115px;
+    height: 115px;
     background: #ebebeb;
     //10px
-    border-radius: 40px;
+    border-radius: 30px;
     padding: 30px 25px;
     margin-bottom: 40px;
 
     .logo img {
-      width: 7rem;
-      height: 7rem;
+      width: 6rem;
+      height: 6rem;
       background-repeat: no-repeat;
-      margin-left: -6px;
-      margin-top: -18px;
+      margin-left: -14px;
+      margin-top: -25px;
     }
 
     .circles {
@@ -83,8 +83,8 @@ export default {
       margin-left: 6px;
 
       .circle {
-        width: 20px;
-        height: 20px;
+        width: 10px;
+        height: 10px;
         margin: 5px;
         background: linear-gradient(180deg, #00cffd 0%, #00e9df 100%);
         border-radius: 50%;

@@ -101,7 +101,7 @@ export default {
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-  margin-top: 90px;
+  margin-top: 1200px;
   margin-left: 380px;
 
   .button-style {
@@ -167,11 +167,11 @@ export default {
         background-color: #00cffd;
         border-radius: 0px 20px;
         padding: 1.25rem 1.88rem;
-        width: 100px;
+        width: 110px;
         height: 60px;
         cursor: pointer;
         margin-top: -47px;
-        margin-left: 190px;
+        margin-left: 176px;
 
         //Mobile Responsiveness
         @include breakpoint-down(medium) {
@@ -187,7 +187,7 @@ export default {
     display: flex;
     align-items: center;
     //115px
-    margin-top: 7.1875rem;
+    margin-top: 90px;
 
     //Tablet Responsiveness
     @include breakpoint-down(large) {

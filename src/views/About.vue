@@ -154,9 +154,9 @@ export default {};
     margin-top: 4.375rem;
     border-radius: 30px;
     background-color: transparent;
-    border: 2px solid #00e9df;
+    border: 1px solid;
     border-color: #00cffd #00e9df #00cffd #00e9df;
-    overflow: hidden;
+    // overflow: hidden;
 
     //Tablet Responsiveness
     @include breakpoint-down(large) {

@@ -7,6 +7,97 @@
       </h2>
     </div>
 
+    <!-- 1 -->
+    <div class="project-content">
+      <div class="image-container">
+        <a href=""
+          ><img src="../assets/project-image-1.jpg" alt="project-image-1"
+        /></a>
+      </div>
+      <div class="project-details">
+        <h1>Featured Project</h1>
+        <h3>Weather App</h3>
+        <div class="container">
+          <p>
+            Weather app develop with Vue. An API is pass from openweather.org,
+            You can search any country of your choice from the web app and it
+            will tell you the country tempeature, date, time, atmosphere
+            changes. Having struggled understanding how to pass an API through
+            this I learn a lot from my struggle.
+          </p>
+        </div>
+        <div class="stacks">
+          <div class="stack">HTMl</div>
+          <div class="stack">CSS</div>
+          <div class="stack">VUE</div>
+          <div class="stack">API</div>
+        </div>
+
+        <div class="link-direction">
+          <a
+            href="https://toye-quiz.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="../assets/github-link-direct.svg" alt="" />
+          </a>
+          <a
+            href="https://toye-quiz.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img class="lmg-2" src="../assets/arrow-link-direct.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="project-content">
+      <div class="image-container">
+        <a href=""
+          ><img src="../assets/project-image-2.jpg" alt="project-image-1"
+        /></a>
+      </div>
+      <div class="project-details">
+        <h1>Featured Project</h1>
+        <h3>Weather App</h3>
+        <div class="container">
+          <p>
+            Weather app develop with Vue. An API is pass from openweather.org,
+            You can search any country of your choice from the web app and it
+            will tell you the country tempeature, date, time, atmosphere
+            changes. Having struggled understanding how to pass an API through
+            this I learn a lot from my struggle.
+          </p>
+        </div>
+        <div class="stacks">
+          <div class="stack">HTMl</div>
+          <div class="stack">CSS</div>
+          <div class="stack">VUE</div>
+          <div class="stack">API</div>
+        </div>
+
+        <div class="link-direction">
+          <a
+            href="https://toye-quiz.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../assets/github-link-direct.svg" alt="" />
+          </a>
+          <a
+            href="https://toye-quiz.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../assets/arrow-link-direct.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
     <div class="project-content">
       <div class="image-container">
         <a href=""
@@ -75,7 +166,6 @@ export default {};
   height: 100vh;
   visibility: visible;
   opacity: 1;
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
   margin-top: 90px;
@@ -174,10 +264,10 @@ export default {};
     margin-bottom: 200px;
     width: 100%;
     justify-content: space-between;
-    margin-right: -50px;
+    // margin-right: 300px;
     position: relative;
-    z-index: 1;
     margin-top: 90px;
+    margin-bottom: 60px;
 
     .image-container {
       //Mobile responsiveness
@@ -187,8 +277,8 @@ export default {};
       background: #d9e4f3;
       padding: 20px;
       border-radius: 3px;
-      width: 30.24vw;
-      height: 30.24vw;
+      width: 27.24vw;
+      height: 27.24vw;
 
       img {
         object-fit: cover;
@@ -198,9 +288,10 @@ export default {};
         border-radius: 3px;
       }
     }
+
     .project-details {
       width: 36vw;
-      margin-left: 100px;
+      margin-left: -90px;
 
       h1 {
         color: #0db9ff;
@@ -209,46 +300,44 @@ export default {};
         font-style: italic;
         line-height: 1.5;
         margin-bottom: 10px;
-        margin-left: 300px;
+        margin-left: 400px;
       }
       h3 {
         color: #e6f1ff;
         font-size: 30px;
         font-weight: 400px;
-        margin-left: 255px;
+        margin-left: 355px;
         margin-bottom: 20px;
       }
     }
 
     .container {
-      width: 650px;
-      height: 150px;
+      display: flex;
+      position: relative;
       background: #16294b;
       box-shadow: 4px 7px 57px 2px rgba(0, 0, 0, 0.25);
       border-radius: 5px;
-      margin-left: -200px;
+      padding: 15px;
 
       p {
         font-size: 16px;
         line-height: 1.5;
-        text-align: center;
+        text-align: right;
         color: #8892b0;
-        font-weight: 400;
-        max-width: 600px;
-        margin-top: -45px;
-        margin-left: 10px;
+        font-weight: 300;
       }
     }
 
     .stacks {
       display: flex;
-      margin-top: 30px;
+      margin-top: 20px;
       margin-bottom: 16px;
+      margin-left: 180px;
 
       .stack {
         display: flex;
-        width: 98px;
-        height: 36px;
+        width: 80px;
+        height: 32px;
         justify-content: center;
         align-items: center;
         background: var(--color-focus);
@@ -260,13 +349,22 @@ export default {};
       }
     }
     .link-direction {
-      margin-top: 32px;
-      margin-left: 360px;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      position: relative;
+      margin-top: 10px;
+      margin-left: 420px;
 
       a {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 10px;
         img {
           width: 25px;
-          margin-right: 10px;
           &:hover {
             border: 1px dashed #00cffd;
             padding: 10px;

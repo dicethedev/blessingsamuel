@@ -1,0 +1,193 @@
+<template>
+  <section class="skillset-me">
+    <div class="button-style">
+      <h2 class="head-numbering">
+        <span>04.</span> I’ve this Skillset
+        <div class="button-style2"></div>
+      </h2>
+    </div>
+
+    <div class="skillset">
+      <div class="skills">
+        <div class="skill-container">
+          <div class="skill-list">
+            <img src="../assets/logos_html-5.svg" alt="" />
+            <img src="../assets/logos_css-3.svg" alt="" />
+            <img src="../assets/logos_sass.svg" alt="" />
+            <img src="../assets/logos_javascript.svg" alt="" />
+            <img src="../assets/logos_vue.svg" alt="" />
+            <img src="../assets/logos_react.svg" alt="" />
+            <img src="../assets/logos_mysql.svg" alt="" />
+            <img src="../assets/logos_nodejs.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="scss" scoped>
+@import "/src/scss/_mixins.scss";
+:root {
+  --color-focus: #00cffd;
+  --fz-sm: 12px;
+  --fz-md: 16px;
+  --fz-heading: 32px;
+  --lightest-slate: #ccd6f6;
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --dice-color-shadow: rgba(2, 12, 27, 0.7);
+}
+
+.skillset-me {
+  position: relative;
+  height: 100vh;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
+    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  margin-top: 90px;
+  margin-left: 380px;
+
+  .button-style {
+    color: var(--color-focus);
+    background-color: transparent;
+    border: 1px dashed var(--color-focus);
+    border-radius: 0px 20px;
+    padding: 1.25rem 1.88rem;
+    word-spacing: 5px;
+    width: 305px;
+    height: 60px;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 120px;
+
+    //Mobile Responsiveness
+    @include breakpoint-down(small) {
+      margin-left: 200px;
+      margin-top: 500px;
+      width: 170px;
+      height: 20px;
+    }
+
+    //Mobile Responsiveness
+    @include breakpoint-down(medium) {
+      margin-left: -310px;
+      margin-top: 500px;
+      width: 170px;
+      height: 20px;
+    }
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-down(large) {
+      margin-left: -255px;
+    }
+
+    .head-numbering > h2 {
+      display: flex;
+      -webkit-box-align: center;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 10px 0px 40px;
+      width: 100%;
+      font-size: clamp(26px, 5vw, var(--fz-heading));
+      white-space: nowrap;
+    }
+
+    h2 {
+      font-size: 25px;
+      font-weight: 700;
+      color: #ccd6f6;
+      //Mobile Responsiveness
+      @include breakpoint-down(medium) {
+        font-size: 17px;
+      }
+      span {
+        color: #00cffd;
+        font-size: 19px;
+        font-weight: 200;
+        margin-right: 2px;
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          font-size: 16px;
+        }
+      }
+      .button-style2 {
+        color: var(--color-focus);
+        background-color: #00cffd;
+        border-radius: 0px 20px;
+        padding: 1.25rem 1.88rem;
+        width: 126px;
+        height: 60px;
+        cursor: pointer;
+        margin-top: -49px;
+        margin-left: 147px;
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          width: 34px;
+          height: 25px;
+          margin-top: -41px;
+          margin-left: 115px;
+        }
+      }
+    }
+  }
+
+  .skillset {
+    // background: #fff;
+    border: 1px solid var(--color-focus);
+    padding: 100px 6.944vw;
+    position: relative;
+    margin-top: 90px;
+    width: 1000px;
+
+    .skills {
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-container {
+      width: 100%;
+      overflow: hidden;
+      margin-right: -90px;
+      margin-top: 15px;
+
+      .skill-list {
+        display: flex;
+        align-items: center;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        -webkit-animation: scrollFromLefttoRight 4s ease-in-out 1s infinite;
+        animation: scrollFromLefttoRight 4s ease-in-out 1s infinite;
+
+        img {
+          margin-right: 10px;
+        }
+
+        @keyframes scrollFromLefttoRight {
+          0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+          }
+          50% {
+            -webkit-transform: translateX(-500%);
+            transform: translateX(-500%);
+          }
+          100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+}
+</style>
