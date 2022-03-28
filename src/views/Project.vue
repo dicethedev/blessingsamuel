@@ -37,18 +37,21 @@
 
         <div class="link-direction">
           <a
-            href="https://toye-quiz.netlify.app/"
+            href="https://github.com/dicethedev/Weatherapp"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="../assets/github-link-direct.svg" alt="" />
+            <img src="../assets/akar-icons_github-fill.svg" alt="github" />
           </a>
           <a
-            href="https://toye-quiz.netlify.app/"
+            href="https://weatherappbyblessing.vercel.app/"
             target="_blank"
             rel="noreferrer"
           >
-            <img class="lmg-2" src="../assets/arrow-link-direct.svg" alt="" />
+            <img
+              src="../assets/bi_arrow-right-circle-fill.svg"
+              alt="arrow-right"
+            />
           </a>
         </div>
       </div>
@@ -77,23 +80,19 @@
           <div class="stack">HTMl</div>
           <div class="stack">CSS</div>
           <div class="stack">VUE</div>
-          <div class="stack">API</div>
+          <!-- <div class="stack">VUE</div> -->
+          <div class="stack">FIREBASE</div>
         </div>
 
         <div class="link-direction">
-          <a
-            href="https://toye-quiz.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="../assets/github-link-direct.svg" alt="" />
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/akar-icons_github-fill.svg" alt="github" />
           </a>
-          <a
-            href="https://toye-quiz.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="../assets/arrow-link-direct.svg" alt="" />
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img
+              src="../assets/bi_arrow-right-circle-fill.svg"
+              alt="arrow-right"
+            />
           </a>
         </div>
       </div>
@@ -126,19 +125,11 @@
         </div>
 
         <div class="link-direction">
-          <a
-            href="https://toye-quiz.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="../assets/github-link-direct.svg" alt="" />
+          <a href="#" target="_blank" rel="noreferrer">
+            <img src="../assets/akar-icons_github-fill.svg" alt="github" />
           </a>
-          <a
-            href="https://toye-quiz.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img class="lmg-2" src="../assets/arrow-link-direct.svg" alt="" />
+          <a href="#" target="_blank" rel="noreferrer">
+            <img src="../assets/bi_arrow-right-circle-fill.svg" alt="Vector" />
           </a>
         </div>
       </div>
@@ -154,22 +145,23 @@ export default {};
 @import "/src/scss/_mixins.scss";
 :root {
   --color-focus: #00cffd;
+  --color-focus-fam: #00e9df;
   --fz-sm: 12px;
   --fz-md: 16px;
   --fz-heading: 32px;
   --lightest-slate: #ccd6f6;
-  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --light-slate: #e6f1ff;
+  --darkest-slate: #8892b0;
+  --easing: cubic-bezier(0.22, 0.68, 0, 1.71);
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --animate-duration: 0.1ms;
+  --animate-delay: 400ms;
   --dice-color-shadow: rgba(2, 12, 27, 0.7);
 }
 
 .project-me {
   position: relative;
   height: 100vh;
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
   margin-top: 100px;
   margin-left: 380px;
 
@@ -223,7 +215,7 @@ export default {};
     h2 {
       font-size: 25px;
       font-weight: 700;
-      color: #e6f1ff;
+      color: var(--light-slate);
       //Mobile Responsiveness
       @include breakpoint-down(medium) {
         font-size: 17px;
@@ -240,7 +232,7 @@ export default {};
       }
       .button-style2 {
         color: var(--color-focus);
-        background-color: #00cffd;
+        background-color: var(--color-focus);
         border-radius: 0px 20px;
         padding: 1.25rem 1.88rem;
         width: 101px;
@@ -302,13 +294,13 @@ export default {};
         font-style: italic;
         line-height: 1.5;
         margin-bottom: 10px;
-        margin-left: 400px;
+        margin-left: 390px;
       }
       h3 {
-        color: #e6f1ff;
-        font-size: 30px;
+        color: var(--light-slate);
+        font-size: clamp(24px, 5vw, 28px);
         font-weight: 400px;
-        margin-left: 355px;
+        margin-left: 358px;
         margin-bottom: 20px;
       }
     }
@@ -325,7 +317,7 @@ export default {};
         font-size: 16px;
         line-height: 1.5;
         text-align: right;
-        color: #8892b0;
+        color: var(--darkest-slate);
         font-weight: 300;
       }
     }
@@ -334,12 +326,16 @@ export default {};
       display: flex;
       margin-top: 20px;
       margin-bottom: 16px;
-      margin-left: 180px;
+      -webkit-box-pack: end;
+      justify-content: flex-end;
+      position: relative;
+      margin-right: 20px;
+      // margin-left: 180px;
 
       .stack {
         display: flex;
         width: 80px;
-        height: 32px;
+        height: 30px;
         justify-content: center;
         align-items: center;
         background: var(--color-focus);
@@ -352,25 +348,27 @@ export default {};
     }
     .link-direction {
       display: flex;
-      -webkit-box-align: center;
-      align-items: center;
+      -webkit-box-pack: end;
+      justify-content: flex-end;
       position: relative;
       margin-top: 10px;
-      margin-left: 420px;
+      margin-right: 25px;
 
       a {
-        display: flex;
+        display: inline-block;
         -webkit-box-pack: center;
         justify-content: center;
         -webkit-box-align: center;
         align-items: center;
-        padding: 10px;
+        padding: 8px;
         img {
-          width: 25px;
+          width: 20px;
           &:hover {
             border: 1px dashed #00cffd;
-            padding: 10px;
-            border-radius: 20px;
+            padding: 5px;
+            border-radius: 10px;
+            transition: var(--transition);
+            animation-delay: var(--easing);
           }
         }
       }

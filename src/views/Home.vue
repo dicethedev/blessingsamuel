@@ -34,7 +34,8 @@
         <!-- See projects is here -->
         <!--  <a v-bind:href="`mailto:${email}`">See Projects</a> -->
         <div class="action-button">
-          <router-link to="/">See Projects</router-link>
+          <!-- <router-link to="/">See Projects</router-link> -->
+          <a :href="`mailto:${email}`">See Projects</a>
         </div>
       </div>
     </section>
@@ -150,7 +151,9 @@ export default {
   --fz-md: 18px;
   --fz-heading: 32px;
   --lightest-slate: #ccd6f6;
-  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --light-slate: #e6f1ff;
+  --darkest-slate: #8892b0;
+  --easing: cubic-bezier(0.22, 0.68, 0, 1.71);
   --animate-duration: 0.1ms;
   --animate-delay: 400ms;
 }
@@ -183,7 +186,7 @@ h6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #ccd6f6;
+    margin-top: 90px;
 
     h1 {
       margin: 0px 0px 30px 4px;
@@ -207,7 +210,7 @@ h6 {
       h2 {
         //50px = 3.125rem
         font-size: 3.125rem;
-        color: #ccd6f6;
+        color: var(--light-slate);
         margin-bottom: 1rem;
 
         //Mobile Responsiveness
@@ -228,7 +231,7 @@ h6 {
       h3 {
         font-size: 60px;
         margin-bottom: 1rem;
-        color: #8892b0;
+        color: var(--darkest-slate);
         line-height: 0.9;
 
         //Mobile Responsiveness
@@ -252,7 +255,7 @@ h6 {
     .small-heading-detail {
       margin: 15px 0px 0px;
       max-width: 520px;
-      color: #8892b0;
+      color: var(--darkest-slate);
 
       //Responsiveness for Desktop or Laptop
       @include breakpoint-down(large) {
@@ -293,22 +296,6 @@ h6 {
         @include breakpoint-down(large) {
           margin-left: 30px;
         }
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          background-color: rgba(13, 186, 255, 0.185);
-          opacity: 0;
-          transition: opacity 150ms ease-in-out;
-        }
-
-        &:hover::before {
-          opacity: 1;
-        }
       }
     }
   }
@@ -345,6 +332,7 @@ h6 {
   li a {
     padding: 10px;
   }
+
   a {
     display: inline-block;
     text-decoration: none;
@@ -358,7 +346,7 @@ h6 {
     width: 23px;
     height: 23px;
     transition: var(--transition);
-    // transition: var(--easing);
+    animation-delay: var(--easing);
 
     &:hover {
       border: 1px dashed #00cffd;

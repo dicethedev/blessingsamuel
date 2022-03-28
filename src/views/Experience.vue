@@ -90,7 +90,7 @@ export default {
   --fz-md: 16px;
   --fz-heading: 32px;
   --lightest-slate: #ccd6f6;
-  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --easing: cubic-bezier(0.22, 0.68, 0, 1.71);
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --dice-color-shadow: rgba(2, 12, 27, 0.7);
 }

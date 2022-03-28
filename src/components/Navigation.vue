@@ -1,9 +1,8 @@
 <template>
   <header class="header" :class="{ 'scrolled-nav': scrolledNav }">
-    <div class="overlay"></div>
     <nav>
       <div class="branding-logo">
-        <a href="/#Home"><img src="@/assets/Logo.svg" alt="" /></a>
+        <a href="/" aria-label="home"><img src="@/assets/Logo.svg" alt="" /></a>
       </div>
 
       <!-- Resume Button area is here -->
@@ -33,6 +32,7 @@ export default {
     this.checkScreen();
   },
 
+  //this mounted is for scrollNav function
   mounted() {
     window.addEventListener("scroll", this.updateScroll);
   },
@@ -100,16 +100,6 @@ export default {
   transition: var(--transition);
   color: #fff;
   overflow: hidden;
-
-  .overlay {
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-image: linear-gradient(var(--light-slate), transparent);
-  }
 
   nav {
     position: relative;

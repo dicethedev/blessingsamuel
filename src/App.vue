@@ -1,6 +1,6 @@
 <template>
   <!-- Preloader for the page is here -->
-  <Loader />
+  <Loader @wheel.prevent @touchmove.prevent @scroll.prevent />
   <div class="app flex flex-column">
     <Navigation />
     <div></div>
@@ -40,7 +40,7 @@ export default {
 .app {
   background-color: #112240;
   position: relative;
-  min-height: 735vh;
+  min-height: 745vh;
   // overflow-x: hidden;
   // flex-direction: column;
   @media (min-width: 900px) {

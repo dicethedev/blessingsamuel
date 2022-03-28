@@ -36,12 +36,17 @@ export default {};
 @import "/src/scss/_mixins.scss";
 :root {
   --color-focus: #00cffd;
+  --color-focus-fam: #00e9df;
   --fz-sm: 12px;
   --fz-md: 16px;
   --fz-heading: 32px;
   --lightest-slate: #ccd6f6;
-  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --light-slate: #e6f1ff;
+  --darkest-slate: #8892b0;
+  --easing: cubic-bezier(0.22, 0.68, 0, 1.71);
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --animate-duration: 0.1ms;
+  --animate-delay: 400ms;
   --dice-color-shadow: rgba(2, 12, 27, 0.7);
 }
 
@@ -105,13 +110,13 @@ export default {};
     h2 {
       font-size: 25px;
       font-weight: 700;
-      color: #e6f1ff;
+      color: var(--light-slate);
       //Mobile Responsiveness
       @include breakpoint-down(medium) {
         font-size: 17px;
       }
       span {
-        color: #00cffd;
+        color: var(--color-focus);
         font-size: 19px;
         font-weight: 200;
         margin-right: 2px;
@@ -122,7 +127,7 @@ export default {};
       }
       .button-style2 {
         color: var(--color-focus);
-        background-color: #00cffd;
+        background-color: var(--color-focus);
         border-radius: 0px 20px;
         padding: 1.25rem 1.88rem;
         width: 126px;

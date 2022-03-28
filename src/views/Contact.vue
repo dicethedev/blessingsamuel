@@ -17,24 +17,36 @@
         in touch with me. I’ll try all my best to reply you on time. Thank you!
       </p>
       <div class="contact-link">
-        <a href="#" target="_blank" rel="noopener">Say Hello</a>
+        <a :href="`mailto:${email}`">Say Hello</a>
       </div>
     </div>
 
     <footer>
       <h3>Designed & Built by Blessing Samuel</h3>
       <div class="project-destination">
-        <a href="https://github.com/dicethedev" target="_blank" rel="noreferrer"
-          ><img src="../assets/fa-brands_figma.svg" alt=""
+        <a
+          href="https://www.figma.com/file/FrJ9xgmbpnefZUTFBr0CNE/Blessing-Samuel-Portfolio?node-id=0%3A1"
+          target="_blank"
+          rel="noreferrer"
+          ><img src="../assets/fa-brands_figma.svg" alt="figma"
         /></a>
-        <a href=""><img src="../assets/akar-icons_link-out.svg" alt="" /></a>
+        <a href="https://github.com/dicethedev/blessingsamuel"
+          ><img src="../assets/akar-icons_link-out.svg" alt=""
+        /></a>
       </div>
     </footer>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Contact",
+  data() {
+    return {
+      email: "dicethedev@gmail.com",
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -45,7 +57,7 @@ export default {};
   --fz-md: 16px;
   --fz-heading: 32px;
   --lightest-slate: #ccd6f6;
-  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --easing: cubic-bezier(0.22, 0.68, 0, 1.71);
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --dice-color-shadow: rgba(2, 12, 27, 0.7);
 }
@@ -148,6 +160,7 @@ export default {};
     h1 {
       font-size: clamp(40px, 5vw, 60px);
       font-style: italic;
+      color: #e6f1ff;
     }
     p {
       color: #8892b0;

@@ -51,29 +51,30 @@ export default {};
 @import "/src/scss/_mixins.scss";
 :root {
   --color-focus: #00cffd;
+  --color-focus-fam: #00e9df;
   --fz-sm: 12px;
   --fz-md: 16px;
   --fz-heading: 32px;
   --lightest-slate: #ccd6f6;
-  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --light-slate: #e6f1ff;
+  --darkest-slate: #8892b0;
+  --easing: cubic-bezier(0.22, 0.68, 0, 1.71);
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --animate-duration: 0.1ms;
+  --animate-delay: 400ms;
   --dice-color-shadow: rgba(2, 12, 27, 0.7);
 }
+
 .about-me {
   position: relative;
   height: 100vh;
-  visibility: visible;
-  opacity: 1;
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
   margin-top: 90px;
   margin-left: 420px;
 
   .button-style {
     color: var(--color-focus);
     background-color: transparent;
-    border: 1px dashed #00e9df;
+    border: 1px dashed var(--color-focus-fam);
     border-radius: 0px 20px;
     padding: 1.25rem 1.88rem;
     word-spacing: 5px;
@@ -216,7 +217,7 @@ export default {};
       }
 
       .details-2 {
-        color: #8892b0;
+        color: var(--darkest-slate);
         font-weight: 300;
         justify-content: center;
         align-items: center;
