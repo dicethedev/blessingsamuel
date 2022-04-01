@@ -7,10 +7,8 @@
 
       <!-- Resume Button area is here -->
       <div>
-        <!-- href="/resume.pdf" -->
-        <a class="resume-button" href="#" @click="readPdf" target="_blank"
-          >Resume</a
-        >
+        <!-- href="/resume.pdf"  @click="readPdf" -->
+        <a class="resume-button" href="./profile.pdf" target="_blank">Resume</a>
       </div>
     </nav>
   </header>
@@ -38,15 +36,10 @@ export default {
   },
 
   methods: {
-    //PDF file
-    // ReadPdf() {
-    //   window.open("./Profile.pdf", "_blank");
+    // readPdf() {
+    //   const pdf = "./profile.pdf";
+    //   window.open(require(pdf), "_blank");
     // },
-    readPdf() {
-      const pdf = "./profile.pdf";
-      window.open(pdf, "_blank").focus();
-      return;
-    },
 
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
@@ -117,9 +110,6 @@ export default {
       width: 3.75rem;
       height: 3.75rem;
       margin: 1rem 2rem 1rem;
-      // margin-top: 1rem;
-      // margin-left: 2rem;
-      // margin-bottom: 1rem;
 
       @media (max-width: 640px) {
         margin-left: 5px !important;
@@ -135,10 +125,11 @@ export default {
         width: 60px;
         height: 60px;
         transition: 200ms ease-in-out;
+        transition: var(--transition);
 
         &:hover {
           border: 1px dashed #00cffd;
-          border-radius: 50px;
+          border-radius: 10px;
         }
       }
     }

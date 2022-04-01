@@ -16,26 +16,26 @@
         you’re currently have a role for Blessing, please don’t hestiate to get
         in touch with me. I’ll try all my best to reply you on time. Thank you!
       </p>
-      <div class="contact-link">
+      <button class="contact-link">
         <a :href="`mailto:${email}`">Say Hello</a>
-      </div>
+      </button>
     </div>
-
-    <footer>
-      <h3>Designed & Built by Blessing Samuel</h3>
-      <div class="project-destination">
-        <a
-          href="https://www.figma.com/file/FrJ9xgmbpnefZUTFBr0CNE/Blessing-Samuel-Portfolio?node-id=0%3A1"
-          target="_blank"
-          rel="noreferrer"
-          ><img src="../assets/fa-brands_figma.svg" alt="figma"
-        /></a>
-        <a href="https://github.com/dicethedev/blessingsamuel"
-          ><img src="../assets/akar-icons_link-out.svg" alt=""
-        /></a>
-      </div>
-    </footer>
   </section>
+
+  <footer>
+    <h3>Designed & Built by Blessing Samuel</h3>
+    <div class="project-destination">
+      <a
+        href="https://www.figma.com/file/FrJ9xgmbpnefZUTFBr0CNE/Blessing-Samuel-Portfolio?node-id=0%3A1"
+        target="_blank"
+        rel="noreferrer"
+        ><img src="../assets/fa-brands_figma.svg" alt="figma"
+      /></a>
+      <a href="https://github.com/dicethedev/blessingsamuel"
+        ><img src="../assets/akar-icons_link-out.svg" alt=""
+      /></a>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -78,7 +78,12 @@ export default {
     line-height: 1;
     text-decoration: none;
     margin-top: -100px;
-    margin-left: 700px;
+    // margin-left: 700px;
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-up(xlarge) {
+      margin-left: 730px;
+    }
 
     //Mobile Responsiveness
     @include breakpoint-down(small) {
@@ -98,7 +103,7 @@ export default {
 
     //Responsiveness for Desktop or Laptop
     @include breakpoint-down(large) {
-      margin-left: -255px;
+      margin-left: 530px;
     }
 
     .head-numbering > h2 {
@@ -155,37 +160,45 @@ export default {
 
   .contact-details {
     margin-top: 70px;
-    margin-left: 640px;
+    max-width: 600px;
+    text-align: center;
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-up(xlarge) {
+      margin-left: 580px;
+    }
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-down(large) {
+      margin-left: 380px;
+    }
 
     h1 {
-      font-size: clamp(40px, 5vw, 60px);
+      font-size: clamp(40px, 5vw, 55px);
       font-style: italic;
       color: #e6f1ff;
     }
+
     p {
       color: #8892b0;
       font-size: var(--fz-md);
-      max-width: 500px;
-      text-align: center;
       line-height: 26.44px;
-      margin-left: -50px;
       margin-top: 20px;
     }
+
     .contact-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      font-size: 20px;
-      font-weight: 400;
+      font-size: 16px;
+      font-weight: 300;
       word-spacing: 5px;
-      border: 2px solid var(--color-focus);
+      color: var(--green);
+      background-color: transparent;
+      border: 1px solid var(--color-focus);
       border-radius: 10px;
-      padding: 0 20px;
+      padding: 1.25rem 1.75rem;
       width: fit-content;
-      height: 80px;
       margin-top: 30px;
-      margin-left: 120px;
+      // margin-left: 140px;
       overflow: hidden;
 
       a {
@@ -195,30 +208,42 @@ export default {
       }
     }
   }
+}
 
-  footer {
-    display: flex;
-    margin-top: 230px;
-    text-align: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 560px;
+footer {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  min-height: 70px;
+  padding: 15px;
+  text-align: center;
+  margin-top: 450px;
+  margin-left: -420px;
 
-    h3 {
-      color: #8892b0;
-      font-size: 15px;
-      font-weight: 300;
-    }
+  h3 {
+    color: #8892b0;
+    font-size: 13px;
+    font-weight: 300;
+  }
 
-    .project-destination {
-      margin-top: 10px;
-      a {
-        text-decoration: none;
-        img {
-          margin-right: 5px;
+  .project-destination {
+    margin-top: 10px;
+    a {
+      text-decoration: none;
+
+      img {
+        margin-right: 5px;
+
+        &:hover {
+          border: 1px dashed #00cffd;
+          padding: 5px;
+          border-radius: 10px;
+          transition: var(--transition);
+          animation-delay: var(--easing);
         }
       }
     }

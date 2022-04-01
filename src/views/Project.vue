@@ -19,19 +19,17 @@
       <div class="project-details">
         <h1>Featured Project</h1>
         <h3>Weather App</h3>
-        <div class="container">
-          <p>
-            Weather app develop with Vue. An API is pass from openweather.org,
-            You can search any country of your choice from the web app and it
-            will tell you the country tempeature, date, time, atmosphere
-            changes. Having struggled understanding how to pass an API through
-            this I learn a lot from my struggle.
-          </p>
-        </div>
+        <p>
+          Weather app develop with Vue. An API is pass from openweather.org, You
+          can search any country of your choice from the web app and it will
+          tell you the country tempeature, date, time, atmosphere changes.
+          Having struggled understanding how to pass an API through this I learn
+          a lot from my struggle.
+        </p>
         <div class="stacks">
           <div class="stack">HTMl</div>
           <div class="stack">CSS</div>
-          <div class="stack">VUE</div>
+          <div class="stack">VUE.JS</div>
           <div class="stack">API</div>
         </div>
 
@@ -67,15 +65,15 @@
       <div class="project-details">
         <h1>Featured Project</h1>
         <h3>Weather App</h3>
-        <div class="container">
-          <p>
-            Weather app develop with Vue. An API is pass from openweather.org,
-            You can search any country of your choice from the web app and it
-            will tell you the country tempeature, date, time, atmosphere
-            changes. Having struggled understanding how to pass an API through
-            this I learn a lot from my struggle.
-          </p>
-        </div>
+
+        <p>
+          Weather app develop with Vue. An API is pass from openweather.org, You
+          can search any country of your choice from the web app and it will
+          tell you the country tempeature, date, time, atmosphere changes.
+          Having struggled understanding how to pass an API through this I learn
+          a lot from my struggle.
+        </p>
+
         <div class="stacks">
           <div class="stack">HTMl</div>
           <div class="stack">CSS</div>
@@ -108,19 +106,19 @@
       <div class="project-details">
         <h1>Featured Project</h1>
         <h3>Weather App</h3>
-        <div class="container">
-          <p>
-            Weather app develop with Vue. An API is pass from openweather.org,
-            You can search any country of your choice from the web app and it
-            will tell you the country tempeature, date, time, atmosphere
-            changes. Having struggled understanding how to pass an API through
-            this I learn a lot from my struggle.
-          </p>
-        </div>
+
+        <p>
+          Weather app develop with Vue. An API is pass from openweather.org, You
+          can search any country of your choice from the web app and it will
+          tell you the country tempeature, date, time, atmosphere changes.
+          Having struggled understanding how to pass an API through this I learn
+          a lot from my struggle.
+        </p>
+
         <div class="stacks">
           <div class="stack">HTMl</div>
           <div class="stack">CSS</div>
-          <div class="stack">VUE</div>
+          <div class="stack">VUE.JS</div>
           <div class="stack">API</div>
         </div>
 
@@ -197,7 +195,12 @@ export default {};
 
     //Responsiveness for Desktop or Laptop
     @include breakpoint-down(large) {
-      margin-left: -255px;
+      margin-left: 150px;
+    }
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-up(xlarge) {
+      margin-left: 340px;
     }
 
     .head-numbering > h2 {
@@ -258,21 +261,32 @@ export default {};
     margin-bottom: 200px;
     width: 100%;
     justify-content: space-between;
-    // margin-right: 300px;
     position: relative;
     margin-top: 100px;
     margin-bottom: 60px;
+    flex-direction: row;
+
+    &:nth-last-of-type(2n) {
+      flex-direction: row-reverse;
+      // margin-left: -70px;
+    }
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-down(large) {
+      margin-left: -50px;
+    }
 
     .image-container {
-      //Mobile responsiveness
-      // padding: 40px;
-      // width: 34.24vw;
-      // height: 34.24vw;
-      background: #d9e4f3;
-      padding: 20px;
-      border-radius: 3px;
-      width: 27.24vw;
-      height: 27.24vw;
+      background: var(--light-slate);
+      padding: 25px;
+      border-radius: 5px;
+      width: 28.24vw;
+      height: 28.24vw;
+
+      //Responsiveness for Desktop or Laptop
+      @include breakpoint-down(large) {
+        padding: 15px;
+      }
 
       img {
         object-fit: cover;
@@ -285,7 +299,12 @@ export default {};
 
     .project-details {
       width: 36vw;
-      margin-left: -90px;
+      margin-left: 60px;
+
+      //Responsiveness for Desktop or Laptop
+      @include breakpoint-down(large) {
+        width: 40vw;
+      }
 
       h1 {
         color: #0db9ff;
@@ -294,81 +313,78 @@ export default {};
         font-style: italic;
         line-height: 1.5;
         margin-bottom: 10px;
-        margin-left: 390px;
+        // margin-left: 250px;
       }
+
       h3 {
         color: var(--light-slate);
         font-size: clamp(24px, 5vw, 28px);
         font-weight: 400px;
-        margin-left: 358px;
+        // margin-left: 215px;
         margin-bottom: 20px;
-      }
-    }
 
-    .container {
-      display: flex;
-      position: relative;
-      background: #16294b;
-      box-shadow: 4px 7px 57px 2px rgba(0, 0, 0, 0.25);
-      border-radius: 5px;
-      padding: 15px;
+        //Responsiveness for Desktop or Laptop
+        @include breakpoint-down(large) {
+          font-size: clamp(25px, 5vw, 18px);
+          margin-right: -500px;
+        }
+      }
 
       p {
         font-size: 16px;
         line-height: 1.5;
-        text-align: right;
         color: var(--darkest-slate);
         font-weight: 300;
+        max-width: 300px;
       }
-    }
 
-    .stacks {
-      display: flex;
-      margin-top: 20px;
-      margin-bottom: 16px;
-      -webkit-box-pack: end;
-      justify-content: flex-end;
-      position: relative;
-      margin-right: 20px;
-      // margin-left: 180px;
-
-      .stack {
+      .stacks {
         display: flex;
-        width: 80px;
-        height: 30px;
-        justify-content: center;
-        align-items: center;
-        background: var(--color-focus);
-        color: #112240;
-        border-radius: 5px;
-        margin-right: 10px;
-        letter-spacing: 0.2em;
-        font-size: 12px;
-      }
-    }
-    .link-direction {
-      display: flex;
-      -webkit-box-pack: end;
-      justify-content: flex-end;
-      position: relative;
-      margin-top: 10px;
-      margin-right: 25px;
+        margin-top: 30px;
+        margin-bottom: 16px;
 
-      a {
-        display: inline-block;
-        -webkit-box-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        align-items: center;
-        padding: 8px;
-        img {
-          width: 20px;
-          &:hover {
-            border: 1px dashed #00cffd;
-            padding: 5px;
-            border-radius: 10px;
-            transition: var(--transition);
-            animation-delay: var(--easing);
+        //Responsiveness for Desktop or Laptop
+        @include breakpoint-down(large) {
+          // margin-right: 300px;
+        }
+
+        .stack {
+          display: flex;
+          width: 80px;
+          height: 30px;
+          justify-content: center;
+          align-items: center;
+          background: var(--color-focus);
+          color: #112240;
+          border-radius: 5px;
+          margin-right: 10px;
+          letter-spacing: 0.2em;
+          font-size: 12px;
+        }
+      }
+
+      .link-direction {
+        display: flex;
+        margin-top: 10px;
+
+        a {
+          display: inline-block;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          padding: 8px;
+
+          img {
+            width: 20px;
+
+            &:hover {
+              border: 1px dashed #00cffd;
+              padding: 5px;
+              border-radius: 10px;
+              transition: var(--transition);
+              animation-delay: var(--easing);
+            }
           }
         }
       }

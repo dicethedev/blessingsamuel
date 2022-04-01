@@ -1,4 +1,6 @@
 <template>
+  <!-- Preloader for the page is here -->
+  <Loader />
   <div class="home">
     <section class="home-title">
       <div class="hero-text container">
@@ -10,8 +12,6 @@
         </div>
 
         <div class="big-heading-2">
-          <!-- <h3>The full stop to your search.</h3> -->
-          <!-- <h3>I design things for the web.</h3> -->
           <h3 class="animate__animated animate__pulse animate__infinite">
             The Tech guy with the Web.
           </h3>
@@ -20,10 +20,10 @@
         </div>
         <div class="small-heading-detail">
           <p>
-            I love to build and style things that live on web pages with great
+            I love to build and style things that live on the web with great
             user interface & experience. I am very good with HTML5, CSS3 (SCSS
             included). I am also very good with JavaScript and its frameworks
-            such as Vue & React. I have over 2 years professional experience in
+            such as Vue & React. I have over 1 years professional experience in
             front end development.
             <!-- <a href="https://myshelta.com/" target="_blank" rel="norefer">
               Shelta.
@@ -34,8 +34,8 @@
         <!-- See projects is here -->
         <!--  <a v-bind:href="`mailto:${email}`">See Projects</a> -->
         <div class="action-button">
-          <!-- <router-link to="/">See Projects</router-link> -->
           <a :href="`mailto:${email}`">See Projects</a>
+          <div class="water-liquid"></div>
         </div>
       </div>
     </section>
@@ -116,6 +116,7 @@
 
 <script>
 // @ is an alias to /src
+import Loader from "@/components/Loader.vue";
 import Contact from "@/views/Contact.vue";
 import SkillSet from "@/views/SkillSet.vue";
 import Project from "@/views/Project.vue";
@@ -135,6 +136,7 @@ export default {
     Project,
     SkillSet,
     Contact,
+    Loader,
   },
 
   methods: {},
@@ -153,7 +155,7 @@ export default {
   --lightest-slate: #ccd6f6;
   --light-slate: #e6f1ff;
   --darkest-slate: #8892b0;
-  --easing: cubic-bezier(0.22, 0.68, 0, 1.71);
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
   --animate-duration: 0.1ms;
   --animate-delay: 400ms;
 }
@@ -194,10 +196,8 @@ h6 {
       //5px = 0.3125rem
       word-spacing: 0.3125rem;
       margin-bottom: 1rem;
-      font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+      font-size: clamp(13px, 5vw, 18px);
       font-weight: 400;
-      transition: var(--transition);
-      transition-delay: 100ms;
 
       //Responsiveness for Desktop or Laptop
       @include breakpoint-down(large) {
@@ -209,7 +209,7 @@ h6 {
       margin: 0px;
       h2 {
         //50px = 3.125rem
-        font-size: 3.125rem;
+        font-size: clamp(40px, 6vw, 76px);
         color: var(--light-slate);
         margin-bottom: 1rem;
 
@@ -228,11 +228,11 @@ h6 {
 
     .big-heading-2 {
       margin: 0px;
+      line-height: 0.9;
       h3 {
-        font-size: 60px;
+        font-size: clamp(30px, 6vw, 63px);
         margin-bottom: 1rem;
         color: var(--darkest-slate);
-        line-height: 0.9;
 
         //Mobile Responsiveness
         @include breakpoint-down(medium) {
@@ -280,17 +280,39 @@ h6 {
       margin-top: 4.375rem;
 
       a {
-        color: var(--color-focus);
-        background-color: transparent;
-        border: 1px solid var(--color-focus);
-        border-radius: 30px 0px 30px 0px;
-        padding: 1.25rem 3rem;
-        word-spacing: 5px;
-        font-size: 1rem;
-        line-height: 1;
+        padding: 15px 25px;
+        border: unset;
+        border-radius: 0 20px;
         text-decoration: none;
-        cursor: pointer;
+        background: var(--color-focus);
+        position: relative;
+        color: var(--light-slate);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        word-spacing: 5px;
+        font-weight: 400;
+        transition: all 250ms ease-in-out;
         overflow: hidden;
+
+        &:hover {
+          color: #e8e8e8;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 0;
+          border-radius: 0 20px;
+          background-color: var(--light-slate);
+          transition: all 250ms ease-in-out;
+        }
+
+        &:hover::before {
+          width: 90%;
+        }
 
         //Responsiveness for Desktop or Laptop
         @include breakpoint-down(large) {
@@ -351,7 +373,7 @@ h6 {
     &:hover {
       border: 1px dashed #00cffd;
       padding: 5px;
-      border-radius: 10px;
+      border-radius: 8px;
     }
   }
   // Line-focus styling area is here

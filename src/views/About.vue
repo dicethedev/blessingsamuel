@@ -92,8 +92,14 @@ export default {};
 
     //Responsiveness for Desktop or Laptop
     @include breakpoint-down(large) {
-      margin-left: -180px;
+      margin-left: 150px;
     }
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-up(xlarge) {
+      margin-left: 340px;
+    }
+
     .head-numbering > h2 {
       display: flex;
       -webkit-box-align: center;
@@ -161,9 +167,9 @@ export default {};
     border-color: #00cffd #00e9df #00cffd #00e9df;
     // overflow: hidden;
 
-    //Tablet Responsiveness
+    //Responsiveness for Desktop or Laptop
     @include breakpoint-down(large) {
-      margin-left: -20px;
+      margin-left: 30px;
     }
 
     //Mobile - Tablet Responsiveness

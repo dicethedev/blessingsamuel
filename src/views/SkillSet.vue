@@ -92,7 +92,12 @@ export default {};
 
     //Responsiveness for Desktop or Laptop
     @include breakpoint-down(large) {
-      margin-left: -255px;
+      margin-left: 170px;
+    }
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-up(xlarge) {
+      margin-left: 340px;
     }
 
     .head-numbering > h2 {
@@ -154,6 +159,13 @@ export default {};
     position: relative;
     margin-top: 90px;
     width: 1000px;
+
+    //Responsiveness for Desktop or Laptop
+    @include breakpoint-down(large) {
+      margin-left: -80px;
+      padding: 50px 6.944vw;
+      width: 800px;
+    }
 
     .skills {
       display: flex;
