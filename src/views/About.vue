@@ -1,5 +1,5 @@
 <template>
-  <section class="about-me">
+  <div class="about-me">
     <div
       class="button-style animate__animated animate__bounce animate__infinite"
     >
@@ -9,14 +9,13 @@
       </h2>
     </div>
 
-    <div class="container">
-      <div class="container-details">
-        <div class="details-1">
-          <img src="@/assets/Profile.jpg" alt="" />
-        </div>
-
-        <div class="details-2">
-          <p>
+    <div class="about-content">
+      <div class="about-me-content">
+        <div class="left">
+          <div class="right">
+            <img class="about-me-img" src="@/assets/Profile.jpg" alt="" />
+          </div>
+          <p class="about-paragraph">
             I am a frontend software engineer currently based in Nigeria. I am
             very proficient using javascript and its frameworks like Vue and
             React. I am also very good with mock up languages such as html and
@@ -28,7 +27,7 @@
             however I always put my best & maintain a strong team bonding for
             every project I get to work on.
           </p>
-          <p>
+          <p class="about-paragraph">
             I was born in Kogi State, Nigeria. I graduated with a second class
             upper division in Sofwtare Engineering in Nigeria. I look forward to
             expanding my talent in the backend development.
@@ -38,9 +37,9 @@
       </div>
     </div>
 
-    <div class="focus-line-heading"></div>
+    <!-- <div class="focus-line-heading"></div> -->
     <router-view />
-  </section>
+  </div>
 </template>
 
 <script>
@@ -69,7 +68,7 @@ export default {};
   position: relative;
   height: 100vh;
   margin-top: 90px;
-  margin-left: 420px;
+  margin-left: 260px;
 
   .button-style {
     color: var(--color-focus);
@@ -84,20 +83,18 @@ export default {};
     text-decoration: none;
     margin-left: 240px;
 
-    //Tablet Responsiveness
+    //Mobile Responsiveness
+    @include breakpoint-down(small) {
+      margin-left: -280px;
+      width: 190px;
+      height: 52px;
+    }
+
+    //Mobile Responsiveness
     @include breakpoint-down(medium) {
-      width: 140px;
-      height: 20px;
-    }
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-down(large) {
-      margin-left: 150px;
-    }
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-up(xlarge) {
-      margin-left: 340px;
+      margin-left: -25px;
+      width: 190px;
+      height: 52px;
     }
 
     .head-numbering > h2 {
@@ -117,18 +114,31 @@ export default {};
       font-size: 25px;
       font-weight: 700;
       color: #e6f1ff;
+
+      //Mobile Responsiveness
+      @include breakpoint-down(small) {
+        font-size: 18px;
+      }
+
       //Mobile Responsiveness
       @include breakpoint-down(medium) {
-        font-size: 17px;
+        font-size: 19px;
       }
+
       span {
         color: #00cffd;
         font-size: 19px;
         font-weight: 200;
         margin-right: 10px;
+
+        //Mobile Responsiveness
+        @include breakpoint-down(small) {
+          font-size: 17px;
+        }
+
         //Mobile Responsiveness
         @include breakpoint-down(medium) {
-          font-size: 16px;
+          font-size: 18px;
         }
       }
       .button-style2 {
@@ -143,102 +153,79 @@ export default {};
         margin-left: 115px;
 
         //Mobile Responsiveness
+        @include breakpoint-down(small) {
+          margin-top: -42px;
+          margin-left: 95px;
+          width: 63px;
+          height: 53px;
+        }
+
+        //Mobile Responsiveness
         @include breakpoint-down(medium) {
-          width: 34px;
-          height: 25px;
-          margin-top: -40px;
-          margin-left: 85px;
+          margin-top: -42px;
+          margin-left: 95px;
+          width: 64px;
+          height: 53px;
         }
       }
     }
   }
 
-  .container {
+  .about-content {
+    margin-top: -90px;
+    width: 100%;
     display: flex;
-    width: 95vw;
-    max-width: 500px;
-    padding: 2rem;
-    background-color: rgba(17, 34, 64, 1);
-    padding: 1.5rem;
-    margin-top: 4.375rem;
-    border-radius: 30px;
-    background-color: transparent;
-    border: 1px solid;
-    border-color: #00cffd #00e9df #00cffd #00e9df;
-    // overflow: hidden;
+    align-items: center;
+    padding: 200px 6.944vw 150px;
+    overflow-y: hidden;
 
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-down(large) {
-      margin-left: 30px;
-    }
-
-    //Mobile - Tablet Responsiveness
-    @include breakpoint-down(medium) {
-      margin-left: -200px;
-      max-width: 380px;
-    }
-
-    //Tablet Responsiveness
+    //Mobile Responsiveness
     @include breakpoint-down(small) {
-      margin-left: -320px;
-      max-width: 370px;
-      overflow-x: hidden;
+      margin-left: -390px;
+      margin-top: -100px;
     }
 
-    //Desktop Responsiveness
-    @include breakpoint-up(xlarge) {
-      margin-left: 200px;
+    //Mobile Responsiveness
+    @include breakpoint-down(medium) {
+      margin-left: -125px;
     }
 
-    .container-details {
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+    .about-me-content {
+      width: 100%;
+      margin-right: -50px;
 
-      .details-1 {
+      .right {
+        float: right;
+        width: 44.7%;
+        margin-left: 7.5%;
+        margin-bottom: 30px;
+
         img {
-          display: flex;
-          margin-top: 1.25rem;
-          width: 8rem;
-          margin-left: 10rem;
-          clip-path: circle(60px at center);
-          margin-bottom: 30px;
+          position: relative;
+          border-radius: 3px;
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+          object-position: top center;
+          max-height: 530px;
+        }
 
-          // //Mobile Responsiveness
-          // @include breakpoint-down(small) {
-          //   margin-left: 4rem;
-          //   margin-right: 2rem;
-          // }
-
-          //Mobile - Tablet Responsiveness
-          @include breakpoint-down(medium) {
-            margin-left: 8rem;
-          }
-
-          //Desktop Responsiveness
-          @include breakpoint-up(large) {
-            margin-left: 165px;
-          }
+        .about-me-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
-
-      .details-2 {
-        color: var(--darkest-slate);
+      .about-paragraph {
+        font-size: 17px;
+        line-height: 2;
+        color: var(--lightest-slate);
         font-weight: 300;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1.25rem;
+        margin-bottom: 46px;
 
-        p {
-          margin-top: 10px;
-          font-size: var(--fz-md);
-          max-width: 500px;
-          line-height: 25px;
-
-          //Mobile Responsiveness
-          @include breakpoint-down(small) {
-            max-width: 500px;
-          }
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          font-size: 16px;
+          line-height: 1.7;
+          margin-bottom: 32px;
         }
       }
     }

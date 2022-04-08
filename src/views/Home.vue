@@ -33,7 +33,7 @@
 
         <!-- See projects is here -->
         <!--  <a v-bind:href="`mailto:${email}`">See Projects</a> -->
-        <div class="action-button">
+        <div class="button-home">
           <a :href="`mailto:${email}`">See Projects</a>
           <div class="water-liquid"></div>
         </div>
@@ -81,35 +81,26 @@
         <img class="line-focus" src="@/assets/line-focus.svg" alt="" />
       </ul>
     </div>
-    <!-- 
-    <div class="link-to-right">
-      <a v-bind:href="`mailto:${email}`">dicethedev@gmail.com</a> -->
 
-    <!-- <ul class="style-right"> -->
-    <!-- Line-focus bottom is here -->
-    <!-- <img class="focus-line" src="@/assets/focus-line.svg" alt="" /> -->
-    <!-- </ul>
-    </div> -->
-
-    <section class="flex">
+    <div>
       <About />
-    </section>
+    </div>
 
-    <section class="flex">
+    <div>
       <Experience />
-    </section>
+    </div>
 
-    <section class="flex">
+    <div>
       <Project />
-    </section>
+    </div>
 
-    <section class="flex">
+    <div>
       <SkillSet />
-    </section>
+    </div>
 
-    <section class="flex">
+    <div>
       <Contact />
-    </section>
+    </div>
     <router-view />
   </div>
 </template>
@@ -179,8 +170,15 @@ h6 {
   margin-left: 2rem;
 
   //Mobile Responsiveness
+  @include breakpoint-down(small) {
+    margin-top: -3rem;
+    margin-left: -1.5rem;
+  }
+
+  //Mobile Responsiveness
   @include breakpoint-down(medium) {
-    margin-top: -2rem;
+    margin-top: -3rem;
+    margin-left: -10px;
   }
 
   .hero-text {
@@ -214,9 +212,8 @@ h6 {
         margin-bottom: 1rem;
 
         //Mobile Responsiveness
-        @include breakpoint-down(medium) {
-          //20px = 1.25rem
-          font-size: 2rem;
+        @include breakpoint-down(small) {
+          font-size: clamp(35px, 6vw, 50px);
         }
 
         //Responsiveness for Desktop or Laptop
@@ -230,24 +227,18 @@ h6 {
       margin: 0px;
       line-height: 0.9;
       h3 {
-        font-size: clamp(30px, 6vw, 63px);
+        font-size: clamp(40px, 6vw, 61px);
         margin-bottom: 1rem;
         color: var(--darkest-slate);
 
+        //Responsiveness for Desktop or Laptop
+        @include breakpoint-down(small) {
+          margin-left: 20px;
+        }
+
         //Mobile Responsiveness
         @include breakpoint-down(medium) {
-          //35px = 2.1875rem
-          font-size: 2.1875rem;
-          word-break: break-word;
-        }
-        // //Mobile - Tablet Responsiveness
-        // @include breakpoint-up(large) {
-        //   margin-left: 300px;
-        // }
-
-        //Responsiveness for Desktop or Laptop
-        @include breakpoint-down(large) {
-          margin-left: 15px;
+          margin-left: 20px;
         }
       }
     }
@@ -275,7 +266,7 @@ h6 {
       }
     }
 
-    .action-button {
+    .button-home {
       //70px = 4.375rem
       margin-top: 4.375rem;
 
@@ -294,10 +285,6 @@ h6 {
         transition: all 250ms ease-in-out;
         overflow: hidden;
 
-        &:hover {
-          color: #e8e8e8;
-        }
-
         &::before {
           content: "";
           position: absolute;
@@ -308,6 +295,10 @@ h6 {
           border-radius: 0 20px;
           background-color: var(--light-slate);
           transition: all 250ms ease-in-out;
+        }
+
+        &:hover {
+          color: #e8e8e8;
         }
 
         &:hover::before {
@@ -392,9 +383,10 @@ h6 {
   @include breakpoint-down(small) {
     display: none;
   }
-  //Responsiveness for Desktop or Laptop
+
+  //Mobile Responsiveness
   @include breakpoint-down(medium) {
-    margin-left: 200px;
+    display: none;
   }
 
   //Responsiveness for Desktop or Laptop

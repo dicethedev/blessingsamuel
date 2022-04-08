@@ -1,5 +1,5 @@
 <template>
-  <section class="skillset-me">
+  <div class="skillset-me">
     <div
       class="button-style animate__animated animate__bounce animate__infinite"
     >
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -52,13 +52,13 @@ export default {};
 
 .skillset-me {
   position: relative;
-  height: 100vh;
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
   margin-top: 1100px;
   margin-left: 380px;
+
+  //Mobile Responsiveness
+  @include breakpoint-down(medium) {
+    margin-top: 1700px;
+  }
 
   .button-style {
     color: var(--color-focus);
@@ -74,30 +74,19 @@ export default {};
     cursor: pointer;
     margin-left: 240px;
 
-    //Mobile Responsiveness
-    @include breakpoint-down(small) {
-      margin-left: 200px;
-      margin-top: 500px;
-      width: 170px;
-      height: 20px;
-    }
+    // //Mobile Responsiveness
+    // @include breakpoint-down(small) {
+    //   margin-left: 200px;
+    //   margin-top: 500px;
+    //   width: 170px;
+    //   height: 20px;
+    // }
 
     //Mobile Responsiveness
     @include breakpoint-down(medium) {
-      margin-left: -310px;
-      margin-top: 500px;
-      width: 170px;
-      height: 20px;
-    }
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-down(large) {
-      margin-left: 170px;
-    }
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-up(xlarge) {
-      margin-left: 340px;
+      margin-left: -170px;
+      width: 237px;
+      height: 52px;
     }
 
     .head-numbering > h2 {
@@ -143,28 +132,30 @@ export default {};
 
         //Mobile Responsiveness
         @include breakpoint-down(medium) {
-          width: 34px;
-          height: 25px;
           margin-top: -41px;
-          margin-left: 115px;
+          margin-left: 110px;
+          width: 96px;
+          height: 54px;
         }
       }
     }
   }
 
   .skillset {
-    // background: #fff;
-    border: 1px solid var(--color-focus);
     padding: 100px 6.944vw;
     position: relative;
     margin-top: 90px;
-    width: 1000px;
 
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-down(large) {
-      margin-left: -80px;
-      padding: 50px 6.944vw;
-      width: 800px;
+    //Mobile Responsiveness
+    @include breakpoint-down(medium) {
+      padding: 40px 6.944vw;
+      margin-left: -378px;
+    }
+
+    //Mobile Responsiveness
+    @include breakpoint-up(medium) {
+      padding: 40px 6.944vw;
+      margin-left: -378px;
     }
 
     .skills {
@@ -173,9 +164,9 @@ export default {};
     }
 
     .skill-container {
-      width: 100%;
+      width: 80%;
       overflow: hidden;
-      margin-right: -90px;
+      // margin-right: 15px;
       margin-top: 15px;
 
       .skill-list {
@@ -187,8 +178,13 @@ export default {};
         -webkit-animation: scrollFromLefttoRight 4s ease-in-out 1s infinite;
         animation: scrollFromLefttoRight 4s ease-in-out 1s infinite;
 
+        @include breakpoint-down(medium) {
+          -webkit-animation: scrollFromLefttoRight 5s ease-in-out 1s infinite;
+          animation: scrollFromLefttoRight 5s ease-in-out 1s infinite;
+        }
+
         img {
-          margin-right: 20px;
+          margin-right: 15px;
           width: 120px;
           height: 120px;
         }

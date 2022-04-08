@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-me">
+  <div class="contact-me">
     <div
       class="button-style animate__animated animate__bounce animate__infinite"
     >
@@ -20,7 +20,7 @@
         <a :href="`mailto:${email}`">Say Hello</a>
       </button>
     </div>
-  </section>
+  </div>
 
   <footer>
     <h3>Designed & Built by Blessing Samuel</h3>

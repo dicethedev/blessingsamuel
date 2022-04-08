@@ -1,5 +1,5 @@
 <template>
-  <section class="project-me">
+  <div class="project-me">
     <div
       class="button-style animate__animated animate__bounce animate__infinite"
     >
@@ -132,7 +132,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -166,41 +166,29 @@ export default {};
   .button-style {
     color: var(--color-focus);
     background-color: transparent;
-    border: 1px dashed var(--color-focus);
+    border: 1px dashed var(--color-focus-fam);
     border-radius: 0px 20px;
     padding: 1.25rem 1.88rem;
     word-spacing: 5px;
-    width: 290px;
+    width: 220px;
     height: 60px;
     line-height: 1;
     text-decoration: none;
-    cursor: pointer;
     margin-left: 240px;
 
-    //Mobile Responsiveness
-    @include breakpoint-down(small) {
-      margin-left: 200px;
-      margin-top: 500px;
-      width: 170px;
-      height: 20px;
-    }
+    // //Mobile Responsiveness
+    // @include breakpoint-down(small) {
+    //   margin-left: 200px;
+    //   margin-top: 500px;
+    //   width: 170px;
+    //   height: 20px;
+    // }
 
     //Mobile Responsiveness
     @include breakpoint-down(medium) {
-      margin-left: -310px;
-      margin-top: 500px;
-      width: 170px;
-      height: 20px;
-    }
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-down(large) {
-      margin-left: 150px;
-    }
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-up(xlarge) {
-      margin-left: 340px;
+      margin-left: -160px;
+      width: 220px;
+      height: 52px;
     }
 
     .head-numbering > h2 {
@@ -246,10 +234,10 @@ export default {};
 
         //Mobile Responsiveness
         @include breakpoint-down(medium) {
-          width: 34px;
-          height: 25px;
-          margin-top: -41px;
+          margin-top: -42px;
           margin-left: 115px;
+          width: 74px;
+          height: 54px;
         }
       }
     }
@@ -266,14 +254,15 @@ export default {};
     margin-bottom: 60px;
     flex-direction: row;
 
-    &:nth-last-of-type(2n) {
-      flex-direction: row-reverse;
-      // margin-left: -70px;
-    }
-
     //Responsiveness for Desktop or Laptop
     @include breakpoint-down(large) {
       margin-left: -50px;
+    }
+
+    //Mobile Responsiveness
+    @include breakpoint-down(medium) {
+      flex-direction: column !important;
+      margin-left: -200px;
     }
 
     .image-container {
@@ -286,6 +275,16 @@ export default {};
       //Responsiveness for Desktop or Laptop
       @include breakpoint-down(large) {
         padding: 15px;
+      }
+
+      //Mobile Responsiveness
+      @include breakpoint-down(medium) {
+        padding: 15px;
+        width: 100%;
+        height: unset;
+        max-height: 450px;
+        max-width: 450px;
+        margin-bottom: 30px;
       }
 
       img {
@@ -306,6 +305,11 @@ export default {};
         width: 40vw;
       }
 
+      //Mobile Responsiveness
+      @include breakpoint-down(large) {
+        width: 100%;
+      }
+
       h1 {
         color: #0db9ff;
         font-size: var(--fz-md);
@@ -313,7 +317,11 @@ export default {};
         font-style: italic;
         line-height: 1.5;
         margin-bottom: 10px;
-        // margin-left: 250px;
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          margin-left: -30px;
+        }
       }
 
       h3 {
@@ -328,6 +336,11 @@ export default {};
           font-size: clamp(25px, 5vw, 18px);
           margin-right: -500px;
         }
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          margin-left: -30px;
+        }
       }
 
       p {
@@ -336,6 +349,11 @@ export default {};
         color: var(--darkest-slate);
         font-weight: 300;
         max-width: 300px;
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          margin-left: -30px;
+        }
       }
 
       .stacks {
@@ -346,6 +364,11 @@ export default {};
         //Responsiveness for Desktop or Laptop
         @include breakpoint-down(large) {
           // margin-right: 300px;
+        }
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          margin-left: -30px;
         }
 
         .stack {
@@ -366,6 +389,11 @@ export default {};
       .link-direction {
         display: flex;
         margin-top: 10px;
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          margin-left: -36px;
+        }
 
         a {
           display: inline-block;

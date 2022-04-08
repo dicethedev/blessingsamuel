@@ -123,7 +123,7 @@ export default {
       img {
         // margin-left: 305px;
         width: 60px;
-        height: 60px;
+        height: 100px;
         transition: 200ms ease-in-out;
         transition: var(--transition);
 

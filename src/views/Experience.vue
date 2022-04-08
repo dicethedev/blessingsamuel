@@ -1,5 +1,5 @@
 <template>
-  <section class="work-me">
+  <div class="work-experience">
     <div
       class="button-style animate__animated animate__bounce animate__infinite"
     >
@@ -10,7 +10,7 @@
     </div>
 
     <!-- Card here -->
-    <div class="work-experience">
+    <div class="experiences">
       <div class="experience-list">
         <!-- 1 -->
         <div class="experience-card">
@@ -70,7 +70,7 @@
       </div>
     </div>
     <router-view />
-  </section>
+  </div>
 </template>
 
 <script>
@@ -95,16 +95,19 @@ export default {
   --dice-color-shadow: rgba(2, 12, 27, 0.7);
 }
 
-.work-me {
-  position: relative;
-  height: 100vh;
-  visibility: visible;
-  opacity: 1;
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+.work-experience {
   margin-top: 100px;
   margin-left: 380px;
+
+  //Mobile Responsiveness
+  @include breakpoint-down(small) {
+    margin-top: 400px;
+  }
+
+  //Mobile Responsiveness
+  @include breakpoint-down(medium) {
+    margin-top: 300px;
+  }
 
   .button-style {
     color: var(--color-focus);
@@ -121,21 +124,18 @@ export default {
     text-decoration: none;
     margin-left: 240px;
 
-    //Mobile - Tablet Responsiveness
+    //Mobile Responsiveness
+    @include breakpoint-down(small) {
+      margin-left: -280px;
+      width: 260px;
+      height: 54px;
+    }
+
+    //Mobile Responsiveness
     @include breakpoint-down(medium) {
-      margin-left: 200px;
-      width: 180px;
-      height: 20px;
-    }
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-down(large) {
-      margin-left: 120px;
-    }
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-up(xlarge) {
-      margin-left: 340px;
+      margin-left: -180px;
+      width: 260px;
+      height: 54px;
     }
 
     .head-numbering > h2 {
@@ -155,10 +155,17 @@ export default {
       font-size: 23px;
       font-weight: 700;
       color: #e6f1ff;
+
+      //Mobile Responsiveness
+      @include breakpoint-down(small) {
+        font-size: 18px;
+      }
+
       //Mobile Responsiveness
       @include breakpoint-down(medium) {
-        font-size: 17px;
+        font-size: 19px;
       }
+
       span {
         color: #00cffd;
         font-size: 19px;
@@ -166,8 +173,12 @@ export default {
         margin-right: 2px;
 
         //Mobile Responsiveness
-        @include breakpoint-down(medium) {
+        @include breakpoint-down(small) {
           font-size: 16px;
+        }
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          font-size: 17px;
         }
       }
       .button-style2 {
@@ -182,59 +193,51 @@ export default {
         margin-left: 176px;
 
         //Mobile Responsiveness
+        @include breakpoint-down(small) {
+          width: 79px;
+          height: 55px;
+          margin-top: -42px;
+          margin-left: 150px;
+        }
+        //Mobile Responsiveness
         @include breakpoint-down(medium) {
-          width: 34px;
-          height: 25px;
-          margin-top: -40px;
-          margin-left: 136px;
+          width: 79px;
+          height: 55px;
+          margin-top: -42px;
+          margin-left: 150px;
         }
       }
     }
   }
 
-  .work-experience {
+  .experiences {
     display: flex;
     align-items: center;
-    //115px
     margin-top: 90px;
-
-    //Tablet Responsiveness
-    @include breakpoint-down(large) {
-      margin-left: -200px;
-    }
-
-    //Mobile - Tablet Responsiveness
-    @include breakpoint-down(medium) {
-      margin-left: -200px;
-    }
-
-    //Mobile - Tablet Responsiveness
-    @include breakpoint-up(medium) {
-      margin-left: -200px;
-    }
-
-    @include breakpoint-up(xlarge) {
-      margin-left: -10px;
-    }
 
     //Mobile Responsiveness
     @include breakpoint-down(small) {
-      margin-left: -280px;
+      margin-left: -300px;
+    }
+
+    @include breakpoint-down(medium) {
+      margin-left: -200px;
     }
 
     .experience-list {
       display: flex;
       justify-content: space-between;
-      // gap: 0.5rem;
       flex-wrap: wrap;
       width: 100%;
       padding-bottom: 20px;
+      display: flex;
       margin-right: 50px;
 
-      //Tablet Responsiveness
-      @include breakpoint-down(large) {
-        justify-content: space-around;
-        margin-right: 60px;
+      //Mobile Responsiveness
+      @include breakpoint-down(small) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
       }
     }
 
@@ -251,13 +254,13 @@ export default {
       margin-bottom: 40px;
       color: #16294b;
 
-      //Mobile Responsiveness
       @include breakpoint-down(small) {
-        width: 350px;
-        max-width: 30%;
-        min-width: 300px;
+        margin: 25px 0;
+        padding: 30px 20px;
+        max-width: 400px;
+        width: 100%;
+        min-width: unset;
         min-height: 200px;
-        margin-left: -30px;
       }
 
       h2,
@@ -290,16 +293,6 @@ export default {
     .experience-card:last-of-type {
       background: var(--color-focus);
       margin-right: 0;
-
-      //Mobile Responsiveness
-      @include breakpoint-down(small) {
-        margin-right: 15px;
-      }
-
-      //Tablet - Mobile Responsiveness
-      @include breakpoint-down(medium) {
-        margin-right: 15px;
-      }
     }
     .experience-card:last-of-type h4,
     .experience-card:last-of-type p {
