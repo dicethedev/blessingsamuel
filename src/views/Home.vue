@@ -1,23 +1,23 @@
 <template>
-  <!-- Preloader for the page is here -->
-  <Loader />
   <div class="home">
-    <section class="home-title">
+    <section class="home-content">
       <div class="hero-text container">
         <h1>Hi, my name is</h1>
 
-        <!-- <hr /> -->
-        <div class="big-heading">
+        <div class="big-heading-1">
           <h2>Blessing Samuel.</h2>
         </div>
 
-        <div class="big-heading-2">
-          <h3 class="animate__animated animate__pulse animate__infinite">
-            The Tech guy with the Web.
-          </h3>
+        <!-- animate__pulse animate__infinite -->
+        <h3
+          class="
+            big-heading-2
+            animate__animated animate__pulse animate__infinite
+          "
+        >
+          The Tech guy with the Web.
+        </h3>
 
-          <!-- <hr /> -->
-        </div>
         <div class="small-heading-detail">
           <p>
             I love to build and style things that live on the web with great
@@ -33,8 +33,8 @@
 
         <!-- See projects is here -->
         <!--  <a v-bind:href="`mailto:${email}`">See Projects</a> -->
-        <div class="button-home">
-          <a :href="`mailto:${email}`">See Projects</a>
+        <div class="home-link">
+          <a href="#project">See Projects</a>
           <div class="water-liquid"></div>
         </div>
       </div>
@@ -107,7 +107,6 @@
 
 <script>
 // @ is an alias to /src
-import Loader from "@/components/Loader.vue";
 import Contact from "@/views/Contact.vue";
 import SkillSet from "@/views/SkillSet.vue";
 import Project from "@/views/Project.vue";
@@ -127,7 +126,6 @@ export default {
     Project,
     SkillSet,
     Contact,
-    Loader,
   },
 
   methods: {},
@@ -163,11 +161,15 @@ h6 {
   line-height: 1.1;
 }
 
-.home-title {
+.home-content {
+  width: 100%;
+  padding: 84px 6.944vw 0;
   position: relative;
-  height: 100vh;
-  margin-top: -5.75rem;
-  margin-left: 2rem;
+  min-height: 711px;
+  display: flex;
+  align-items: center;
+  // margin-top: -5.75rem;
+  // margin-left: -180px;
 
   //Mobile Responsiveness
   @include breakpoint-down(small) {
@@ -196,50 +198,26 @@ h6 {
       margin-bottom: 1rem;
       font-size: clamp(13px, 5vw, 18px);
       font-weight: 400;
-
-      //Responsiveness for Desktop or Laptop
-      @include breakpoint-down(large) {
-        margin-left: 20px;
-      }
     }
 
-    .big-heading {
+    .big-heading-1 {
       margin: 0px;
       h2 {
         //50px = 3.125rem
-        font-size: clamp(40px, 6vw, 76px);
-        color: var(--light-slate);
+        font-size: clamp(40px, 6vw, 70px);
+        color: var(--lightest-slate);
         margin-bottom: 1rem;
-
-        //Mobile Responsiveness
-        @include breakpoint-down(small) {
-          font-size: clamp(35px, 6vw, 50px);
-        }
-
-        //Responsiveness for Desktop or Laptop
-        @include breakpoint-down(large) {
-          margin-left: 15px;
-        }
       }
     }
 
-    .big-heading-2 {
-      margin: 0px;
-      line-height: 0.9;
-      h3 {
-        font-size: clamp(40px, 6vw, 61px);
-        margin-bottom: 1rem;
-        color: var(--darkest-slate);
+    h3 {
+      font-size: clamp(40px, 6vw, 62px);
+      margin-bottom: 1rem;
+      color: var(--darkest-slate);
 
-        //Responsiveness for Desktop or Laptop
-        @include breakpoint-down(small) {
-          margin-left: 20px;
-        }
-
-        //Mobile Responsiveness
-        @include breakpoint-down(medium) {
-          margin-left: 20px;
-        }
+      .big-heading-2 {
+        margin: 0px;
+        line-height: 0.9;
       }
     }
 
@@ -247,11 +225,6 @@ h6 {
       margin: 15px 0px 0px;
       max-width: 520px;
       color: var(--darkest-slate);
-
-      //Responsiveness for Desktop or Laptop
-      @include breakpoint-down(large) {
-        margin-left: 20px;
-      }
 
       p {
         margin: 0px 0px 15px;
@@ -266,7 +239,7 @@ h6 {
       }
     }
 
-    .button-home {
+    .home-link {
       //70px = 4.375rem
       margin-top: 4.375rem;
 
@@ -304,11 +277,6 @@ h6 {
         &:hover::before {
           width: 90%;
         }
-
-        //Responsiveness for Desktop or Laptop
-        @include breakpoint-down(large) {
-          margin-left: 30px;
-        }
       }
     }
   }
@@ -322,7 +290,6 @@ h6 {
   right: auto;
   z-index: 10;
   transition: var(--transition);
-  margin-left: 5rem;
 
   ul,
   .style-left {

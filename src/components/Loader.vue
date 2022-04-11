@@ -57,7 +57,6 @@ export default {
   background-color: #16294b;
   // #ebebeb
   z-index: 9999;
-  height: 100vh;
   overflow: auto;
 
   .container {
@@ -145,10 +144,10 @@ export default {
       transform: scale(1);
     }
   }
-}
 
-// Scrollbar customize style is here
-::-webkit-scrollbar {
-  display: none;
+  // Scrollbar customize style is here
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>

@@ -1,4 +1,6 @@
 <template>
+  <!-- Preloader for the page is here -->
+  <Loader />
   <div class="app flex flex-column">
     <Navigation />
     <div></div>
@@ -7,11 +9,13 @@
 </template>
 
 <script>
+import Loader from "@/components/Loader.vue";
 import Navigation from "@/components/Navigation.vue";
 export default {
   name: "App",
   components: {
     Navigation,
+    Loader,
   },
 };
 </script>
@@ -24,9 +28,9 @@ export default {
 *,
 ::before,
 ::after {
-  margin: 0;
   padding: 0;
-  // box-sizing: border-box;
+  margin: 0;
+  margin-top: 0px;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
 }
@@ -34,7 +38,7 @@ export default {
 .app {
   background-color: #112240;
   position: relative;
-  min-height: 730vh;
+  min-height: 600vh;
   // overflow-x: hidden;
   // flex-direction: column;
   @media (min-width: 900px) {
@@ -78,14 +82,14 @@ export default {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   padding: 40px 10px;
   max-width: 850px;
   margin: 0 auto;
 
-  @media (min-width: 900px) {
-    padding-top: 72px;
-  }
+  // @media (min-width: 900px) {
+  //   padding-top: 72px;
+  // }
 }
 </style>
 

@@ -1,11 +1,11 @@
 <template>
   <div class="contact-me">
     <div
-      class="button-style animate__animated animate__bounce animate__infinite"
+      class="button-style-1 animate__animated animate__bounce animate__infinite"
     >
       <h2 class="head-numbering">
         <span>05.</span> What’s Next?
-        <div class="button-style2"></div>
+        <div class="button-style-2"></div>
       </h2>
     </div>
 
@@ -63,10 +63,7 @@ export default {
 }
 
 .contact-me {
-  //   position: relative;
-  //   height: 100vh;
-  //   margin-top: 30px;
-  .button-style {
+  .button-style-1 {
     color: var(--color-focus);
     background-color: transparent;
     border: 1px dashed var(--color-focus);
@@ -77,13 +74,8 @@ export default {
     height: 60px;
     line-height: 1;
     text-decoration: none;
-    margin-top: -100px;
-    // margin-left: 700px;
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-up(xlarge) {
-      margin-left: 730px;
-    }
+    margin-top: 100px;
+    margin-left: 620px;
 
     //Mobile Responsiveness
     @include breakpoint-down(small) {
@@ -95,15 +87,10 @@ export default {
 
     //Mobile Responsiveness
     @include breakpoint-down(medium) {
-      margin-left: -310px;
-      margin-top: 500px;
-      width: 170px;
-      height: 20px;
-    }
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-down(large) {
-      margin-left: 530px;
+      margin-left: 230px;
+      margin-top: 120px;
+      width: 220px;
+      height: 50px;
     }
 
     .head-numbering > h2 {
@@ -122,21 +109,32 @@ export default {
       font-size: 25px;
       font-weight: 700;
       color: #e6f1ff;
+
+      //Mobile Responsiveness
+      @include breakpoint-down(small) {
+        font-size: 17px;
+      }
       //Mobile Responsiveness
       @include breakpoint-down(medium) {
-        font-size: 17px;
+        font-size: 18px;
       }
       span {
         color: #00cffd;
         font-size: 19px;
         font-weight: 200;
         margin-right: 2px;
+
         //Mobile Responsiveness
-        @include breakpoint-down(medium) {
+        @include breakpoint-down(small) {
           font-size: 16px;
         }
+
+        //Mobile Responsiveness
+        @include breakpoint-down(medium) {
+          font-size: 17px;
+        }
       }
-      .button-style2 {
+      .button-style-2 {
         color: var(--color-focus);
         background-color: #00cffd;
         border-radius: 0px 20px;
@@ -149,10 +147,10 @@ export default {
 
         //Mobile Responsiveness
         @include breakpoint-down(medium) {
-          width: 34px;
-          height: 25px;
+          width: 90px;
+          height: 50px;
           margin-top: -41px;
-          margin-left: 115px;
+          margin-left: 100px;
         }
       }
     }
@@ -160,30 +158,33 @@ export default {
 
   .contact-details {
     margin-top: 70px;
+    margin-left: 450px;
     max-width: 600px;
     text-align: center;
 
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-up(xlarge) {
-      margin-left: 580px;
-    }
-
-    //Responsiveness for Desktop or Laptop
-    @include breakpoint-down(large) {
-      margin-left: 380px;
+    //Mobile Responsiveness
+    @include breakpoint-down(medium) {
+      margin-top: 50px;
+      margin-left: 35px;
     }
 
     h1 {
       font-size: clamp(40px, 5vw, 55px);
       font-style: italic;
-      color: #e6f1ff;
+      color: var(--lightest-slate);
     }
 
     p {
       color: #8892b0;
       font-size: var(--fz-md);
+      font-weight: 200;
       line-height: 26.44px;
       margin-top: 20px;
+
+      //Mobile Responsiveness
+      @include breakpoint-down(small) {
+        margin-left: 200px;
+      }
     }
 
     .contact-link {
@@ -198,7 +199,6 @@ export default {
       padding: 1.25rem 1.75rem;
       width: fit-content;
       margin-top: 30px;
-      // margin-left: 140px;
       overflow: hidden;
 
       a {
@@ -221,12 +221,18 @@ footer {
   min-height: 70px;
   padding: 15px;
   text-align: center;
-  margin-top: 450px;
-  margin-left: -420px;
+  margin-top: 200px;
+  margin-left: 50px;
+
+  //Mobile Responsiveness
+  @include breakpoint-down(medium) {
+    margin-top: 150px;
+    margin-left: 10px;
+  }
 
   h3 {
     color: #8892b0;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
   }
 
