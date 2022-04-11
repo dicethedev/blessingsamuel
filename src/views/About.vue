@@ -30,8 +30,8 @@
         </p>
         <p class="about-paragraph">
           I was born in Kogi State, Nigeria. I graduated with a first class
-          upper division in Software Engineering in Nigeria. My love for
-          arithmetic and logic brought me towards the path of software
+          upper division in [Diploma] Software Engineering in Nigeria. My love
+          for arithmetic and logic brought me towards the path of software
           development. I look forward to expanding my dexterity in the backend
           development.
         </p>
@@ -39,8 +39,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="focus-line-heading"></div> -->
   <router-view />
 </template>
 
@@ -100,10 +98,6 @@ export default {};
         }
 
         .head-numbering > h2 {
-          display: flex;
-          -webkit-box-align: center;
-          justify-content: center;
-          align-items: center;
           position: relative;
           margin: 10px 0px 40px;
           margin-top: 40px;
@@ -192,6 +186,7 @@ export default {};
         border-radius: 3px;
         object-position: top center;
         max-height: 540px;
+        box-shadow: 0px 9px 57px -11px #00cffd;
       }
 
       .about-me-img {

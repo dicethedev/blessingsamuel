@@ -13,7 +13,7 @@
   </div>
   <div class="skillset">
     <div class="skills">
-      <div class="skill-container">
+      <div class="skill-container container">
         <div class="skill-list">
           <img src="../assets/logos_html-5.svg" alt="" />
           <img src="../assets/logos_css-3.svg" alt="" />
@@ -21,7 +21,7 @@
           <img src="../assets/logos_javascript.svg" alt="" />
           <img src="../assets/logos_vue.svg" alt="" />
           <img src="../assets/logos_react.svg" alt="" />
-          <img src="../assets/logos_mysql.svg" alt="" />
+          <img src="../assets/logos_typescript.svg" alt="" />
           <img src="../assets/logos_nodejs.svg" alt="" />
         </div>
       </div>
@@ -123,8 +123,8 @@ export default {};
 }
 
 .skillset {
-  padding: 100px 6.944vw;
-  // padding: 200px 15.944vw 150px;
+  padding: 100px 20.944vw;
+  // margin-right: -200px;
   position: relative;
 
   @media (max-width: 991.98px) {
@@ -146,18 +146,30 @@ export default {};
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
-        -webkit-animation: scrollFromLefttoRight 5s ease-in-out 1s infinite;
-        animation: scrollFromLefttoRight 5s ease-in-out 1s infinite;
+        -webkit-animation: scrollFromLefttoRight 6s ease-in-out 1s infinite;
+        animation: scrollFromLefttoRight 6s ease-in-out 1s infinite;
 
         @include breakpoint-down(medium) {
-          -webkit-animation: scrollFromLefttoRight 4s ease-in-out 1s infinite;
-          animation: scrollFromLefttoRight 4s ease-in-out 1s infinite;
+          -webkit-animation: scrollFromLefttoRight 7s ease-in-out 1s infinite;
+          animation: scrollFromLefttoRight 7s ease-in-out 1s infinite;
         }
 
         img {
-          margin-right: 15px;
-          width: 120px;
-          height: 120px;
+          margin-right: 20px;
+          width: 100px;
+          height: 100px;
+
+          @media (max-width: 575.98px) {
+            -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+            margin-right: -20px;
+          }
+
+          @media (max-width: 991.98px) {
+            -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+            margin-right: -10px;
+          }
         }
 
         @keyframes scrollFromLefttoRight {
@@ -166,8 +178,8 @@ export default {};
             transform: translateX(0);
           }
           50% {
-            -webkit-transform: translateX(-55%);
-            transform: translateX(-55%);
+            -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
           }
           100% {
             -webkit-transform: translateX(0);

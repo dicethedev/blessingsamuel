@@ -162,26 +162,12 @@ h6 {
 }
 
 .home-content {
+  display: flex;
+  align-items: center;
   width: 100%;
   padding: 84px 6.944vw 0;
   position: relative;
   min-height: 711px;
-  display: flex;
-  align-items: center;
-  // margin-top: -5.75rem;
-  // margin-left: -180px;
-
-  //Mobile Responsiveness
-  @include breakpoint-down(small) {
-    margin-top: -3rem;
-    margin-left: -1.5rem;
-  }
-
-  //Mobile Responsiveness
-  @include breakpoint-down(medium) {
-    margin-top: -3rem;
-    margin-left: -10px;
-  }
 
   .hero-text {
     height: 100%;

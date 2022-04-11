@@ -1,14 +1,18 @@
 <template>
-  <div class="contact-me">
-    <div
-      class="button-style-1 animate__animated animate__bounce animate__infinite"
-    >
-      <h2 class="head-numbering">
-        <span>05.</span> What’s Next?
-        <div class="button-style-2"></div>
-      </h2>
-    </div>
-
+  <!-- This area consist of both contact and footer section -->
+  <div
+    class="
+      container
+      button-style-1
+      animate__animated animate__bounce animate__infinite
+    "
+  >
+    <h2 class="heading-numbering">
+      <span>05.</span> What’s Next?
+      <div class="button-style-2"></div>
+    </h2>
+  </div>
+  <div class="contact-me container">
     <div class="contact-details">
       <h1>Get me Hired!</h1>
       <p>
@@ -24,13 +28,15 @@
 
   <footer>
     <h3>Designed & Built by Blessing Samuel</h3>
-    <div class="project-destination">
+    <div class="design-build-destination">
+      <!-- Figma Destination -->
       <a
         href="https://www.figma.com/file/FrJ9xgmbpnefZUTFBr0CNE/Blessing-Samuel-Portfolio?node-id=0%3A1"
         target="_blank"
         rel="noreferrer"
         ><img src="../assets/fa-brands_figma.svg" alt="figma"
       /></a>
+      <!-- Github Destination -->
       <a href="https://github.com/dicethedev/blessingsamuel"
         ><img src="../assets/akar-icons_link-out.svg" alt=""
       /></a>
@@ -59,114 +65,97 @@ export default {
   --lightest-slate: #ccd6f6;
   --easing: cubic-bezier(0.22, 0.68, 0, 1.71);
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  --dice-color-shadow: rgba(2, 12, 27, 0.7);
+  --focus-color: rgba(2, 12, 27, 0.7);
 }
 
-.contact-me {
-  .button-style-1 {
-    color: var(--color-focus);
-    background-color: transparent;
-    border: 1px dashed var(--color-focus);
-    border-radius: 0px 20px;
-    padding: 1.25rem 1.88rem;
-    word-spacing: 5px;
-    width: 275px;
-    height: 60px;
-    line-height: 1;
-    text-decoration: none;
-    margin-top: 100px;
-    margin-left: 620px;
+.button-style-1 {
+  color: var(--color-focus);
+  background-color: transparent;
+  border: 1px dashed var(--color-focus);
+  border-radius: 0px 20px;
+  padding: 1.25rem 1.88rem;
+  word-spacing: 5px;
+  width: 275px;
+  height: 60px;
+  line-height: 1;
+  text-decoration: none;
+  margin-top: 100px;
+
+  //Mobile Responsiveness
+  @include breakpoint-down(medium) {
+    width: 220px;
+    height: 50px;
+  }
+
+  .heading-numbering > h2 {
+    display: flex;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font-size: clamp(26px, 5vw, var(--fz-heading));
+    white-space: nowrap;
+  }
+
+  h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #e6f1ff;
 
     //Mobile Responsiveness
     @include breakpoint-down(small) {
-      margin-left: 200px;
-      margin-top: 500px;
-      width: 170px;
-      height: 20px;
+      font-size: 17px;
     }
-
     //Mobile Responsiveness
     @include breakpoint-down(medium) {
-      margin-left: 230px;
-      margin-top: 120px;
-      width: 220px;
-      height: 50px;
+      font-size: 18px;
     }
-
-    .head-numbering > h2 {
-      display: flex;
-      -webkit-box-align: center;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      margin: 10px 0px 40px;
-      width: 100%;
-      font-size: clamp(26px, 5vw, var(--fz-heading));
-      white-space: nowrap;
-    }
-
-    h2 {
-      font-size: 25px;
-      font-weight: 700;
-      color: #e6f1ff;
+    span {
+      color: #00cffd;
+      font-size: 19px;
+      font-weight: 200;
+      margin-right: 2px;
 
       //Mobile Responsiveness
       @include breakpoint-down(small) {
-        font-size: 17px;
+        font-size: 16px;
       }
+
       //Mobile Responsiveness
       @include breakpoint-down(medium) {
-        font-size: 18px;
+        font-size: 17px;
       }
-      span {
-        color: #00cffd;
-        font-size: 19px;
-        font-weight: 200;
-        margin-right: 2px;
+    }
+    .button-style-2 {
+      color: var(--color-focus);
+      background-color: #00cffd;
+      border-radius: 0px 20px;
+      padding: 1.25rem 1.88rem;
+      width: 120px;
+      height: 60px;
+      cursor: pointer;
+      margin-top: -49px;
+      margin-left: 123px;
 
-        //Mobile Responsiveness
-        @include breakpoint-down(small) {
-          font-size: 16px;
-        }
-
-        //Mobile Responsiveness
-        @include breakpoint-down(medium) {
-          font-size: 17px;
-        }
-      }
-      .button-style-2 {
-        color: var(--color-focus);
-        background-color: #00cffd;
-        border-radius: 0px 20px;
-        padding: 1.25rem 1.88rem;
-        width: 120px;
-        height: 60px;
-        cursor: pointer;
-        margin-top: -49px;
-        margin-left: 123px;
-
-        //Mobile Responsiveness
-        @include breakpoint-down(medium) {
-          width: 90px;
-          height: 50px;
-          margin-top: -41px;
-          margin-left: 100px;
-        }
+      //Mobile Responsiveness
+      @include breakpoint-down(medium) {
+        width: 90px;
+        height: 50px;
+        margin-top: -41px;
+        margin-left: 100px;
       }
     }
   }
+}
+
+.contact-me {
+  padding: 100px 6.944vw;
 
   .contact-details {
-    margin-top: 70px;
-    margin-left: 450px;
     max-width: 600px;
     text-align: center;
-
-    //Mobile Responsiveness
-    @include breakpoint-down(medium) {
-      margin-top: 50px;
-      margin-left: 35px;
-    }
 
     h1 {
       font-size: clamp(40px, 5vw, 55px);
@@ -180,11 +169,6 @@ export default {
       font-weight: 200;
       line-height: 26.44px;
       margin-top: 20px;
-
-      //Mobile Responsiveness
-      @include breakpoint-down(small) {
-        margin-left: 200px;
-      }
     }
 
     .contact-link {
@@ -221,14 +205,7 @@ footer {
   min-height: 70px;
   padding: 15px;
   text-align: center;
-  margin-top: 200px;
-  margin-left: 50px;
-
-  //Mobile Responsiveness
-  @include breakpoint-down(medium) {
-    margin-top: 150px;
-    margin-left: 10px;
-  }
+  margin-top: 100px;
 
   h3 {
     color: #8892b0;
@@ -236,7 +213,7 @@ footer {
     font-weight: 300;
   }
 
-  .project-destination {
+  .design-build-destination {
     margin-top: 10px;
     a {
       text-decoration: none;

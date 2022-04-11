@@ -93,7 +93,11 @@
             <a href="#" target="_blank" rel="noopener noreferrer">
               <img src="../assets/akar-icons_github-fill.svg" alt="github" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/dicethedev/invoice-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="../assets/bi_arrow-right-circle-fill.svg"
                 alt="arrow-right"

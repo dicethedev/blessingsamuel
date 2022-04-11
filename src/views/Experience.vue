@@ -18,22 +18,22 @@
         <!-- 1 -->
         <div class="experience-card">
           <h2>Software Engineer Intern</h2>
-          <h4>Printrite.ng</h4>
+          <a href="https://printrite.ng/"><h4>Printrite.ng</h4></a>
           <ul>
             <li>
               <p>Did my internship program at Printrite Ng.</p>
             </li>
             <li>
               <p>
-                Work with languagues , platforms , frameworks, and content
-                management systems such as PHP, VueJs, Github, Bitbucket,
-                JavaScript, SQL and Figma.
+                Work with languagues, platforms, frameworks, and content
+                management systems such as JavaScript, VueJS, PHP, MySQL Github,
+                Bitbucket,and Figma.
               </p>
             </li>
             <li>
               <p>
                 Communicate with integrative teams of developers, engineers,
-                designers and clients.
+                designers and clients resulting to good decision making.
               </p>
             </li>
             <li>
@@ -43,23 +43,37 @@
         </div>
         <!-- 2 -->
         <div class="experience-card">
-          <h2>Wordpress Web Developer</h2>
-          <h4>Lettads.com.ng</h4>
+          <h2>WordPress Developer (Frontend)</h2>
+          <a href="https://Lettads.com.ng/"><h4>Lettads.com.ng</h4></a>
           <ul>
             <li>
-              <p>Did my internship program at Printrite Ng.</p>
-            </li>
-            <li>
               <p>
-                Work with languagues , platforms , frameworks, and content
-                management systems such as PHP, VueJs, Github, Bitbucket,
-                JavaScript, SQL and Figma.
+                Designing layouts, producing images, and developing styles for
+                Lettads website.
               </p>
             </li>
             <li>
               <p>
-                Communicate with integrative teams of developers, engineers,
-                designers and clients.
+                Prioritizing workloads and coordinating multiple ongoing
+                projects.
+              </p>
+            </li>
+            <li>
+              <p>
+                Worked with a team of two developers (backend) to build a
+                suitable e-commerce section on Lettads.
+              </p>
+            </li>
+            <li>
+              <p>
+                Implementing Search Engine Optimization (SEO) and Search Engine
+                Marketing (SEM) to get measurable results.
+              </p>
+            </li>
+            <li>
+              <p>
+                Contributing creative ideas during corporate brainstorming
+                sessions.
               </p>
             </li>
           </ul>
@@ -118,11 +132,24 @@ export default {
     width: 260px;
     height: 54px;
   }
+  .head-numbering > h2 {
+    position: relative;
+    margin: 10px 0px 40px;
+    margin-top: 40px;
+    width: 100%;
+    font-size: clamp(26px, 5vw, var(--fz-heading));
+    white-space: nowrap;
+  }
 
-  .heading-numbering {
+  h2 {
     font-size: 23px;
     font-weight: 500;
     color: #e6f1ff;
+
+    //Mobile Responsiveness
+    @include breakpoint-down(small) {
+      font-size: 18px;
+    }
 
     //Mobile Responsiveness
     @include breakpoint-down(medium) {
@@ -136,8 +163,13 @@ export default {
       margin-right: 2px;
 
       //Mobile Responsiveness
-      @include breakpoint-down(medium) {
+      @include breakpoint-down(small) {
         font-size: 17px;
+      }
+
+      //Mobile Responsiveness
+      @include breakpoint-down(medium) {
+        font-size: 18px;
       }
     }
   }
@@ -159,7 +191,7 @@ export default {
     }
 
     //Mobile Responsiveness
-    @include breakpoint-down(medium) {
+    @include breakpoint-down(small) {
       margin-top: -42px;
       margin-left: 150px;
       width: 80px;
@@ -224,15 +256,6 @@ export default {
         min-height: 200px;
       }
 
-      // @media (max-width: 575.98px) {
-      //   margin: 25px 0;
-      //   padding: 30px 20px;
-      //   max-width: 450px;
-      //   width: 100%;
-      //   min-width: unset;
-      //   min-height: 200px;
-      // }
-
       h2,
       h4 {
         margin-bottom: 20px;
@@ -242,6 +265,11 @@ export default {
         line-height: 1;
         font-size: 1.5rem;
       }
+
+      a {
+        text-decoration: none;
+      }
+
       h4 {
         color: #00cffd;
         font-size: 16px;
