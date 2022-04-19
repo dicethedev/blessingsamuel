@@ -1,14 +1,9 @@
 <template>
-  <div class="home">
-    <section class="home-content">
-      <div class="hero-text container">
-        <h1>Hi, my name is</h1>
-
-        <div class="big-heading-1">
-          <h2>Blessing Samuel.</h2>
-        </div>
-
-        <!-- animate__pulse animate__infinite -->
+  <div class="home-main">
+    <div class="home-section">
+      <div class="left">
+         <h1>Hi, my name is</h1>
+          <h2 class="big-heading">Blessing Samuel.</h2>
         <h3
           class="
             big-heading-2
@@ -18,27 +13,20 @@
           The Tech guy with the Web.
         </h3>
 
-        <div class="small-heading-detail">
-          <p>
+          <p class="home-description">
             I love to build and style things that live on the web with great
             user interface & experience. I am very good with HTML5, CSS3 (SCSS
             included). I am also very good with JavaScript and its frameworks
-            such as Vue & React. I have over 1 years professional experience in
+            such as Vue.js & React. I have over 2 years professional experience in
             front end development.
-            <!-- <a href="https://myshelta.com/" target="_blank" rel="norefer">
-              Shelta.
-            </a> -->
           </p>
-        </div>
-
-        <!-- See projects is here -->
-        <!--  <a v-bind:href="`mailto:${email}`">See Projects</a> -->
-        <div class="home-link">
-          <a href="#project">See Projects</a>
-          <div class="water-liquid"></div>
-        </div>
-      </div>
-    </section>
+          <!-- Button link here -->
+          <a class="email-link" href="#my-project">See Projects</a>
+      </div>   
+      <!-- <div class="right animate__animated animate__pulse animate__infinite">
+        <img src="@/assets/Logo.svg" alt="">
+      </div> -->
+    </div>
     <div class="link-to-left">
       <ul class="style-left">
         <!-- Github link -->
@@ -77,41 +65,39 @@
             <img src="@/assets/linkedin.svg" alt="" />
           </a>
         </li>
-        <!-- Line-focus bottom is here -->
-        <img class="line-focus" src="@/assets/line-focus.svg" alt="" />
+        <!-- Line-focus bottom is here
+        <img class="line-focus" src="@/assets/line-focus.svg" alt="" /> -->
       </ul>
-    </div>
-
-    <div>
-      <About />
-    </div>
-
-    <div>
-      <Experience />
-    </div>
-
-    <div>
-      <Project />
-    </div>
-
-    <div>
-      <SkillSet />
-    </div>
-
-    <div>
-      <Contact />
     </div>
     <router-view />
   </div>
+
+  <!-- About me  -->
+  <About />
+
+  <!-- Project -->
+  <Project />
+
+  <!-- Experience me  -->
+  <Experience />
+
+  <!-- Skillset -->
+  <SkillSet />
+
+  <!-- Contact & Footer -->
+  <Contact />
+
+
 </template>
 
 <script>
+import About from '@/components/About.vue';
+import Experience from '@/components/Experience.vue';
+import Project from '@/components/Project.vue';
+import SkillSet from '@/components/SkillSet.vue';
+import Contact from '@/components/Contact.vue';
 // @ is an alias to /src
-import Contact from "@/views/Contact.vue";
-import SkillSet from "@/views/SkillSet.vue";
-import Project from "@/views/Project.vue";
-import Experience from "@/views/Experience.vue";
-import About from "@/views/About.vue";
+
 export default {
   name: "Home",
   data() {
@@ -133,116 +119,114 @@ export default {
 </script>
 
 <style lang="scss">
-// import _mixings.scss file here
 @import "/src/scss/_mixins.scss";
 
-:root {
-  --color-focus: #00cffd;
-  --fz-sm: 13px;
-  --fz-md: 18px;
-  --fz-heading: 32px;
-  --lightest-slate: #ccd6f6;
-  --light-slate: #e6f1ff;
-  --darkest-slate: #8892b0;
-  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
-  --animate-duration: 0.1ms;
-  --animate-delay: 400ms;
-}
+.home-main {
+width: 100%;
+padding: 86px 10.944vw 0;
+position: relative;
+min-height: 711px;
+display: flex;
+align-items: center;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0px 0px 10px;
-  font-weight: 600;
-  color: #fff;
-  line-height: 1.1;
-}
 
-.home-content {
-  display: flex;
-  align-items: center;
+  @media (max-width: 575.98px) {
+  padding: 114px 25px 0 27px;
   width: 100%;
-  padding: 84px 6.944vw 0;
-  position: relative;
-  min-height: 711px;
+   }
 
-  .hero-text {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 90px;
+.home-section {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+margin-right: -30px;
+
+  @media (max-width: 991.98px){
+  margin-right: 0;
+}
+
+//   @media (max-width: 1199.98px){
+//   margin-right: -80px;
+// }
+
+.left {
+  // width: 750px;
+  // margin-right: 30px;
+
+  //   @media (max-width: 767.98px){
+  //   width: 440px;
+  //   margin-right: 0;
+  //   margin-top: 40px;
+  //   }
+
+  //   @media (max-width: 575.98px) {
+  //   margin-top: 0;
+  //   }
 
     h1 {
       margin: 0px 0px 30px 4px;
-      color: #00cffd;
-      //5px = 0.3125rem
+      color: var(--color-primary);
       word-spacing: 0.3125rem;
-      margin-bottom: 1rem;
-      font-size: clamp(13px, 5vw, 18px);
+      font-size: clamp(13px, 5vw, 16px);
       font-weight: 400;
+
+        @media (max-width: 480px){
+          margin: 0px 0px 20px 2px;
+       }
     }
 
-    .big-heading-1 {
-      margin: 0px;
-      h2 {
-        //50px = 3.125rem
-        font-size: clamp(40px, 6vw, 70px);
+    .big-heading {
+        font-size: clamp(40px, 8vw, 70px);
         color: var(--lightest-slate);
-        margin-bottom: 1rem;
+        margin: 0;
       }
+   
+    .big-heading-2 {
+     font-size: clamp(40px, 8vw, 70px);
+     color: var(--darkest-slate);
+     margin: 0;
+     margin-top: 10px;
+     line-height: 1;
     }
 
-    h3 {
-      font-size: clamp(40px, 6vw, 62px);
-      margin-bottom: 1rem;
-      color: var(--darkest-slate);
+    .home-description{
+     margin: 20px 0px 0px;
+     max-width: 540px;
+     line-height: 1.5;
+     font-size: 1rem;
+     margin-bottom: 50px;
+     font-weight: 300;
+     color: var(--darkest-slate);
 
-      .big-heading-2 {
-        margin: 0px;
-        line-height: 0.9;
-      }
-    }
-
-    .small-heading-detail {
-      margin: 15px 0px 0px;
-      max-width: 520px;
-      color: var(--darkest-slate);
-
-      p {
-        margin: 0px 0px 15px;
-        line-height: 1.5;
-        //16px
-        font-size: 1rem;
-      }
-
-      p:last-child,
-      p:last-of-type {
+     p:last-child,
+     p:last-of-type {
         margin: 0px;
       }
     }
 
-    .home-link {
-      //70px = 4.375rem
-      margin-top: 4.375rem;
-
-      a {
+    .email-link {
         padding: 15px 25px;
         border: unset;
         border-radius: 0 20px;
         text-decoration: none;
-        background: var(--color-focus);
+        line-height: 1;
+        background: var(--color-primary);
         position: relative;
         color: var(--light-slate);
         letter-spacing: 5px;
         text-transform: uppercase;
+        cursor: pointer;
         word-spacing: 5px;
         font-weight: 400;
         transition: all 250ms ease-in-out;
         overflow: hidden;
+
+        
+       @media (max-width: 480px) {
+         font-size: 14px;
+       }
 
         &::before {
           content: "";
@@ -252,7 +236,7 @@ h6 {
           height: 100%;
           width: 0;
           border-radius: 0 20px;
-          background-color: var(--light-slate);
+          background-color: var(--color-primary-variant);
           transition: all 250ms ease-in-out;
         }
 
@@ -264,9 +248,28 @@ h6 {
           width: 90%;
         }
       }
-    }
-  }
+    }  
+    
+    // .right {
+    //     position: relative;
+    //     z-index: 1;
+    //     width: 200px;
+    //     height: 200px;
+        
+    //     img {
+    //     object-fit: contain;
+    //     width: 250px;
+    //     max-height: 250px;
+
+    //       // @media (max-width: 1199.98px){
+    //       // width: 250px;
+    //       //  max-height: 250px;
+    //       //  }
+
+    //     }
+    //   }
 }
+  
 
 .link-to-left {
   width: 40px;
@@ -276,6 +279,12 @@ h6 {
   right: auto;
   z-index: 10;
   transition: var(--transition);
+  transition: var(--easing);
+
+    @media (max-width: 1080px) {
+     left: 20px;
+    right: auto;
+    }
 
   ul,
   .style-left {
@@ -286,17 +295,23 @@ h6 {
     margin: 0px;
     padding: 0px;
     list-style: none;
-    margin-top: -350px;
-    margin-right: -20px;
+
+    //the line below social 
+    &::after {
+    content: '';
+     width: 1px;
+     height: 6rem;
+     background: var(--darkest-slate);
+    }
   }
 
   li {
     display: list-item;
     text-align: -webkit-match-parent;
-    // margin-top: -300px;
   }
+
   li a {
-    padding: 10px;
+    padding: 15px;
   }
 
   a {
@@ -315,23 +330,26 @@ h6 {
     animation-delay: var(--easing);
 
     &:hover {
-      border: 1px dashed #00cffd;
+      border: 1px dashed var(--color-primary);
       padding: 5px;
       border-radius: 8px;
     }
   }
-  // Line-focus styling area is here
-  .line-focus {
-    width: 1.8px;
-    position: fixed;
-    bottom: 0px;
-    right: auto;
-    z-index: 10;
 
-    img {
-      margin-right: -35px;
-    }
-  }
+  // Line-focus styling area is here
+  // .line-focus {
+  //   width: 1.8px;
+  //   position: fixed;
+  //   bottom: 0px;
+  //   right: auto;
+  //   z-index: 10;
+
+  //   img {
+  //     margin-right: -35px;
+  //   }
+  // }
+
+
   //Mobile Responsiveness
   @include breakpoint-down(small) {
     display: none;
@@ -342,10 +360,8 @@ h6 {
     display: none;
   }
 
-  //Responsiveness for Desktop or Laptop
-  @include breakpoint-down(large) {
-    margin-left: -25px;
-  }
+}
+
 }
 
 //link-to-right styling area

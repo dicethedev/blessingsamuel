@@ -1,9 +1,8 @@
 <template>
   <!-- Preloader for the page is here -->
   <Loader />
-  <div class="app flex flex-column">
+  <div class="app">
     <Navigation />
-    <div></div>
     <router-view />
   </div>
 </template>
@@ -22,8 +21,32 @@ export default {
 
 
 <style lang="scss">
-//Use SCSS framework for CSS
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-loader: #22224e;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-focus: #00cffd;
+  --fz-sm: 13px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-heading: 32px;
+  --normal-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --light-slate: #e6f1ff;
+  --darkest-slate: #8892b0;
+  
+     ---container-width-lg: 75%;
+     ---container-width-md: 86%;
+     ---container-width-sm: 90%; 
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --animate-duration: 0.4ms;
+  --animate-delay: 400ms;
+}
 
 *,
 ::before,
@@ -31,19 +54,38 @@ export default {
   padding: 0;
   margin: 0;
   margin-top: 0px;
+  margin-right: 0px;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
 }
 
+
+html {
+     scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px 0px 10px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.1;
+}
+
+
 .app {
-  background-color: #112240;
+  background-color: var(--color-bg);
   position: relative;
-  min-height: 600vh;
-  // overflow-x: hidden;
-  // flex-direction: column;
-  @media (min-width: 900px) {
-    flex-direction: column !important;
-  }
+  min-height: 300vh;
+  // // overflow-x: hidden;
+  // // flex-direction: column;
+  // @media (min-width: 900px) {
+  //   flex-direction: column !important;
+  // }
 
   // .app-content {
   //   padding: 0 20px;
@@ -51,25 +93,31 @@ export default {
   //   position: relative;
   // }
 }
+
 // Scrollbar customize style is here
-::-webkit-scrollbar {
-  width: 5px;
-  background-color: #112240;
+body::-webkit-scrollbar {
+  display: none;
+  // width: 12px;
 }
 
-::-webkit-scrollbar-track {
-  border-radius: 5px;
-  // box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 3px solid var(--app-color);
+  background-color: var(--darkest-slate);
 }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 50px;
-  background-color: #8892b0;
+body::-webkit-scrollbar-track {
+  background: var(--app-color);
 }
 
-// ::-webkit-scrollbar-thumb:hover {
-//   background-color: #00cffd;
-// }
+::selection {
+  background-color: var(--lightest-navy);
+  color: var(--lightest-slate);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #a8b2d1;
+}
 
 // utility classes
 
@@ -81,15 +129,45 @@ export default {
   flex-direction: column;
 }
 
-.container {
-  width: 100%;
-  padding: 40px 10px;
-  max-width: 850px;
-  margin: 0 auto;
+// .container {
+//   width: 100%;
+//   padding: 40px 10px;
+//   max-width: 850px;
+//   margin: 0 auto;
 
-  // @media (min-width: 900px) {
-  //   padding-top: 72px;
-  // }
+//   // @media (min-width: 900px) {
+//   //   padding-top: 72px;
+//   // }
+// }
+
+.container {
+     /* 75% */
+     width: var( ---container-width-lg);
+     margin: auto;
 }
+
+
+/* Media Queries (Medium Devices) */
+@media screen and (max-width: 1024px) {
+     .container {
+          /* 86% */
+          width: var(---container-width-md);
+     }
+
+    
+}
+
+/* Media Queries (Small Devices) */
+@media screen and (max-width: 600px) {
+     .container {
+          /* 90% */
+          width: var(---container-width-sm);
+     }
+
+    // section {
+    //       margin-top: 4rem;
+    //  }
+}
+
 </style>
 

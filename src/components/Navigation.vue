@@ -72,31 +72,19 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "/src/scss/_mixins.scss";
 
-//  The root contain what i declare and I will like to use it later
-:root {
-  --dark-slate: #495670;
-  --slate: #8892b0;
-  --light-slate: #a8b2d1;
-  --lightest-slate: #ccd6f6;
-  --white: #e6f1ff;
-  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
-  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
 .header {
-  z-index: 1;
-  background-color: #112240;
+  background-color: var(--color-bg);
   width: 100%;
   position: fixed;
   transition: var(--transition);
   color: #fff;
+  z-index: 3;
   overflow: hidden;
 
   .nav {
-    // position: fixed;
     z-index: 10;
     width: 100%;
     left: 0;
@@ -126,7 +114,7 @@ export default {
       transition: var(--transition);
 
       &:hover {
-        border: 1px dashed #00cffd;
+        border: 1px dashed var(--color-primary);
         border-radius: 10px;
       }
     }
@@ -135,10 +123,12 @@ export default {
       position: relative;
       cursor: pointer;
       font-size: 12px;
-      color: #00cffd;
+      color: var(--color-primary);
       background-color: transparent;
       border: 1px solid;
-      border-color: #00cffd #00e9df;
+      border-color: var(--color-primary);
+      //   border-image: linear-gradient(45deg, red , yellow);
+      //  border-image-slice: 1;
       border-radius: 15px 0px 15px 0px;
       text-decoration: none;
       padding: 0.5rem 2rem;
@@ -151,9 +141,11 @@ export default {
         left: 0;
         bottom: 0;
         right: 0;
-        background-color: rgba(13, 186, 255, 0.185);
+        background-color: var(--color-primary-variant);
+        border-radius: 15px 0px 15px 0px;
         opacity: 0;
         transition: opacity 200ms ease-in-out;
+        transition: var(--transition);
       }
 
       &:hover::before {
@@ -165,10 +157,10 @@ export default {
 
 // The scrolled-nav class area style is here
 .scrolled-nav {
-  background-color: #112240;
-  box-shadow: 0px 5px 10px #12284e;
+  background-color: var(--color-bg);
+  box-shadow: 0px 2px 10px var(--color-primary);
   -webkit-box-align: center;
-  height: 100px;
+  height: 110px;
 
   nav {
     padding: 8px 0;
@@ -179,9 +171,9 @@ export default {
         height: 65px;
       }
     }
-    .resume-button {
-      margin-top: -0.2rem;
-    }
+    // .resume-button {
+    //   // margin-top: -0.2rem;
+    // }
   }
 }
 </style>

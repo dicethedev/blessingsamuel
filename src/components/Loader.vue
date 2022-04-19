@@ -3,7 +3,7 @@
     <!-- //changing to v-if directive (v-if="show")  -->
     <!-- <div class="preloader"> -->
     <div v-if="show" class="preloader">
-      <div class="container">
+      <div class="container-space">
         <div class="logo">
           <img src="@/assets/Logo.svg" alt="" />
         </div>
@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 //Preloader must fill full window and hide background till the load ends
 .preloader {
   display: flex;
@@ -54,16 +54,14 @@ export default {
   width: 100%;
   height: 100%;
   transition: opacity 200ms linear;
-  background-color: #16294b;
-  // #ebebeb
-  z-index: 9999;
-  overflow: auto;
+  background-color: var(--color-loader);
+  z-index: 10002;
+  overflow: hidden;
 
-  .container {
+  .container-space {
     width: 115px;
     height: 115px;
     background: #ebebeb;
-    //10px
     border-radius: 30px;
     padding: 30px 25px;
     margin-bottom: 40px;
@@ -85,7 +83,7 @@ export default {
         width: 10px;
         height: 10px;
         margin: 5px;
-        background: linear-gradient(180deg, #00cffd 0%, #00e9df 100%);
+        background: linear-gradient(180deg, var(--color-focus) 0%, var(--color-primary) 100%);
         border-radius: 50%;
         animation-name: scaleIn;
         animation-duration: 1s;
@@ -143,11 +141,6 @@ export default {
     100% {
       transform: scale(1);
     }
-  }
-
-  // Scrollbar customize style is here
-  ::-webkit-scrollbar {
-    display: none;
   }
 }
 </style>

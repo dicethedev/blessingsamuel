@@ -11,9 +11,9 @@
       <div class="button-style-2"></div>
     </h2>
   </div>
-  <div class="skillset">
+  <div class="skillset" id="skill-set">
     <div class="skills">
-      <div class="skill-container container">
+      <div class="skill-container">
         <div class="skill-list">
           <img src="../assets/logos_html-5.svg" alt="" />
           <img src="../assets/logos_css-3.svg" alt="" />
@@ -36,24 +36,36 @@ export default {};
 <style lang="scss" scoped>
 @import "/src/scss/_mixins.scss";
 :root {
+   --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-loader: #22224e;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
   --color-focus: #00cffd;
-  --color-focus-fam: #00e9df;
-  --fz-sm: 12px;
-  --fz-md: 16px;
+  --fz-sm: 13px;
+  --fz-md: 18px;
   --fz-heading: 32px;
+  --normal-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --light-slate: #e6f1ff;
   --darkest-slate: #8892b0;
-  --easing: cubic-bezier(0.22, 0.68, 0, 1.71);
+  
+     ---container-width-lg: 75%;
+     ---container-width-md: 86%;
+     ---container-width-sm: 90%; 
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  --animate-duration: 0.1ms;
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --animate-duration: 0.4ms;
   --animate-delay: 400ms;
-  --dice-color-shadow: rgba(2, 12, 27, 0.7);
 }
+
+html {
+     scroll-behavior: smooth;
+}
+
 .button-style-1 {
-  color: var(--color-focus);
   background-color: transparent;
-  border: 1px dashed var(--color-focus);
+  border: 1px dashed var(--color-primary);
   border-radius: 0px 20px;
   padding: 1.25rem 1.88rem;
   word-spacing: 5px;
@@ -86,10 +98,17 @@ export default {};
     font-size: 25px;
     font-weight: 700;
     color: var(--light-slate);
-    //Mobile Responsiveness
-    @include breakpoint-down(medium) {
-      font-size: 17px;
-    }
+
+      //Mobile Responsiveness
+          @include breakpoint-down(small) {
+            font-size: 16px;
+          }
+
+          //Mobile Responsiveness
+          @include breakpoint-down(medium) {
+            font-size: 17px;
+          }
+
     span {
       color: var(--color-focus);
       font-size: 19px;
@@ -101,8 +120,7 @@ export default {};
       }
     }
     .button-style-2 {
-      color: var(--color-focus);
-      background-color: var(--color-focus);
+      background-color: var(--color-primary);
       border-radius: 0px 20px;
       padding: 1.25rem 1.88rem;
       width: 127px;
@@ -123,22 +141,22 @@ export default {};
 }
 
 .skillset {
-  padding: 100px 20.944vw;
-  // margin-right: -200px;
-  position: relative;
-
-  @media (max-width: 991.98px) {
-    padding: 150px 6.944vw;
-  }
+    padding: 100px 20.944vw;
+    position: relative;
 
   .skills {
     display: flex;
     align-items: center;
 
     .skill-container {
-      width: 80%;
+      width: 100%;
       overflow: hidden;
+      margin-right: -90px;
       margin-top: 15px;
+
+      @media (max-width: 991.98px) {
+      margin-top: 0;
+     }
 
       .skill-list {
         display: flex;
@@ -146,18 +164,32 @@ export default {};
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
-        -webkit-animation: scrollFromLefttoRight 6s ease-in-out 1s infinite;
-        animation: scrollFromLefttoRight 6s ease-in-out 1s infinite;
+        -webkit-animation: scrollFromLefttoRight 5s ease-in-out 1s infinite;
+        animation: scrollFromLefttoRight 5s ease-in-out 1s infinite;
 
-        @include breakpoint-down(medium) {
-          -webkit-animation: scrollFromLefttoRight 7s ease-in-out 1s infinite;
-          animation: scrollFromLefttoRight 7s ease-in-out 1s infinite;
+        // @include breakpoint-down(medium) {
+        //   -webkit-animation: scrollFromLefttoRight 7s ease-in-out 1s infinite;
+        //   animation: scrollFromLefttoRight 7s ease-in-out 1s infinite;
+        // }
+
+        @media (max-width: 767.98px){
+         -webkit-animation: scrollHorizontal 2s ease-in-out 1s infinite;
+         animation: scrollHorizontal 2s ease-in-out 1s infinite;
+        }
+
+        @media (max-width: 1199.98px){
+         -webkit-animation: scrollFromLefttoRight 8s ease-in-out 1s infinite;
+         animation: scrollFromLefttoRight 8s ease-in-out 1s infinite;
         }
 
         img {
-          margin-right: 20px;
           width: 100px;
           height: 100px;
+          margin-right: 20px;
+
+          @media (max-width: 575.98px) {
+           margin-right: -40px;
+          }
 
           @media (max-width: 575.98px) {
             -webkit-transform: scale(0.6);
@@ -178,8 +210,8 @@ export default {};
             transform: translateX(0);
           }
           50% {
-            -webkit-transform: translateX(-60%);
-            transform: translateX(-60%);
+            -webkit-transform: translateX(-68%);
+            transform: translateX(-68%);
           }
           100% {
             -webkit-transform: translateX(0);

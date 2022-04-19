@@ -1,5 +1,5 @@
 <template>
-  <div class="about-me">
+  <div class="about-me" id="about-me">
     <div class="about-me-content">
       <div class="left">
         <div
@@ -19,21 +19,22 @@
           <img class="about-me-img" src="@/assets/Profile.jpg" alt="" />
         </div>
         <p class="about-paragraph">
-          I am a Frontend Software Engineer currently based in Nigeria. I am
-          very proficient using javascript and its frameworks like Vue & React.
-          I am also very good with mock up languages such as html and css. I
-          find joy when I use logic to provide solution to challenges thereby
-          solving user potential problems. With three years of experience in
-          frontend developement, I have been opportuned to build web apps that
-          spread across different sectors such as education, estate management
-          and finance.
+          I am a Frontend Software Engineer currently based in Nigeria.
+          I love programming and designing things that live on the web. 
+          My interest is web development  and my web development  journey started 
+          back then in 2019 when i decided  to try to work on a free HTML template. 
+          I am very adept using Javascript and its Frameworks like Vue & React. 
+          I can work with zeal and real wizardy.
+          I want to learn New things, because that's what brings joy to my life Up.
+          I believe in team success & growth, however I always put my best & maintain a strong
+          team bonding for every project I get to work on. 
         </p>
         <p class="about-paragraph">
           I was born in Kogi State, Nigeria. I graduated with a first class
           upper division in [Diploma] Software Engineering in Nigeria. My love
           for arithmetic and logic brought me towards the path of software
-          development. I look forward to expanding my dexterity in the backend
-          development.
+          development. I look forward to expanding my dexterity in the blockchain
+          development space.
         </p>
         <!-- <p>Here are a few technologies l’ve been working with recently:</p> -->
       </div>
@@ -48,21 +49,6 @@ export default {};
 
 <style lang="scss">
 @import "/src/scss/_mixins.scss";
-:root {
-  --color-focus: #00cffd;
-  --color-focus-fam: #00e9df;
-  --fz-sm: 12px;
-  --fz-md: 16px;
-  --fz-heading: 32px;
-  --lightest-slate: #ccd6f6;
-  --light-slate: #e6f1ff;
-  --darkest-slate: #8892b0;
-  --easing: cubic-bezier(0.22, 0.68, 0, 1.71);
-  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  --animate-duration: 0.1ms;
-  --animate-delay: 400ms;
-  --dice-color-shadow: rgba(2, 12, 27, 0.7);
-}
 
 .about-me {
   width: 100%;
@@ -79,9 +65,9 @@ export default {};
 
     .left {
       .button-style-1 {
-        color: var(--color-focus);
+        // color: var( --color-primary-variant);
         background-color: transparent;
-        border: 1px dashed var(--color-focus-fam);
+        border: 1px dashed var( --color-primary);
         border-radius: 0px 20px;
         padding: 1.25rem 1.88rem;
         word-spacing: 5px;
@@ -113,33 +99,32 @@ export default {};
 
           //Mobile Responsiveness
           @include breakpoint-down(small) {
-            font-size: 18px;
+            font-size: 16px;
           }
 
           //Mobile Responsiveness
           @include breakpoint-down(medium) {
-            font-size: 19px;
+            font-size: 17px;
           }
 
           span {
-            color: #00cffd;
+            color: var(--color-primary);
             font-size: 19px;
             font-weight: 200;
             margin-right: 10px;
 
             //Mobile Responsiveness
             @include breakpoint-down(small) {
-              font-size: 17px;
+              font-size: 16px;
             }
 
             //Mobile Responsiveness
             @include breakpoint-down(medium) {
-              font-size: 18px;
+              font-size: 17px;
             }
           }
           .button-style-2 {
-            color: var(--color-focus);
-            background-color: #00cffd;
+            background-color: var(--color-primary);
             border-radius: 0px 20px;
             padding: 1.25rem 1.88rem;
             width: 75px;
@@ -149,19 +134,11 @@ export default {};
             margin-left: 115px;
 
             //Mobile Responsiveness
-            @include breakpoint-down(small) {
-              margin-top: -42px;
-              margin-left: 95px;
-              width: 63px;
-              height: 53px;
-            }
-
-            //Mobile Responsiveness
             @include breakpoint-down(medium) {
               margin-top: -42px;
-              margin-left: 95px;
-              width: 64px;
-              height: 53px;
+              margin-left: 90px;
+              width: 69px;
+              height: 56px;
             }
           }
         }
@@ -186,7 +163,7 @@ export default {};
         border-radius: 3px;
         object-position: top center;
         max-height: 540px;
-        box-shadow: 0px 9px 57px -11px #00cffd;
+        box-shadow: 0px 9px 57px -11px var(--color-primary);
       }
 
       .about-me-img {
@@ -195,11 +172,12 @@ export default {};
         object-fit: cover;
       }
     }
+
     .about-paragraph {
       font-size: 18px;
       line-height: 2;
-      color: var(--lightest-slate);
-      // font-weight: 200;
+      color: var(--darkest-slate);
+      font-weight: 200;
       margin-bottom: 46px;
 
       @media (max-width: 767.98px) {
