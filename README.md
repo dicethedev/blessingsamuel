@@ -1,4 +1,5 @@
-![blessingsamuel](https://user-images.githubusercontent.com/85754527/166171391-a69c4ec6-1bb9-419c-92c1-d86c72ecd622.JPG)
+
+![blessingsamuel](https://user-images.githubusercontent.com/85754527/166171452-21de3c6d-e5c8-4c96-a424-aaee68c05526.PNG)
 
 
 # blessingsamuel
