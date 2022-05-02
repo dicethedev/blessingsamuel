@@ -1,3 +1,6 @@
+![blessingsamuel](https://user-images.githubusercontent.com/85754527/166171391-a69c4ec6-1bb9-419c-92c1-d86c72ecd622.JPG)
+
+
 # blessingsamuel
 My Portfolio Website In Progress. Built with Vue
 
