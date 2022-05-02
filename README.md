@@ -1,16 +1,7 @@
 
-![blessingsamuel](https://user-images.githubusercontent.com/85754527/166171452-21de3c6d-e5c8-4c96-a424-aaee68c05526.PNG)
-
-Color	Hex
-Navy	#0a192f #0a192f
-Light Navy	#112240 #112240
-Lightest Navy	#233554 #233554
-Slate	#8892b0 #8892b0
-Light Slate	#a8b2d1 #a8b2d1
-Lightest Slate	#ccd6f6 #ccd6f6
-White	#e6f1ff #e6f1ff
-Green	#64ffda #64ffda
-
+# User Interface of my website. 
+You are Welcome to my PortFolio Website Repo!
+![blessingsamuel](https://user-images.githubusercontent.com/85754527/166171603-b12ab497-a42d-4531-8c97-dc07537bf5d5.PNG)
 
 # blessingsamuel
 My Portfolio Website In Progress. Built with Vue
