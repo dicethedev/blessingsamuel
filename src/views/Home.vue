@@ -123,7 +123,7 @@ export default {
 
 .home-main {
 width: 100%;
-padding: 86px 10.944vw 0;
+padding: 86px 14.944vw 0;
 position: relative;
 min-height: 711px;
 display: flex;
@@ -283,7 +283,7 @@ margin-right: -30px;
 
     @media (max-width: 1080px) {
      left: 20px;
-    right: auto;
+     right: auto;
     }
 
   ul,
@@ -298,10 +298,12 @@ margin-right: -30px;
 
     //the line below social 
     &::after {
-    content: '';
-     width: 1px;
-     height: 6rem;
-     background: var(--darkest-slate);
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background: var(--darkest-slate);
     }
   }
 
@@ -324,8 +326,8 @@ margin-right: -30px;
   }
 
   li a img {
-    width: 23px;
-    height: 23px;
+    width: 20px;
+    height: 20px;
     transition: var(--transition);
     animation-delay: var(--easing);
 

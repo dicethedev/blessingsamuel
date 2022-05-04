@@ -17,7 +17,7 @@
     <p class="container">
       I'm currently looking for any new opportunities, my inbox is always open. If you’re
       currently have a role for Blessing, please don’t hestiate to get in touch
-      with me. I’ll try my best to back to you! Thank you!
+      with me. I’ll try my best to get back to you on time! Thank you!
     </p>
     <button class="email-link">
       <a :href="`mailto:${email}`">Say Hello to Blessing</a>

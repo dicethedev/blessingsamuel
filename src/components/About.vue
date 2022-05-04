@@ -15,14 +15,15 @@
           </h2>
         </div>
 
-        <div class="right">
+       <div class="right">
           <img class="about-me-img" src="@/assets/Profile.jpg" alt="" />
         </div>
+
         <p class="about-paragraph">
           I am a Frontend Software Engineer currently based in Nigeria.
           I love programming and designing things that live on the web. 
           My interest is web development  and my web development  journey started 
-          back then in 2019 when i decided  to try to work on a free HTML template. 
+          back then in 2020 when I decided  to try to work on a free HTML template. 
           I am very adept using Javascript and its Frameworks like Vue & React. 
           I can work with zeal and real wizardy.
           I want to learn New things, because that's what brings joy to my life Up.
@@ -30,8 +31,8 @@
           team bonding for every project I get to work on. 
         </p>
         <p class="about-paragraph">
-          I was born in Kogi State, Nigeria. I graduated with a first class
-          upper division in [Diploma] Software Engineering in Nigeria. My love
+          I was born in Kogi State, Nigeria. I graduated with a second class
+          upper division in Software Engineering in Nigeria. My love
           for arithmetic and logic brought me towards the path of software
           development. I look forward to expanding my dexterity in the blockchain
           development space.
@@ -158,19 +159,19 @@ export default {};
         margin: 30px 0;
       }
 
-      img {
+       img {
         position: relative;
         border-radius: 3px;
         object-position: top center;
         max-height: 540px;
         box-shadow: 0px 9px 57px -11px var(--color-primary);
       }
-
       .about-me-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
+
     }
 
     .about-paragraph {
@@ -188,6 +189,7 @@ export default {};
 
       @media (max-width: 424.98px) {
         font-size: 14px;
+
       }
     }
   }

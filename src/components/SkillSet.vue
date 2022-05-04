@@ -167,14 +167,9 @@ html {
         -webkit-animation: scrollFromLefttoRight 5s ease-in-out 1s infinite;
         animation: scrollFromLefttoRight 5s ease-in-out 1s infinite;
 
-        // @include breakpoint-down(medium) {
-        //   -webkit-animation: scrollFromLefttoRight 7s ease-in-out 1s infinite;
-        //   animation: scrollFromLefttoRight 7s ease-in-out 1s infinite;
-        // }
-
         @media (max-width: 767.98px){
-         -webkit-animation: scrollHorizontal 2s ease-in-out 1s infinite;
-         animation: scrollHorizontal 2s ease-in-out 1s infinite;
+         -webkit-animation: scrollFromLefttoRight 2s ease-in-out 1s infinite;
+         animation: scrollFromLefttoRight 2s ease-in-out 1s infinite;
         }
 
         @media (max-width: 1199.98px){

@@ -21,17 +21,21 @@
          <div class="project-details">
            <h3>Featured Project</h3>
            <h1>Invoice App</h1>
-            <p>Weather app develop with Vue. An API is pass from openweather.org 
-              You can search any country of your choice from the web app and it will 
-              tell you the country tempeature, date, time, atmosphere changes. 
-              Having struggled understanding how to pass an API through this I learn a lot from
-               my struggle.</p>
+            <p>A Full stack Invoice Application crafted using Vuejs(vuex) & Firebase (firebase).
+              It keep track records of all invoices that is created.
+              It Features include Create, Edit, Delete, Mark as Paid/Pending and also you can print
+              the invoice. I Learned how to use the Vuex effective, how firebase cloud data work efficiently 
+              and how to handle promises, fetch/axios data from a 3rd party API, and I make use of limited 
+              NPM packages. You can check it and see how it works and it is open for everyone
+              to see and feel the environment on the application.
+            </p>
 
                <div class="tech-stacks">
                  <div class="stack">HTML</div>
                   <div class="stack">CSS</div>
                   <div class="stack">VUE.JS</div>
                   <div class="stack">FIREBASE</div>
+                   <div class="stack">VERCEL</div>
                </div>
 
                 <div class="project-link">
@@ -39,6 +43,44 @@
               <img src="../assets/akar-icons_github-fill.svg" alt="github" />
               </a>
             <a href="https://invoice-app-gray.vercel.app/" target="_blank" rel="noreferrer">
+              <img
+                src="../assets/bi_arrow-right-circle-fill.svg"
+                alt="arrow-right"
+              />
+            </a>
+                 </div>
+         </div>
+      </div>
+    </div>
+
+     <div  class="projects">
+      <div class="project-content">
+        <div class="image-content">
+         <a href="https://diceflix.netlify.app/" target="_blank" rel="noreferrer">
+         <img src="../assets/project-image-3.jpg" alt=""></a> 
+        </div>
+         <div class="project-details">
+           <h3>Featured Project</h3>
+           <h1>Diceflix</h1>
+            <p>Diceflix is movie search engine. I called it Diceflix because the name inspiration
+            comes from Netflix. This project was built with React.js and with the help of OMDb API.
+            You search any movie of your choices and it will display 
+            the movie image, year, title and 
+            date possibly.</p>
+
+               <div class="tech-stacks">
+                 <div class="stack">HTML</div>
+                  <div class="stack">CSS</div>
+                  <div class="stack">REACT</div>
+                  <div class="stack">OMDbAPI</div>
+                   <div class="stack">NETLIFY</div>
+               </div>
+
+                <div class="project-link">
+               <a href="https://github.com/dicethedev/diceflix-react" target="_blank" rel="noreferrer">
+              <img src="../assets/akar-icons_github-fill.svg" alt="github" />
+              </a>
+            <a href="https://diceflix.netlify.app/" target="_blank" rel="noreferrer">
               <img
                 src="../assets/bi_arrow-right-circle-fill.svg"
                 alt="arrow-right"
@@ -68,42 +110,7 @@
                   <div class="stack">CSS</div>
                   <div class="stack">VUE.JS</div>
                   <div class="stack">API</div>
-               </div>
-
-                <div class="project-link">
-               <a href="https://github.com/dicethedev/Weatherapp" target="_blank" rel="noreferrer">
-              <img src="../assets/akar-icons_github-fill.svg" alt="github" />
-              </a>
-            <a href="https://invoice-app-gray.vercel.app/" target="_blank" rel="noreferrer">
-              <img
-                src="../assets/bi_arrow-right-circle-fill.svg"
-                alt="arrow-right"
-              />
-            </a>
-                 </div>
-         </div>
-      </div>
-    </div>
-
-     <div  class="projects">
-      <div class="project-content">
-        <div class="image-content">
-         <a href="https://weatherapp-blessing-samuel.vercel.app/" target="_blank" rel="noreferrer"><img src="../assets/project-image-1.jpg" alt=""></a> 
-        </div>
-         <div class="project-details">
-           <h3>Featured Project</h3>
-           <h1>Screenshot App</h1>
-            <p>Weather app develop with Vue. An API is pass from openweather.org 
-              You can search any country of your choice from the web app and it will 
-              tell you the country tempeature, date, time, atmosphere changes. 
-              Having struggled understanding how to pass an API through this I learn a lot from
-               my struggle.</p>
-
-               <div class="tech-stacks">
-                 <div class="stack">HTML</div>
-                  <div class="stack">CSS</div>
-                  <div class="stack">VUE.JS</div>
-                  <div class="stack">API</div>
+                   <div class="stack">VERCEL</div>
                </div>
 
                 <div class="project-link">
@@ -130,42 +137,6 @@ export default {
   },
   data() {
     return {
-      projectData: [
-    {
-      id: 1,
-      name: "Featured Project",
-      projectname: "Invoice App",
-      projectimage: "",
-      projectdescription:
-        "Weather app develop with Vue. An API is pass from openweather.org You can search any country of your choice from the web app and it will tell you the country tempeature, date, time, atmosphere changes. Having struggled understanding how to pass an API through this I learn a lot from my struggle.",
-      stack1: 'HTML',
-      stack2: 'CSS',
-      stack3: 'VUE.JS',
-      stack4: 'FIREBASE'
-    },
-    {
-      id: 2,
-       name: "Featured Project",
-      projectname: "Weather App",
-      projectdescription:
-        "Weather app develop with Vue. An API is pass from openweather.org You can search any country of your choice from the web app and it will tell you the country tempeature, date, time, atmosphere changes. Having struggled understanding how to pass an API through this I learn a lot from my struggle.",
-      stack1: 'HTML',
-      stack2: 'CSS',
-      stack3: 'VUE.JS',
-      stack4: 'API',
-    },
-    {
-      id: 3,
-      name: "Featured Project",
-      projectname: "ScreenShot App",
-      projectdescription:
-        "Weather app develop with Vue. An API is pass from openweather.org You can search any country of your choice from the web app and it will tell you the country tempeature, date, time, atmosphere changes. Having struggled understanding how to pass an API through this I learn a lot from my struggle.",
-      stack1: 'HTML',
-      stack2: 'CSS',
-      stack3: 'VUE.JS',
-      stack4: 'API'
-    },
-  ],
     };
   },
 };
@@ -392,7 +363,7 @@ export default {
       font-size: 12px;
 
        @media (max-width: 480px) {
-         font-size: 8px;
+         font-size: 10px;
        }
      }          
   }

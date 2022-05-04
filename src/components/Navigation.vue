@@ -3,10 +3,10 @@
     <nav class="nav">
       <ul>
         <li>
-          <a href="/"><img class="my-logo" src="@/assets/Logo.svg" alt="" /></a>
+          <a href="/"><img class="my-logo  animate__animated animate__backInDown" src="@/assets/Logo.svg" alt="" /></a>
         </li>
         <li>
-          <a class="resume-button" href="./profile.pdf" target="_blank"
+          <a class="resume-button" href="./resume.pdf" target="_blank"
             >Resume</a
           >
         </li>
