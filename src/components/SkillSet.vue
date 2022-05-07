@@ -3,8 +3,7 @@
     class="
       container
       button-style-1
-      animate__animated animate__bounce animate__infinite
-    "
+      animate__animated animate__bounce"
   >
     <h2 class="heading-numbering">
       <span>04.</span> I’ve this Skillset

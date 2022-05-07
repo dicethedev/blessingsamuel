@@ -7,8 +7,7 @@
         <h3
           class="
             big-heading-2
-            animate__animated animate__pulse animate__infinite
-          "
+            animate__animated animate__pulse"
         >
           The Tech guy with the Web.
         </h3>
