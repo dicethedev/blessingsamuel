@@ -71,6 +71,9 @@
     <router-view />
   </div>
 
+    <!-- cursor design -->
+   <CustomCursor/>
+
   <!-- About me  -->
   <About />
 
@@ -90,6 +93,7 @@
 </template>
 
 <script>
+import CustomCursor from '@/components/CustomCursor.vue';
 import About from '@/components/About.vue';
 import Experience from '@/components/Experience.vue';
 import Project from '@/components/Project.vue';
@@ -111,6 +115,7 @@ export default {
     Project,
     SkillSet,
     Contact,
+    CustomCursor,
   },
 
   methods: {},
