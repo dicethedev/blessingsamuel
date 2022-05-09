@@ -72,7 +72,7 @@
   </div>
 
     <!-- cursor design -->
-   <CustomCursor/>
+   <!-- <CustomCursor/> -->
 
   <!-- About me  -->
   <About />
@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import CustomCursor from '@/components/CustomCursor.vue';
+// import CustomCursor from '@/components/CustomCursor.vue';
 import About from '@/components/About.vue';
 import Experience from '@/components/Experience.vue';
 import Project from '@/components/Project.vue';
@@ -115,7 +115,7 @@ export default {
     Project,
     SkillSet,
     Contact,
-    CustomCursor,
+    // CustomCursor,
   },
 
   methods: {},
