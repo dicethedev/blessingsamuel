@@ -83,7 +83,7 @@ export default {
         width: 10px;
         height: 10px;
         margin: 5px;
-        background: linear-gradient(180deg, var(--color-focus) 0%, var(--color-primary) 100%);
+        background: linear-gradient(180deg, var(--color-bg-variant) 0%, var(--color-primary) 100%);
         border-radius: 50%;
         animation-name: scaleIn;
         animation-duration: 1s;
@@ -121,10 +121,13 @@ export default {
       }
     }
   }
+
+  
   .fade-enter,
   .fade-leave-to {
     opacity: 0;
   }
+
   @keyframes scaleOut {
     0% {
       transform: scale(1);
