@@ -97,18 +97,17 @@ h6 {
 
 // Scrollbar customize style is here
 body::-webkit-scrollbar {
-  display: none;
-  // width: 12px;
+   width: 6px;
 }
 
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   border: 3px solid var(--app-color);
-  background-color: var(--darkest-slate);
+  background-color: var(--normal-slate);
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--app-color);
+  background: var(--color-bg);
 }
 
 ::selection {
@@ -116,9 +115,7 @@ body::-webkit-scrollbar-track {
   color: var(--lightest-slate);
 }
 
-body::-webkit-scrollbar-thumb:hover {
-  background-color: #a8b2d1;
-}
+
 
 // utility classes
 
