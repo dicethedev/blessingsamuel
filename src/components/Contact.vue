@@ -48,7 +48,7 @@
         </li>
         <!-- Instagram link -->
         <li>
-          <a href="#" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/dicethedev5/" target="_blank" rel="noreferrer">
             <img src="@/assets/instagram-fill.svg" alt="" />
           </a>
         </li>

@@ -66,7 +66,7 @@
 </script>
 
 <style>
-  @media screen and (min-width:1100px) {
+ @media screen and (min-width: 1024px) {
     * {
       cursor: none !important;
     }
@@ -97,5 +97,39 @@
       background: var(--light-slate);
       border-radius: 50%;
     }
+  }
+
+  @media screen and (max-width: 600px) {
+      * {
+      cursor: none !important;
+    }
+
+    .custom-cursor__ball {
+      position: fixed;
+      top: 0;
+      left: 0;
+      mix-blend-mode: difference;
+      z-index: 99999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .custom-cursor__ball--big {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background: var(--color-primary);
+      border-radius: 50%;
+    }
+
+    .custom-cursor__ball--small {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: var(--light-slate);
+      border-radius: 50%;
+    }
+
   }
 </style>
