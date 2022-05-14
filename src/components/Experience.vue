@@ -15,7 +15,7 @@
       <div class="experience-list">
         <!-- 1 -->
         <div class="experience-card">
-          <h2>Software Engineer Intern</h2>
+          <h2>Frontend Software Engineer</h2>
           <a href="https://printrite.ng/"><h4>Printrite.ng</h4></a>
           <ul>
             <li>
