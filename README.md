@@ -31,14 +31,12 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-### Custom cursor using GSAP library
+### Packages used for this project
 npm i gsap
 
 it will install all the gsap dependencies...
 
 Gsap webiste (https://zelen-co.com/articles/custom-cursor-in-vuejs-with-gsap/)
-
-### Animation of the Text behaviors ---
 
  npm install animate.css --save
 

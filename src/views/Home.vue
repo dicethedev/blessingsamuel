@@ -20,7 +20,7 @@
             front end development.
           </p>
           <!-- Button link here -->
-          <a class="email-link" href="#my-project">See Projects</a>
+          <a class="email-link" href="#myproject">See Projects</a>
       </div>   
       <!-- <div class="right animate__animated animate__pulse animate__infinite">
         <img src="@/assets/Logo.svg" alt="">

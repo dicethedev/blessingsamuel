@@ -11,7 +11,7 @@
     </h2>
   </div>
 
-  <div class="my-project" id="my-project">
+  <div class="my-project" id="myproject">
     <div  class="projects">
       <div class="project-content">
         <div class="image-content">
@@ -20,7 +20,7 @@
          <div class="project-details">
            <h3>Featured Project</h3>
            <h1>Invoice App</h1>
-            <p>A Full stack Invoice Application crafted using Vuejs(vuex) & Firebase (firebase).
+            <p>A Full stack Invoice Application crafted using Vuejs (vuex) & Firebase.
               It keep track records of all invoices that is created.
               It Features include Create, Edit, Delete, Mark as Paid/Pending and also you can print
               the invoice. I Learned how to use the Vuex effective, how firebase cloud data work efficiently 
@@ -116,7 +116,7 @@
                <a href="https://github.com/dicethedev/Weatherapp" target="_blank" rel="noreferrer">
               <img src="../assets/akar-icons_github-fill.svg" alt="github" />
               </a>
-            <a href="https://invoice-app-gray.vercel.app/" target="_blank" rel="noreferrer">
+            <a href="https://weatherapp-blessing-samuel.vercel.app/" target="_blank" rel="noreferrer">
               <img
                 src="../assets/bi_arrow-right-circle-fill.svg"
                 alt="arrow-right"

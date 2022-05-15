@@ -10,7 +10,7 @@
       <div class="button-style-2"></div>
     </h2>
   </div>
-  <div class="experience-me" id="my-experience">
+  <div class="experience-me" id="myexperience">
     <div class="experiences">
       <div class="experience-list">
         <!-- 1 -->

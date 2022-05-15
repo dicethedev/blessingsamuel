@@ -10,7 +10,7 @@
       <div class="button-style-2"></div>
     </h2>
   </div>
-  <div class="skillset" id="skill-set">
+  <div class="skillset" id="skillset">
     <div class="skills">
       <div class="skill-container">
         <div class="skill-list">
