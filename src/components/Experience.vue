@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="
-      button-style
-      container
-      animate__animated animate__bounce"
-  >
+  <div class="button-style container">
     <h2 class="heading-numbering">
       <span>03.</span> I’ve Worked here
       <div class="button-style-2"></div>
@@ -34,7 +29,7 @@
         </div>
         <!-- 2 -->
         <div class="experience-card">
-          <h2>WordPress Developer</h2>
+          <h2>Frontend Developer</h2>
           <a href="https://Lettads.com.ng/"><h4>Lettads.com.ng</h4></a>
           <ul>
              <li>
@@ -43,7 +38,7 @@
             <li>
               <p>
                 Prioritizing workloads and coordinating multiple ongoing
-                projects (Frontend prduct).
+                projects (Front-end product).
               </p>
             </li>
             <li>
@@ -162,8 +157,8 @@ export default {
      //Mobile Responsiveness
     @include breakpoint-down(medium) {
       margin-top: -41px;
-      margin-left: 140px;
-      width: 77px;
+      margin-left: 138px;
+      width: 80px;
       height: 57px;
     }
   }

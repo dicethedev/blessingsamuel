@@ -14,18 +14,21 @@
 
           <p class="home-description">
             I love to build and style things that live on the web with great
-            user interface & experience. I am very good with HTML5, CSS3 (SCSS
-            included). I am also very good with JavaScript and its frameworks
-            such as Vue.js & React. I have over 2 years professional experience in
+            user interface & experience. I am very good with HTML5, CSS3 (SCSS, Styled-components
+            included). I am also very good with JavaScript, TypeScript and its frameworks
+            such as React & Vue.js. I have over 2 years professional experience in
             front end development.
           </p>
           <!-- Button link here -->
           <a class="email-link" href="#myproject">See Projects</a>
-      </div>   
-      <!-- <div class="right animate__animated animate__pulse animate__infinite">
-        <img src="@/assets/Logo.svg" alt="">
-      </div> -->
+      </div>  
+
+    <!-- <div class="right">
+    <img src="@/assets/Logo.svg" alt="" class="logoToRight">
     </div>
+     -->
+    </div>
+
     <div class="link-to-left">
       <ul class="style-left">
         <!-- Github link -->
@@ -127,12 +130,11 @@ export default {
 
 .home-main {
 width: 100%;
-padding: 86px 14.944vw 0;
+padding: 86px 13.944vw 0;
 position: relative;
 min-height: 711px;
 display: flex;
 align-items: center;
-
 
   @media (max-width: 575.98px) {
   padding: 114px 25px 0 27px;
@@ -156,18 +158,8 @@ margin-right: -30px;
 // }
 
 .left {
-  // width: 750px;
-  // margin-right: 30px;
-
-  //   @media (max-width: 767.98px){
-  //   width: 440px;
-  //   margin-right: 0;
-  //   margin-top: 40px;
-  //   }
-
-  //   @media (max-width: 575.98px) {
-  //   margin-top: 0;
-  //   }
+  flex: 4;
+  order: 1;
 
     h1 {
       margin: 0px 0px 30px 4px;
@@ -253,27 +245,44 @@ margin-right: -30px;
         }
       }
     }  
-    
-    // .right {
-    //     position: relative;
-    //     z-index: 1;
-    //     width: 200px;
-    //     height: 200px;
-        
-    //     img {
-    //     object-fit: contain;
-    //     width: 250px;
-    //     max-height: 250px;
-
-    //       // @media (max-width: 1199.98px){
-    //       // width: 250px;
-    //       //  max-height: 250px;
-    //       //  }
-
-    //     }
-    //   }
 }
-  
+
+/*
+.right {
+     flex: 2;
+      order: 2;
+       min-height: 10rem;
+      background-image: none;
+      margin-left: 5px;
+
+      @media (max-width: 480px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         padding-top: 8.375rem;
+        padding-bottom: 1.375rem;
+       }
+
+        @media (max-width: 767.98px) {
+       display: flex;
+        align-items: center;
+        justify-content: center;
+         padding-top: 8.375rem;
+        padding-bottom: 1.375rem;
+   }
+        
+  .logoToRight {
+    object-fit: cover;
+    width: 300px;
+    max-height: 300px;
+
+      @media (max-width: 480px) {
+        width: 250px;
+        max-height: 250px;
+       }
+   }
+}
+*/
 
 .link-to-left {
   width: 40px;

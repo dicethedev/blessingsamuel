@@ -2,12 +2,7 @@
   <div class="about-me" id="about-me">
     <div class="about-me-content">
       <div class="left">
-        <div
-          class="
-            container
-            button-style-1
-            animate__animated animate__bounce"
-        >
+        <div class="container button-style-1">
           <h2 class="head-numbering">
             <span>01.</span>About Me
             <div class="button-style-2"></div>
@@ -19,7 +14,7 @@
         </div>
 
         <p class="about-paragraph">
-          I am a Frontend Software Engineer currently based in Nigeria.
+          I am a Software Engineer (I focus on Front-end as Software Engineer) currently based in Nigeria.
           I love programming and designing things that live on the web. 
           My interest is web development  and my web development  journey started 
           back then in 2020 when I decided  to try to work on a free HTML template. 
@@ -57,7 +52,7 @@ export default {};
   padding: 200px 15.944vw 150px;
   overflow-y: hidden;
   position: relative;
-  margin-top: -50px;
+  margin-top: -90px;
 
   .about-me-content {
     width: 100%;

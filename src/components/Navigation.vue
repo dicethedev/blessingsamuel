@@ -73,6 +73,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 @import "/src/scss/_mixins.scss";
 
 .header {
@@ -127,12 +128,12 @@ export default {
       background-color: transparent;
       border: 1px solid;
       border-color: var(--color-primary);
-      //   border-image: linear-gradient(45deg, red , yellow);
-      //  border-image-slice: 1;
       border-radius: 15px 0px 15px 0px;
       text-decoration: none;
       padding: 0.5rem 2rem;
       overflow: hidden;
+      transition: opacity 200ms ease-in-out;
+      transition: var(--transition);
 
       &::before {
         content: "";
@@ -144,8 +145,6 @@ export default {
         background-color: var(--color-primary-variant);
         border-radius: 15px 0px 15px 0px;
         opacity: 0;
-        transition: opacity 200ms ease-in-out;
-        transition: var(--transition);
       }
 
       &:hover::before {

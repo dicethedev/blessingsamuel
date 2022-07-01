@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="
-      container
-      button-style-1
-      animate__animated animate__bounce"
-  >
+  <div class="container button-style-1">
     <h2 class="heading-numbering">
       <span>04.</span> I’ve this Skillset
       <div class="button-style-2"></div>

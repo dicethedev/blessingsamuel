@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="
-      button-style-1
-      container
-      animate__animated animate__bounce"
-  >
+  <div class="button-style-1 container">
     <h2 class="heading-numbering">
       <span>02.</span> I’ve Built this
       <div class="button-style-2"></div>
