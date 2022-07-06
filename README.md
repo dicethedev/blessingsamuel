@@ -31,16 +31,15 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-### Packages used for this project
+### Packages installed for this project
+
 npm i gsap
 
 it will install all the gsap dependencies...
 
 Gsap webiste (https://zelen-co.com/articles/custom-cursor-in-vuejs-with-gsap/)
 
- npm install animate.css --save
-
- yarn add animate.css
+ npm install animate.css --save or yarn add animate.css
 
  or add it this to the public folder in html
 
@@ -50,8 +49,5 @@ Gsap webiste (https://zelen-co.com/articles/custom-cursor-in-vuejs-with-gsap/)
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 </head>
-
-
-### Responsiveness: Can be found in the _mixings.scss in styles inside assets folder
 
 
