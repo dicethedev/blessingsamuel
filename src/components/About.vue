@@ -18,20 +18,19 @@
           I love programming and designing things that live on the web. 
           My interest is web development  and my web development  journey started 
           back then in 2020 when I decided  to try to work on a free HTML template. 
-          I am very adept using Javascript and its Frameworks like Vue & React. 
-          I can work with zeal and real wizardy.
+          I am very adept using JavaScript & Typescript and its frameworks like TReact & vue. 
+          I can work with zeal.
           I want to learn New things, because that's what brings joy to my life Up.
           I believe in team success & growth, however I always put my best & maintain a strong
           team bonding for every project I get to work on. 
         </p>
         <p class="about-paragraph">
-          I was born in Kogi State, Nigeria. I graduated with a second class
+          I was born in Nigeria. I graduated with a second class
           upper division in Software Engineering in Nigeria. My love
           for arithmetic and logic brought me towards the path of software
           development. I look forward to expanding my dexterity in the blockchain
           development space.
         </p>
-        <!-- <p>Here are a few technologies l’ve been working with recently:</p> -->
       </div>
     </div>
   </div>
@@ -62,7 +61,7 @@ export default {};
       .button-style-1 {
         // color: var( --color-primary-variant);
         background-color: transparent;
-        border: 1px dashed var( --color-primary);
+        border: 1px solid var(--color-primary);
         border-radius: 0px 20px;
         padding: 1.25rem 1.88rem;
         word-spacing: 5px;
@@ -119,7 +118,7 @@ export default {};
             }
           }
           .button-style-2 {
-            background-color: var(--color-primary);
+            background: var(--color-linear-gradient);
             border-radius: 0px 20px;
             padding: 1.25rem 1.88rem;
             width: 75px;

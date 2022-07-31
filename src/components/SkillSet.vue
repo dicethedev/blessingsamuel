@@ -59,7 +59,7 @@ html {
 
 .button-style-1 {
   background-color: transparent;
-  border: 1px dashed var(--color-primary);
+  border: 1px solid var(--color-primary);
   border-radius: 0px 20px;
   padding: 1.25rem 1.88rem;
   word-spacing: 5px;
@@ -114,7 +114,7 @@ html {
       }
     }
     .button-style-2 {
-      background-color: var(--color-primary);
+      background: var(--color-linear-gradient);
       border-radius: 0px 20px;
       padding: 1.25rem 1.88rem;
       width: 127px;
@@ -122,6 +122,7 @@ html {
       cursor: pointer;
       margin-top: -49px;
       margin-left: 147px;
+      
 
       //Mobile Responsiveness
       @include breakpoint-down(medium) {

@@ -223,7 +223,7 @@ export default {
     font-weight: 300;
     word-spacing: 5px;
     background-color: transparent;
-    border: 1px solid var(--color-primary-variant);
+    border: 2px solid var(--color-primary-variant);
     border-radius: 10px;
     padding: 1.25rem 1.75rem;
     width: fit-content;

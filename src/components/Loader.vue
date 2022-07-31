@@ -83,7 +83,7 @@ export default {
         width: 10px;
         height: 10px;
         margin: 5px;
-        background: linear-gradient(180deg, var(--color-bg-variant) 0%, var(--color-primary) 100%);
+        background: var(--color-linear-gradient);
         border-radius: 50%;
         animation-name: scaleIn;
         animation-duration: 1s;

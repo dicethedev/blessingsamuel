@@ -141,7 +141,7 @@ export default {
 
 .button-style-1 {
   background-color: transparent;
-  border: 1px dashed var(--color-primary);
+  border: 1px solid var(--color-primary);
   border-radius: 0px 20px;
   padding: 1.25rem 1.88rem;
   word-spacing: 5px;
@@ -195,7 +195,7 @@ export default {
             }
     }
     .button-style-2 {
-      background-color: var(--color-primary);
+     background: var(--color-linear-gradient);
       border-radius: 0px 20px;
       padding: 1.25rem 1.88rem;
       width: 93px;
@@ -269,9 +269,9 @@ export default {
     width: 35.24vw;
     height: 35.24vw;
 
-    &:nth-of-type(2n) {
-        flex-direction: row-reverse;
-    }
+   // &:nth-of-type(2n) {
+     //   flex-direction: row-reverse;
+    //}
 
 
      @media (max-width: 767.98px) {

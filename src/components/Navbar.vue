@@ -123,11 +123,10 @@ export default {
     .resume-button {
       position: relative;
       cursor: pointer;
-      font-size: 12px;
+      font-size: 12.5px;
       color: var(--color-primary);
       background-color: transparent;
-      border: 1px solid;
-      border-color: var(--color-primary);
+      border: 2px solid var(--color-primary);
       border-radius: 15px 0px 15px 0px;
       text-decoration: none;
       padding: 0.5rem 2rem;

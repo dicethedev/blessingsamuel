@@ -2,18 +2,18 @@
   <!-- Preloader for the page is here -->
   <Loader />
   <div class="app">
-    <Navigation />
+    <Navbar />
     <router-view />
   </div>
 </template>
 
 <script>
 import Loader from "@/components/Loader.vue";
-import Navigation from "@/components/Navigation.vue";
+import Navbar from "@/components/Navbar.vue";
 export default {
   name: "App",
   components: {
-    Navigation,
+    Navbar,
     Loader,
   },
 };
@@ -27,8 +27,10 @@ export default {
   --color-bg: #1f1f38;
   --color-bg-variant: #2c2c6c;
   --color-loader: #22224e;
-  --color-primary: #4db5ff;
+  --color-primary: #4ca5ff;
+  --color-linear-gradient: linear-gradient(90deg,#4ca5ff 2.34%,#b673f8 100.78%); 
   --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-secondary: #b673f8;
   --color-focus: #00cffd;
   --fz-sm: 13px;
   --fz-md: 16px;

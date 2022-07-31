@@ -84,7 +84,7 @@ export default {
 
 .button-style {
   background-color: transparent;
-  border: 1px dashed var(--color-primary);
+  border: 1px solid var(--color-primary);
   border-radius: 0px 20px;
   padding: 1.25rem 1.88rem;
   word-spacing: 5px;
@@ -140,7 +140,7 @@ export default {
   }
 
   .button-style-2 {
-    background-color: var(--color-primary);
+    background: var(--color-linear-gradient);
     border-radius: 0px 20px;
     padding: 1.25rem 1.88rem;
     width: 100px;
@@ -197,12 +197,12 @@ export default {
       max-width: 30%;
       min-width: 300px;
       min-height: 245px;
-      background: var(--light-slate);
-      border-radius: 4px;
+      background: var(--lightest-slate);
+      border-radius: 10px;
       padding: 30px 25px;
       margin-right: 15px;
       margin-bottom: 40px;
-      color: var(--color-bg-variant);
+      color: var(--color-bg);
 
       @media (max-width: 575.98px) {
         margin: 25px 0;
@@ -243,7 +243,8 @@ export default {
 
         li,
         p {
-          font-size: 14px;
+          font-size: 14.3px;
+          font-weight: 400;
           line-height: 1.5;
           a {
             color: var(--color-primary);

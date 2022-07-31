@@ -208,7 +208,7 @@ margin-right: -30px;
         border-radius: 0 20px;
         text-decoration: none;
         line-height: 1;
-        background: var(--color-primary);
+        background: var(--color-linear-gradient);
         position: relative;
         color: var(--light-slate);
         letter-spacing: 5px;
