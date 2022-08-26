@@ -16,17 +16,15 @@
         <p class="about-paragraph">
           I am a Software Engineer (I focus on Front-end as Software Engineer) currently based in Nigeria.
           I love programming and designing things that live on the web. 
-          My interest is web development  and my web development  journey started 
-          back then in 2020 when I decided  to try to work on a free HTML template. 
-          I am very adept using JavaScript & Typescript and its frameworks like TReact & vue. 
-          I can work with zeal.
-          I want to learn New things, because that's what brings joy to my life Up.
+          My interest is web development and my web development journey started 
+          back then in 2020 when I decided to try to work on a free HTML template. 
+          I am very adept using JavaScript & Typescript and its frameworks like React & Vue. 
+          I can work with zeal. I want to learn New things, because that's what brings joy to my life Up.
           I believe in team success & growth, however I always put my best & maintain a strong
           team bonding for every project I get to work on. 
         </p>
         <p class="about-paragraph">
-          I was born in Nigeria. I graduated with a second class
-          upper division in Software Engineering in Nigeria. My love
+          I was born in Nigeria. My love
           for arithmetic and logic brought me towards the path of software
           development. I look forward to expanding my dexterity in the blockchain
           development space.
